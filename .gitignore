@@ -1,0 +1,130 @@
+# Ignore build outputs
+bin/
+obj/
+
+# Ignore .NET specific files
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Ignore User-Specific files (settings)
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.cache
+
+# ASP.NET specific
+App_Data/
+App_Data/*
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Visual Studio Code specific
+.vscode/
+.history/
+
+# Rider/JetBrains specific
+.idea/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries/
+.idea/**/shelf/
+.idea/**/logs/
+.idea/**/deployment.xml
+.idea/.idea.Toolbox/
+
+# ReSharper files (JetBrains Rider)
+_ReSharper*/
+*.DotSettings.user
+*.DotSettings
+
+# Other common editor backups and temp files
+*.swp
+*.swo
+*~.nib
+Thumbs.db
+*.DS_Store
+.vscode/
+
+# Log files
+*.log
+
+# npm package directory (if you're using Node.js for front-end)
+node_modules/
+
+# Bundle/Minify configs
+.bundle/
+dist/
+publish/
+
+# Libman directory (if you're using LibMan for managing client-side libraries)
+libman/
+
+# Temporary files
+*.tmp
+*.temp
+*.pid
+*.gz
+*.lock
+
+# Certificates
+*.pfx
+*.p12
+
+# Configuration and Secrets (do not commit sensitive config files)
+appsettings.Development.json
+appsettings.Local.json
+appsettings.Production.json
+
+# If using Docker
+docker-compose.yml
+docker-compose.override.yml
+Dockerfile
+Dockerfile.*
+
+# Database (local development db)
+*.mdf
+*.ldf
+*.sqlite
+*.db
+
+# Rider-specific logs
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+
+# Coverage reports
+coverage/
+*.coverage
+*.coveragexml
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+
+# Windows specific
+*.db
+*.out
+*.exe
+*.dll
+*.pdb
+*.lib
+*.ilk
+*.log
+
+# macOS specific
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Others
+*.bak
+*.old
+*.swp
+*.class
+*.jar
+
