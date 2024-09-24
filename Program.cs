@@ -1,13 +1,12 @@
-using JavaHateBE.repository;
-using JavaHateBE.service;
+using JavaHateBE.util;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
-builder.Services.AddScoped<UserRepository>();
-builder.Services.AddScoped<UserService>();
+//defined in util/DependencyInjections.cs
+builder.Services.AddCustomServices();
 
 
 var app = builder.Build();

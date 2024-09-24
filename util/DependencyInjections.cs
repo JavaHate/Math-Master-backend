@@ -1,0 +1,22 @@
+using JavaHateBE.repository;
+using JavaHateBE.service;
+
+namespace JavaHateBE.util
+{
+    public static class DependencyInjections
+    {
+        /// <summary>
+        /// Adds custom services, repositories, and other dependencies to the service collection.
+        /// </summary>
+        /// <param name="services">The service collection.</param> 
+        public static IServiceCollection AddCustomServices(this IServiceCollection services)
+        {
+            services.AddScoped<UserRepository>();
+            services.AddScoped<QuestionRepository>();
+            services.AddScoped<UserService>();
+            services.AddScoped<QuestionService>();
+
+            return services;
+        }
+    }
+}
