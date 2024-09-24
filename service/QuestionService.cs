@@ -99,5 +99,20 @@ namespace JavaHateBE.service
             }
             return await Task.FromResult(await _questionRepository.DeleteQuestion(id) ?? throw new ObjectNotFoundException("question", "No questions found with that ID"));
         }
+
+        /// <summary>
+        /// Gets all questions.
+        /// </summary>
+        /// <returns>All questions.</returns>
+        /// <exception cref="ObjectNotFoundException">Thrown when no questions are found.</exception>
+        public async Task<IEnumerable<Question>> GetAllQuestions()
+        {
+            IEnumerable<Question> questions = await _questionRepository.GetAllQuestions();
+            if (questions.Count() == 0)
+            {
+                throw new ObjectNotFoundException("question", "No questions found");
+            }
+            return await Task.FromResult(questions);
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using JavaHateBE.exceptions;
 using JavaHateBE.model;
+using JavaHateBE.model.DTOs;
 using JavaHateBE.service;
 using Microsoft.AspNetCore.Mvc;
 
@@ -145,17 +146,17 @@ namespace JavaHateBE.controller
         }
 
         [HttpPost("login")]
-        public async Task<ActionResult<User>> Login([FromBody] string email, [FromBody] string password)
+        public async Task<ActionResult<User>> Login([FromBody] UserLogin credentials)
         {
             try
             {
-                User user = await _userService.Login(password, email);
+                User user = await _userService.Login(credentials.Password, credentials.Username);
                 return Ok(user);
             }
             catch (ObjectNotFoundException e)
             {
                 _logger.LogWarning(e, "Failed to login.");
-                return NotFound(new { message = e.Message, entity = e.Object });
+                return Unauthorized(new { message = e.Message, entity = e.Object });
             }
             catch (Exception e)
             {
@@ -164,4 +165,6 @@ namespace JavaHateBE.controller
             }
         }
     }
+
+    
 }
