@@ -30,13 +30,13 @@ namespace JavaHateBE.controller
             }
             catch (ObjectNotFoundException e)
             {
-                _logger.LogWarning(e, "Failed to get user by id.");
-                return NotFound(new { message = e.Message, entity = e.Object });
+                _logger.LogWarning(e, "Failed to get all questions.");
+                return NotFound(new Dictionary<string, string> { { "message", e.Message }, { "entity", e.Object } });
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "Failed to get user by id.");
-                return BadRequest(new { message = e.Message });
+                _logger.LogError(e, "Failed to get all questions.");
+                return BadRequest(new Dictionary<string, string> { { "message", e.Message } });
             }
         }
 
@@ -50,13 +50,13 @@ namespace JavaHateBE.controller
             }
             catch (ObjectNotFoundException e)
             {
-                _logger.LogWarning(e, "Failed to get user by username.");
-                return NotFound(new { message = e.Message, entity = e.Object });
+                _logger.LogWarning(e, "Failed to get all questions.");
+                return NotFound(new Dictionary<string, string> { { "message", e.Message }, { "entity", e.Object } });
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "Failed to get user by username.");
-                return BadRequest(new { message = e.Message });
+                _logger.LogError(e, "Failed to get all questions.");
+                return BadRequest(new Dictionary<string, string> { { "message", e.Message } });
             }
         }
 
@@ -70,13 +70,13 @@ namespace JavaHateBE.controller
             }
             catch (ObjectNotFoundException e)
             {
-                _logger.LogWarning(e, "Failed to get user by email.");
-                return NotFound(new { message = e.Message, entity = e.Object });
+                _logger.LogWarning(e, "Failed to get all questions.");
+                return NotFound(new Dictionary<string, string> { { "message", e.Message }, { "entity", e.Object } });
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "Failed to get user by email.");
-                return BadRequest(new { message = e.Message });
+                _logger.LogError(e, "Failed to get all questions.");
+                return BadRequest(new Dictionary<string, string> { { "message", e.Message } });
             }
         }
 
@@ -90,13 +90,13 @@ namespace JavaHateBE.controller
             }
             catch (IllegalArgumentException e)
             {
-                _logger.LogWarning(e, "Failed to create user.");
-                return BadRequest(new { argument = e.Argument, message = e.Message });
+                _logger.LogWarning(e, "Failed to add question.");
+                return BadRequest(new Dictionary<string, string> { { "message", e.Message }, { "field", e.Argument } });
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "Failed to create user.");
-                return BadRequest(new { message = e.Message });
+                _logger.LogError(e, "Failed to get all questions.");
+                return BadRequest(new Dictionary<string, string> { { "message", e.Message } });
             }
         }
 
@@ -110,18 +110,18 @@ namespace JavaHateBE.controller
             }
             catch (ObjectNotFoundException e)
             {
-                _logger.LogWarning(e, "Failed to update user.");
-                return NotFound(new { message = e.Message, entity = e.Object });
+                _logger.LogWarning(e, "Failed to get all questions.");
+                return NotFound(new Dictionary<string, string> { { "message", e.Message }, { "entity", e.Object } });
             }
             catch (IllegalArgumentException e)
             {
-                _logger.LogWarning(e, "Failed to update user.");
-                return BadRequest(new { argument = e.Argument, message = e.Message });
+                _logger.LogWarning(e, "Failed to add question.");
+                return BadRequest(new Dictionary<string, string> { { "message", e.Message }, { "field", e.Argument } });
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "Failed to update user.");
-                return BadRequest(new { message = e.Message });
+                _logger.LogError(e, "Failed to get all questions.");
+                return BadRequest(new Dictionary<string, string> { { "message", e.Message } });
             }
         }
 
@@ -135,13 +135,13 @@ namespace JavaHateBE.controller
             }
             catch (ObjectNotFoundException e)
             {
-                _logger.LogWarning(e, "Failed to delete user.");
-                return NotFound(new { message = e.Message, entity = e.Object });
+                _logger.LogWarning(e, "Failed to get all questions.");
+                return NotFound(new Dictionary<string, string> { { "message", e.Message }, { "entity", e.Object } });
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "Failed to delete user.");
-                return BadRequest(new { message = e.Message });
+                _logger.LogError(e, "Failed to get all questions.");
+                return BadRequest(new Dictionary<string, string> { { "message", e.Message } });
             }
         }
 
@@ -155,13 +155,13 @@ namespace JavaHateBE.controller
             }
             catch (ObjectNotFoundException e)
             {
-                _logger.LogWarning(e, "Failed to login.");
-                return Unauthorized(new { message = e.Message, entity = e.Object });
+                _logger.LogWarning(e, "Failed to get all questions.");
+                return NotFound(new Dictionary<string, string> { { "message", e.Message }, { "entity", e.Object } });
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "Failed to login.");
-                return BadRequest(new { message = e.Message });
+                _logger.LogError(e, "Failed to get all questions.");
+                return BadRequest(new Dictionary<string, string> { { "message", e.Message } });
             }
         }
     }

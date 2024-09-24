@@ -30,12 +30,12 @@ namespace JavaHateBE.controller
             catch (ObjectNotFoundException e)
             {
                 _logger.LogWarning(e, "Failed to get all questions.");
-                return NotFound(new { message = e.Message, entity = e.Object });
+                return NotFound(new Dictionary<string, string> { { "message", e.Message }, { "entity", e.Object } });
             }
             catch (Exception e)
             {
                 _logger.LogError(e, "Failed to get all questions.");
-                return BadRequest(new { message = e.Message });
+                return BadRequest(new Dictionary<string, string> { { "message", e.Message } });
             }
         }
 
@@ -49,13 +49,13 @@ namespace JavaHateBE.controller
             }
             catch (ObjectNotFoundException e)
             {
-                _logger.LogWarning(e, "Failed to get question by id.");
-                return NotFound(new { message = e.Message, entity = e.Object });
+                _logger.LogWarning(e, "Failed to get all questions.");
+                return NotFound(new Dictionary<string, string> { { "message", e.Message }, { "entity", e.Object } });
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "Failed to get question by id.");
-                return BadRequest(new { message = e.Message });
+                _logger.LogError(e, "Failed to get all questions.");
+                return BadRequest(new Dictionary<string, string> { { "message", e.Message } });
             }
         }
 
@@ -69,13 +69,13 @@ namespace JavaHateBE.controller
             }
             catch (ObjectNotFoundException e)
             {
-                _logger.LogWarning(e, "Failed to get random question.");
-                return NotFound(new { message = e.Message, entity = e.Object });
+                _logger.LogWarning(e, "Failed to get all questions.");
+                return NotFound(new Dictionary<string, string> { { "message", e.Message }, { "entity", e.Object } });
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "Failed to get random question.");
-                return BadRequest(new { message = e.Message });
+                _logger.LogError(e, "Failed to get all questions.");
+                return BadRequest(new Dictionary<string, string> { { "message", e.Message } });
             }
         }
 
@@ -90,12 +90,12 @@ namespace JavaHateBE.controller
             catch (IllegalArgumentException e)
             {
                 _logger.LogWarning(e, "Failed to add question.");
-                return BadRequest(new { message = e.Message });
+                return BadRequest(new Dictionary<string, string> { { "message", e.Message }, { "field", e.Argument } });
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "Failed to add question.");
-                return BadRequest(new { message = e.Message });
+                _logger.LogError(e, "Failed to get all questions.");
+                return BadRequest(new Dictionary<string, string> { { "message", e.Message } });
             }
         }
 
@@ -109,13 +109,13 @@ namespace JavaHateBE.controller
             }
             catch (ObjectNotFoundException e)
             {
-                _logger.LogWarning(e, "Failed to update question.");
-                return NotFound(new { message = e.Message, entity = e.Object });
+                _logger.LogWarning(e, "Failed to get all questions.");
+                return NotFound(new Dictionary<string, string> { { "message", e.Message }, { "entity", e.Object } });
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "Failed to update question.");
-                return BadRequest(new { message = e.Message });
+                _logger.LogError(e, "Failed to get all questions.");
+                return BadRequest(new Dictionary<string, string> { { "message", e.Message } });
             }
         }
 
@@ -129,13 +129,13 @@ namespace JavaHateBE.controller
             }
             catch (ObjectNotFoundException e)
             {
-                _logger.LogWarning(e, "Failed to delete question.");
-                return NotFound(new { message = e.Message, entity = e.Object });
+                _logger.LogWarning(e, "Failed to get all questions.");
+                return NotFound(new Dictionary<string, string> { { "message", e.Message }, { "entity", e.Object } });
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "Failed to delete question.");
-                return BadRequest(new { message = e.Message });
+                _logger.LogError(e, "Failed to get all questions.");
+                return BadRequest(new Dictionary<string, string> { { "message", e.Message } });
             }
         }
     }
