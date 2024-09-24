@@ -25,10 +25,10 @@ namespace JavaHateBE.service
         /// </summary>
         /// <param name="id">The ID of the user.</param>
         /// <returns>The user with the specified ID.</returns>
-        /// <exception cref="UserNotFoundException">Thrown when no user is found with the specified ID.</exception>
+        /// <exception cref="ObjectNotFoundException">Thrown when no user is found with the specified ID.</exception>
         public async Task<User> GetUserById(Guid id)
         {
-            User? user = await _userRepository.GetUserById(id) ?? throw new UserNotFoundException("No users found with that ID");
+            User? user = await _userRepository.GetUserById(id) ?? throw new ObjectNotFoundException("user", "No users found with that ID");
             return await Task.FromResult(user);
         }
 
@@ -37,10 +37,10 @@ namespace JavaHateBE.service
         /// </summary>
         /// <param name="username">The username of the user.</param>
         /// <returns>The user with the specified username.</returns>
-        /// <exception cref="UserNotFoundException">Thrown when no user is found with the specified username.</exception>
+        /// <exception cref="ObjectNotFoundException">Thrown when no user is found with the specified username.</exception>
         public async Task<User> GetUserByUsername(string username)
         {
-            User? user = await _userRepository.GetUserByUsername(username) ?? throw new UserNotFoundException("No users found with that username");
+            User? user = await _userRepository.GetUserByUsername(username) ?? throw new ObjectNotFoundException("user", "No users found with that username");
             return await Task.FromResult(user);
         }
 
@@ -49,10 +49,10 @@ namespace JavaHateBE.service
         /// </summary>
         /// <param name="email">The email of the user.</param>
         /// <returns>The user with the specified email.</returns>
-        /// <exception cref="UserNotFoundException">Thrown when no user is found with the specified email.</exception>
+        /// <exception cref="ObjectNotFoundException">Thrown when no user is found with the specified email.</exception>
         public async Task<User> GetUserByEmail(string email)
         {
-            User? user = await _userRepository.GetUserByEmail(email) ?? throw new UserNotFoundException("No users found with that email");
+            User? user = await _userRepository.GetUserByEmail(email) ?? throw new ObjectNotFoundException("user", "No users found with that email");
             return await Task.FromResult(user);
         }
 
@@ -81,13 +81,13 @@ namespace JavaHateBE.service
         /// </summary>
         /// <param name="user">The user to update.</param>
         /// <returns>The updated user.</returns>
-        /// <exception cref="UserNotFoundException">Thrown when the user is not found.</exception>
+        /// <exception cref="ObjectNotFoundException">Thrown when the user is not found.</exception>
         /// <exception cref="IllegalArgumentException">Thrown when a user with the same username or email already exists.</exception>
         public async Task<User> UpdateUser(User user)
         {
             if (await _userRepository.GetUserById(user.Id) == null)
             {
-                throw new UserNotFoundException("No users found with that ID");
+                throw new ObjectNotFoundException("user", "No users found with that ID");
             }
             if (await _userRepository.GetUserByUsername(user.Username) != null && (await _userRepository.GetUserByUsername(user.Username))!.Id != user.Id)
             {
@@ -97,7 +97,7 @@ namespace JavaHateBE.service
             {
                 throw new IllegalArgumentException("email", "User with that email already exists");
             }
-            User? updatedUser = await _userRepository.UpdateUser(user) ?? throw new UserNotFoundException("No users found with that ID");
+            User? updatedUser = await _userRepository.UpdateUser(user) ?? throw new ObjectNotFoundException("user", "No users found with that ID");
             return await Task.FromResult(updatedUser);
         }
 
@@ -106,10 +106,10 @@ namespace JavaHateBE.service
         /// </summary>
         /// <param name="id">The ID of the user to delete.</param>
         /// <returns>The deleted user.</returns>
-        /// <exception cref="UserNotFoundException">Thrown when no user is found with the specified ID.</exception>
+        /// <exception cref="ObjectNotFoundException">Thrown when no user is found with the specified ID.</exception>
         public async Task<User> DeleteUser(Guid id)
         {
-            User deletedUser = await _userRepository.DeleteUser(id) ?? throw new UserNotFoundException("No users found with that ID");
+            User deletedUser = await _userRepository.DeleteUser(id) ?? throw new ObjectNotFoundException("user", "No users found with that ID");
             return await Task.FromResult(deletedUser);
         }
 
@@ -119,10 +119,10 @@ namespace JavaHateBE.service
         /// <param name="username">The username (or email adress) of the user.</param>
         /// <param name="password">The password of the user.</param>
         /// <returns>The logged in user.</returns>
-        /// <exception cref="UserNotFoundException">Thrown when no user is found with the specified username.</exception>
+        /// <exception cref="ObjectNotFoundException">Thrown when no user is found with the specified username.</exception>
         public async Task<User> Login(string password, string username)
         {
-            User user = await _userRepository.GetUserByUsername(username) ?? await _userRepository.GetUserByEmail(username) ?? throw new UserNotFoundException("No users found with that username or email");
+            User user = await _userRepository.GetUserByUsername(username) ?? await _userRepository.GetUserByEmail(username) ?? throw new ObjectNotFoundException("user", "No users found with that username or email");
             if (!user.IsPasswordCorrect(password))
             {
                 throw new IllegalArgumentException("password", "Incorrect password");

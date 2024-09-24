@@ -27,10 +27,10 @@ namespace JavaHateBE.controller
                 User user = await _userService.GetUserById(id);
                 return Ok(user);
             }
-            catch (UserNotFoundException e)
+            catch (ObjectNotFoundException e)
             {
                 _logger.LogWarning(e, "Failed to get user by id.");
-                return NotFound(new { message = e.Message });
+                return NotFound(new { message = e.Message, entity = e.Object });
             }
             catch (Exception e)
             {
@@ -47,10 +47,10 @@ namespace JavaHateBE.controller
                 User user = await _userService.GetUserByUsername(username);
                 return Ok(user);
             }
-            catch (UserNotFoundException e)
+            catch (ObjectNotFoundException e)
             {
                 _logger.LogWarning(e, "Failed to get user by username.");
-                return NotFound(new { message = e.Message });
+                return NotFound(new { message = e.Message, entity = e.Object });
             }
             catch (Exception e)
             {
@@ -67,10 +67,10 @@ namespace JavaHateBE.controller
                 User user = await _userService.GetUserByEmail(email);
                 return Ok(user);
             }
-            catch (UserNotFoundException e)
+            catch (ObjectNotFoundException e)
             {
                 _logger.LogWarning(e, "Failed to get user by email.");
-                return NotFound(new { message = e.Message });
+                return NotFound(new { message = e.Message, entity = e.Object });
             }
             catch (Exception e)
             {
@@ -107,10 +107,10 @@ namespace JavaHateBE.controller
                 User updatedUser = await _userService.UpdateUser(user);
                 return Ok(updatedUser);
             }
-            catch (UserNotFoundException e)
+            catch (ObjectNotFoundException e)
             {
                 _logger.LogWarning(e, "Failed to update user.");
-                return NotFound(new { message = e.Message });
+                return NotFound(new { message = e.Message, entity = e.Object });
             }
             catch (IllegalArgumentException e)
             {
@@ -132,10 +132,10 @@ namespace JavaHateBE.controller
                 await _userService.DeleteUser(id);
                 return Ok();
             }
-            catch (UserNotFoundException e)
+            catch (ObjectNotFoundException e)
             {
                 _logger.LogWarning(e, "Failed to delete user.");
-                return NotFound(new { message = e.Message });
+                return NotFound(new { message = e.Message, entity = e.Object });
             }
             catch (Exception e)
             {
@@ -152,10 +152,10 @@ namespace JavaHateBE.controller
                 User user = await _userService.Login(password, email);
                 return Ok(user);
             }
-            catch (UserNotFoundException e)
+            catch (ObjectNotFoundException e)
             {
                 _logger.LogWarning(e, "Failed to login.");
-                return NotFound(new { message = e.Message });
+                return NotFound(new { message = e.Message, entity = e.Object });
             }
             catch (Exception e)
             {
