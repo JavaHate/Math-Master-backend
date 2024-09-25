@@ -60,12 +60,20 @@ namespace JavaHateBE.controller
         }
 
         [HttpGet("random")]
-        public async Task<ActionResult<Question>> GetRandomQuestion()
+        public async Task<ActionResult<Question>> GetRandomQuestion([FromQuery] int? amount)
         {
             try
             {
-                Question question = await _questionService.GetQuestion();
-                return Ok(question);
+                if (amount == null)
+                {
+                    List<Question> questions = await _questionService.GetQuestion();
+                    return Ok(questions);
+                }
+                else
+                {
+                    List<Question> questions = await _questionService.GetQuestion(amount);
+                    return Ok(questions);
+                }
             }
             catch (ObjectNotFoundException e)
             {

@@ -35,19 +35,25 @@ namespace JavaHateBE.service
         }
 
         /// <summary>
-        /// Gets a random question.
+        /// Retrieves a specified number of random questions from the repository.
         /// </summary>
-        /// <returns>A random question.</returns>
-        /// <exception cref="ObjectNotFoundException">Thrown when no questions are found.</exception>
-        public async Task<Question> GetQuestion()
+        /// <param name="amount">The number of questions to retrieve. Defaults to 1 if not specified.</param>
+        /// <returns>A list of randomly selected questions.</returns>
+        /// <exception cref="ObjectNotFoundException">Thrown when no questions are found in the repository.</exception>
+        public async Task<List<Question>> GetQuestion(int? amount = 1)
         {
             IEnumerable<Question> questions = await _questionRepository.GetAllQuestions();
             if (questions.Count() == 0)
             {
                 throw new ObjectNotFoundException("question", "No questions found");
             }
-            Question randomQuestion = questions.ElementAt(new Random().Next(questions.Count()));
-            return await Task.FromResult(randomQuestion);
+            List<Question> questionList = new List<Question>();
+            Random random = new Random();
+            for (int i = 0; i < amount; i++)
+            {
+                questionList.Add(questions.ElementAt(random.Next(questions.Count())));
+            }
+            return await Task.FromResult(questionList);
         }
 
         /// <summary>
