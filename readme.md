@@ -12,4 +12,9 @@ Welcome to the JavaHate Back-End API! This is a simple project built using **ASP
     dotnet run
     ```
 
+## View Endpoints
+
+1. Start the project
+2. Go to localhost:{Port}/swagger
+
 Enjoy using the API!
