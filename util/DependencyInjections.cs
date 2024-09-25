@@ -13,8 +13,10 @@ namespace JavaHateBE.util
         {
             services.AddScoped<UserRepository>();
             services.AddScoped<QuestionRepository>();
+            services.AddScoped<GameRepository>();
             services.AddScoped<UserService>();
             services.AddScoped<QuestionService>();
+            services.AddScoped<GameService>();
 
             return services;
         }

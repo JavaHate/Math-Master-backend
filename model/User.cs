@@ -11,6 +11,7 @@ namespace JavaHateBE.model
         public string Password { get; private set; }
         public string Email { get; private set; }
         public DateTime LastLogin { get; private set; }
+        public List<Game> Games { get; private set; } = new List<Game>();
 
 
         public User(string username, string password, string email)
@@ -44,6 +45,18 @@ namespace JavaHateBE.model
         public bool IsPasswordCorrect(string password)
         {
             return PasswordHasher.VerifyPassword(password, Password);
+        }
+
+        public void AddGame(Game game)
+        {
+            Games.Add(game);
+        }
+
+        public Game NewGame(GameMode gameMode)
+        {
+            Game game = new Game(gameMode, this);
+            Games.Add(game);
+            return game;
         }
     }
 }
