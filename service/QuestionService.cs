@@ -40,12 +40,17 @@ namespace JavaHateBE.service
         /// <param name="amount">The number of questions to retrieve. Defaults to 1 if not specified.</param>
         /// <returns>A list of randomly selected questions.</returns>
         /// <exception cref="ObjectNotFoundException">Thrown when no questions are found in the repository.</exception>
+        /// <exception cref="IllegalArgumentException">Thrown when a negative number was given for parameter amount.</exception>
         public async Task<List<Question>> GetQuestion(int? amount = 1)
         {
             IEnumerable<Question> questions = await _questionRepository.GetAllQuestions();
             if (questions.Count() == 0)
             {
                 throw new ObjectNotFoundException("question", "No questions found");
+            }
+            if (amount != null && amount < 1)
+            {
+                throw new IllegalArgumentException("amount", "Amount must be greater than 0 (at least 1)");
             }
             List<Question> questionList = new List<Question>();
             Random random = new Random();

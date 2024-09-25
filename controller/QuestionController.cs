@@ -80,6 +80,11 @@ namespace JavaHateBE.controller
                 _logger.LogWarning(e, "Failed to get all questions.");
                 return NotFound(new Dictionary<string, string> { { "message", e.Message }, { "entity", e.Object } });
             }
+            catch (IllegalArgumentException e)
+            {
+                _logger.LogWarning(e, "Failed to get all questions.");
+                return BadRequest(new Dictionary<string, string> { { "message", e.Message }, { "field", e.Argument } });
+            }
             catch (Exception e)
             {
                 _logger.LogError(e, "Failed to get all questions.");
