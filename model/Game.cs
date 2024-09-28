@@ -1,6 +1,6 @@
 namespace JavaHateBE.model
 {
-    public class Game {
+    public class Game : IEquatable<Game> {
         public Guid Id { get; private set; } = Guid.NewGuid();
         public GameMode GameMode { get; private set; }
         public uint Score { get; private set; } = 0;
@@ -52,6 +52,11 @@ namespace JavaHateBE.model
 
         public void updateGamer(User user) {
             Gamer = user;
+        }
+
+        public bool Equals(Game? other) {
+            if (other is null) return false;
+            return Id == other.Id;
         }
     }
 }

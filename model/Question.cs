@@ -1,20 +1,13 @@
 namespace JavaHateBE.model
 {
-    public class Question
+    public class Question : IEquatable<Question>
     {
         public Guid Id { get; set; } = Guid.NewGuid();
         public string Text { get; private set; }
         public float Answer { get; private set; }
         public byte Difficulty { get; private set; }
 
-        public Question(string text, float answer)
-        {
-            Text = text;
-            Answer = answer;
-            Difficulty = 1;
-        }
-
-        public Question(string text, float answer, byte difficulty)
+        public Question(string text, float answer, byte difficulty = 1)
         {
             Text = text;
             Answer = answer;
@@ -34,6 +27,12 @@ namespace JavaHateBE.model
         public void UpdateDifficulty(byte difficulty)
         {
             Difficulty = difficulty;
+        }
+
+        public bool Equals(Question? other)
+        {
+            if (other is null) return false;
+            return Id == other.Id;
         }
     }
 }

@@ -81,7 +81,7 @@ namespace JavaHateBE.controller
         }
 
         [HttpPost]
-        public async Task<ActionResult<User>> CreateUser([FromBody] User user)
+        public async Task<ActionResult<User>> CreateUser([FromBody] UserCreateInput user)
         {
             try
             {

@@ -1,4 +1,5 @@
 using JavaHateBE.model;
+using JavaHateBE.exceptions;
 
 namespace JavaHateBE.repository{
     
@@ -27,6 +28,10 @@ namespace JavaHateBE.repository{
 
         public async Task<Question> AddQuestion(Question question)
         {
+            if (Questions.Any(q => q.Equals(question))) {
+                throw new IllegalArgumentException("id", "A question with the same ID already exists.");
+            }
+
             Questions.Add(question);
             return await Task.FromResult(question);
         }

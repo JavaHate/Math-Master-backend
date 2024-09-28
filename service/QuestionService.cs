@@ -5,6 +5,8 @@ namespace JavaHateBE.service
     using JavaHateBE.model;
     using JavaHateBE.repository;
     using JavaHateBE.exceptions;
+    using JavaHateBE.model.DTOs;
+    using JavaHateBE.extensions;
 
     /// <summary>
     /// Provides services for managing questions.
@@ -44,7 +46,7 @@ namespace JavaHateBE.service
         public async Task<List<Question>> GetQuestion(int? amount = 1)
         {
             IEnumerable<Question> questions = await _questionRepository.GetAllQuestions();
-            if (questions.Count() == 0)
+            if (questions.Count().IsZero())
             {
                 throw new ObjectNotFoundException("question", "No questions found");
             }
@@ -54,9 +56,11 @@ namespace JavaHateBE.service
             }
             List<Question> questionList = new List<Question>();
             Random random = new Random();
+            var questionArray = questions.ToList();
+            int totalQuestions = questionArray.Count;
             for (int i = 0; i < amount; i++)
             {
-                questionList.Add(questions.ElementAt(random.Next(questions.Count())));
+                questionList.Add(questionArray[random.Next(totalQuestions)]);
             }
             return await Task.FromResult(questionList);
         }
@@ -67,13 +71,13 @@ namespace JavaHateBE.service
         /// <param name="question">The question to add.</param>
         /// <returns>The added question.</returns>
         /// <exception cref="IllegalArgumentException">Thrown when a question with the same text already exists.</exception>
-        public async Task<Question> AddQuestion(Question question)
+        public async Task<Question> AddQuestion(QuestionCreateInput question)
         {
             if (await _questionRepository.GetQuestionFromText(question.Text) != null)
             {
                 throw new IllegalArgumentException("text", "A question with that text already exists");
             }
-            Question newQuestion = await _questionRepository.AddQuestion(new Question(question.Text, question.Answer));
+            Question newQuestion = await _questionRepository.AddQuestion(new Question(question.Text, question.Answer, question.Difficulty));
             return await Task.FromResult(newQuestion);
         }
 
@@ -119,7 +123,7 @@ namespace JavaHateBE.service
         public async Task<IEnumerable<Question>> GetAllQuestions()
         {
             IEnumerable<Question> questions = await _questionRepository.GetAllQuestions();
-            if (questions.Count() == 0)
+            if (questions.Count().IsZero())
             {
                 throw new ObjectNotFoundException("question", "No questions found");
             }

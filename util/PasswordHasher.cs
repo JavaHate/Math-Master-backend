@@ -23,9 +23,13 @@ namespace JavaHateBE.util
                 var salt = algorithm.Salt;
                 var key = algorithm.GetBytes(KeySize);
 
+                // Boxing and unboxing example
+                object boxedSalt = salt; // Boxing
+                object boxedKey = key;   // Boxing
+
                 var hashBytes = new byte[SaltSize + KeySize];
-                Array.Copy(salt, 0, hashBytes, 0, SaltSize);
-                Array.Copy(key, 0, hashBytes, SaltSize, KeySize);
+                Array.Copy((byte[])boxedSalt, 0, hashBytes, 0, SaltSize);      // Unboxing
+                Array.Copy((byte[])boxedKey, 0, hashBytes, SaltSize, KeySize); // Unboxing
 
                 return Convert.ToBase64String(hashBytes);
             }
