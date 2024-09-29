@@ -13,10 +13,7 @@ namespace JavaHateBE.repository
         public GameRepository() { }
 
         public async Task<Game> AddGame(Game game) {
-            if (!gameList.Contains(game))
-            {
-                gameList.Add(game);
-            }
+            gameList.Add(game);
             return await Task.FromResult(game);
         }
 
