@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JavaHateBE.Migrations
 {
     [DbContext(typeof(SampleDBContext))]
-    [Migration("20240929121542_InitialCreate")]
+    [Migration("20240929134548_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -29,11 +29,11 @@ namespace JavaHateBE.Migrations
                     b.Property<int>("GameMode")
                         .HasColumnType("INTEGER");
 
-                    b.Property<Guid?>("GamerId")
-                        .HasColumnType("TEXT");
-
                     b.Property<uint>("Score")
                         .HasColumnType("INTEGER");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("endTime")
                         .HasColumnType("TEXT");
@@ -43,7 +43,7 @@ namespace JavaHateBE.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("GamerId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Games");
                 });
@@ -76,1575 +76,1575 @@ namespace JavaHateBE.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("8b75116b-6c10-437b-9cdb-066f5560175d"),
+                            Id = new Guid("4147515c-17b3-4cf1-8ac4-460bfaba9a2d"),
                             Answer = 1f,
                             Difficulty = (byte)1,
                             Text = "1 + 0"
                         },
                         new
                         {
-                            Id = new Guid("b0e4018e-cad6-4d55-8975-34d4ed824241"),
+                            Id = new Guid("65152cdf-8478-479d-83da-f69c10cb671f"),
                             Answer = 2f,
                             Difficulty = (byte)1,
                             Text = "1 + 1"
                         },
                         new
                         {
-                            Id = new Guid("fb52580f-0389-4f4c-bdcd-b70d1f0ff9d6"),
+                            Id = new Guid("87bb4ff0-5fdc-47ea-8f8c-671772b65c50"),
                             Answer = 3f,
                             Difficulty = (byte)1,
                             Text = "1 + 2"
                         },
                         new
                         {
-                            Id = new Guid("e9263a81-3c75-4887-a092-ad9393b95de9"),
+                            Id = new Guid("9ba342c5-9676-4e5c-85b1-31d43555043f"),
                             Answer = 4f,
                             Difficulty = (byte)1,
                             Text = "1 + 3"
                         },
                         new
                         {
-                            Id = new Guid("3e1218a9-df87-4b14-9583-77e305b8d6d8"),
+                            Id = new Guid("12a6f1ed-dd3a-4ca9-8cd8-be8f987d6f5b"),
                             Answer = 5f,
                             Difficulty = (byte)1,
                             Text = "1 + 4"
                         },
                         new
                         {
-                            Id = new Guid("8c8ae444-a57b-4439-a947-a3c8ec55be41"),
+                            Id = new Guid("4329603d-4d24-4fb8-8c34-5435bf09ee92"),
                             Answer = 6f,
                             Difficulty = (byte)1,
                             Text = "1 + 5"
                         },
                         new
                         {
-                            Id = new Guid("a31d0b69-162f-4578-863e-ade474145350"),
+                            Id = new Guid("9bf4b61d-60b2-484e-9ea8-9c8f914b037a"),
                             Answer = 7f,
                             Difficulty = (byte)1,
                             Text = "1 + 6"
                         },
                         new
                         {
-                            Id = new Guid("92351484-0f10-4b75-8d9d-852664f7ecc1"),
+                            Id = new Guid("8badd258-c674-4631-a625-54348fc0a823"),
                             Answer = 8f,
                             Difficulty = (byte)1,
                             Text = "1 + 7"
                         },
                         new
                         {
-                            Id = new Guid("95feb5cf-e8c6-4caf-b3a3-c56e0890a0bb"),
+                            Id = new Guid("46bea4bc-0b4e-4b14-a03f-64ee95542cbd"),
                             Answer = 9f,
                             Difficulty = (byte)1,
                             Text = "1 + 8"
                         },
                         new
                         {
-                            Id = new Guid("48d2fb07-9a21-4045-8851-8475c5042d57"),
+                            Id = new Guid("60a1cf46-6655-4651-a2e2-ad8eb97bbf67"),
                             Answer = 10f,
                             Difficulty = (byte)1,
                             Text = "1 + 9"
                         },
                         new
                         {
-                            Id = new Guid("f4bc026c-3a37-4618-9630-ec4385dd7227"),
+                            Id = new Guid("5463343b-6603-49b4-bd5c-e72a0b18c97e"),
                             Answer = 11f,
                             Difficulty = (byte)1,
                             Text = "1 + 10"
                         },
                         new
                         {
-                            Id = new Guid("2158299c-feb3-4383-9937-413d6bc596c7"),
+                            Id = new Guid("da292caf-4d38-43c5-a41a-08d16909e518"),
                             Answer = 12f,
                             Difficulty = (byte)1,
                             Text = "1 + 11"
                         },
                         new
                         {
-                            Id = new Guid("92c319e1-dae5-4429-91b6-ffea5b8d5b81"),
+                            Id = new Guid("542c8876-7da1-4d34-b21e-2cff71136a7a"),
                             Answer = 13f,
                             Difficulty = (byte)1,
                             Text = "1 + 12"
                         },
                         new
                         {
-                            Id = new Guid("2e7ba478-6739-41a0-8cc0-76628d3c55c1"),
+                            Id = new Guid("8171086b-2d9f-4c1e-904f-4b6c011cd2f2"),
                             Answer = 14f,
                             Difficulty = (byte)1,
                             Text = "1 + 13"
                         },
                         new
                         {
-                            Id = new Guid("37074c90-7234-4edd-a5cf-e0aad4ade6b8"),
+                            Id = new Guid("141d38a3-0b5c-45b3-b3ee-637a09f390ea"),
                             Answer = 15f,
                             Difficulty = (byte)1,
                             Text = "1 + 14"
                         },
                         new
                         {
-                            Id = new Guid("4e00c96b-6702-4a47-bca1-73240e9028e6"),
+                            Id = new Guid("5de8a92e-5df0-49d9-84ec-38b7a9359c2b"),
                             Answer = 2f,
                             Difficulty = (byte)1,
                             Text = "2 + 0"
                         },
                         new
                         {
-                            Id = new Guid("74e7d6c6-7b5e-49bd-b6de-6d9d3d604bfe"),
+                            Id = new Guid("9c95ba14-5bef-47e8-902f-005cfa0b522a"),
                             Answer = 3f,
                             Difficulty = (byte)1,
                             Text = "2 + 1"
                         },
                         new
                         {
-                            Id = new Guid("729edc49-9999-4ff4-94dc-90b396ff8317"),
+                            Id = new Guid("4526df6d-1c3b-49aa-a256-fc38a0392118"),
                             Answer = 4f,
                             Difficulty = (byte)1,
                             Text = "2 + 2"
                         },
                         new
                         {
-                            Id = new Guid("b1119314-e838-489b-b062-101cdf74c5d8"),
+                            Id = new Guid("7ef9c795-7951-404d-a80a-ffd6ab38375c"),
                             Answer = 5f,
                             Difficulty = (byte)1,
                             Text = "2 + 3"
                         },
                         new
                         {
-                            Id = new Guid("c71ff243-5eb7-4239-842b-0c319124b739"),
+                            Id = new Guid("6624a104-da37-46fc-8b15-09102d5ef5d0"),
                             Answer = 6f,
                             Difficulty = (byte)1,
                             Text = "2 + 4"
                         },
                         new
                         {
-                            Id = new Guid("a1602f50-4bf3-4ee2-87a2-4cfc020b066f"),
+                            Id = new Guid("19360b01-4af3-43d7-8266-e1cc1d0719db"),
                             Answer = 7f,
                             Difficulty = (byte)1,
                             Text = "2 + 5"
                         },
                         new
                         {
-                            Id = new Guid("4d73d9c6-c99d-4b3b-b745-66decc2d6bc0"),
+                            Id = new Guid("7dbd6b2c-efdb-4a42-aafd-ccd3fd8ee422"),
                             Answer = 8f,
                             Difficulty = (byte)1,
                             Text = "2 + 6"
                         },
                         new
                         {
-                            Id = new Guid("fcf6a5c5-4579-4026-8308-9a54c09a19fc"),
+                            Id = new Guid("56b817eb-a313-4a04-979b-94e20b6eb327"),
                             Answer = 9f,
                             Difficulty = (byte)1,
                             Text = "2 + 7"
                         },
                         new
                         {
-                            Id = new Guid("50f57356-9f88-4efd-bd47-21577d69c172"),
+                            Id = new Guid("2971e466-a8b4-4d10-b39b-b8f476f5065a"),
                             Answer = 10f,
                             Difficulty = (byte)1,
                             Text = "2 + 8"
                         },
                         new
                         {
-                            Id = new Guid("dc3bfba6-f965-4253-b54d-0cb20ca5dce2"),
+                            Id = new Guid("3d8ffb20-b4ca-4e9a-a33d-914b04e8885c"),
                             Answer = 11f,
                             Difficulty = (byte)1,
                             Text = "2 + 9"
                         },
                         new
                         {
-                            Id = new Guid("8e2a8767-cb38-4207-a36d-0eda5f3f5b85"),
+                            Id = new Guid("d00207a8-ed91-4c87-b06b-71fa18e1240c"),
                             Answer = 12f,
                             Difficulty = (byte)1,
                             Text = "2 + 10"
                         },
                         new
                         {
-                            Id = new Guid("2e239d24-eb23-473a-b5c6-4b54be5a36d7"),
+                            Id = new Guid("16ecd8af-6614-4670-83a9-f12b9fa1b125"),
                             Answer = 13f,
                             Difficulty = (byte)1,
                             Text = "2 + 11"
                         },
                         new
                         {
-                            Id = new Guid("fd703835-4333-42df-bc12-fdddfefd899d"),
+                            Id = new Guid("9b974246-3e50-42f0-9810-1fdc277128c2"),
                             Answer = 14f,
                             Difficulty = (byte)1,
                             Text = "2 + 12"
                         },
                         new
                         {
-                            Id = new Guid("77136477-f091-4d1b-9f24-2514fa97b9cd"),
+                            Id = new Guid("9bcfcef0-eafb-4750-a6ea-0b39648691e9"),
                             Answer = 15f,
                             Difficulty = (byte)1,
                             Text = "2 + 13"
                         },
                         new
                         {
-                            Id = new Guid("a6c3a693-6391-43f8-b116-b038a5c8b4b1"),
+                            Id = new Guid("7386391a-c781-4529-afe1-a16e4d0e77fd"),
                             Answer = 16f,
                             Difficulty = (byte)1,
                             Text = "2 + 14"
                         },
                         new
                         {
-                            Id = new Guid("8a1c0162-7371-428b-9771-fca9baf0ca0b"),
+                            Id = new Guid("96cbf69a-2975-496b-9b6e-43c03f913063"),
                             Answer = 3f,
                             Difficulty = (byte)1,
                             Text = "3 + 0"
                         },
                         new
                         {
-                            Id = new Guid("4e1aa73e-c008-42e1-bf02-cfb8e86473dd"),
+                            Id = new Guid("5f937cb5-8579-40ed-9b86-4e48fd4b328f"),
                             Answer = 4f,
                             Difficulty = (byte)1,
                             Text = "3 + 1"
                         },
                         new
                         {
-                            Id = new Guid("c04ee8c3-b4e6-4a3a-99a4-0f7ed2decc01"),
+                            Id = new Guid("55c46172-59ba-4557-9f5c-1dbe691c840d"),
                             Answer = 5f,
                             Difficulty = (byte)1,
                             Text = "3 + 2"
                         },
                         new
                         {
-                            Id = new Guid("6b27a3c8-e635-43ee-871a-a5c849b13912"),
+                            Id = new Guid("ab23c0b9-c819-4ad1-8fea-5be5eaaea418"),
                             Answer = 6f,
                             Difficulty = (byte)1,
                             Text = "3 + 3"
                         },
                         new
                         {
-                            Id = new Guid("193f1357-a0aa-4f3f-b39d-c94376118758"),
+                            Id = new Guid("df3ad41e-49bd-4fd6-8706-19ac46169a4f"),
                             Answer = 7f,
                             Difficulty = (byte)1,
                             Text = "3 + 4"
                         },
                         new
                         {
-                            Id = new Guid("2d1fd7ea-095f-4dc7-b424-f19e64904f27"),
+                            Id = new Guid("fe624533-073a-46a0-aa69-0faade3425cc"),
                             Answer = 8f,
                             Difficulty = (byte)1,
                             Text = "3 + 5"
                         },
                         new
                         {
-                            Id = new Guid("7bfbae98-b91c-489c-bdd5-b217846032ce"),
+                            Id = new Guid("e95403e0-a21e-4eb6-a0e8-c0f998abce77"),
                             Answer = 9f,
                             Difficulty = (byte)1,
                             Text = "3 + 6"
                         },
                         new
                         {
-                            Id = new Guid("15c2b7c7-6b0f-4d85-989e-2d9e50cf727d"),
+                            Id = new Guid("f3d17e55-5e27-4bd2-8b3a-7e027a965c64"),
                             Answer = 10f,
                             Difficulty = (byte)1,
                             Text = "3 + 7"
                         },
                         new
                         {
-                            Id = new Guid("8489cb1f-8d2b-42d4-a69c-e096ad398ddf"),
+                            Id = new Guid("56cbb2be-860d-44ff-9c30-00ef22c1392c"),
                             Answer = 11f,
                             Difficulty = (byte)1,
                             Text = "3 + 8"
                         },
                         new
                         {
-                            Id = new Guid("5f59d4b7-ae3b-4ae1-aee8-e7f223bffde2"),
+                            Id = new Guid("e4990ad6-6e7e-4d49-958b-24b8a618ad07"),
                             Answer = 12f,
                             Difficulty = (byte)1,
                             Text = "3 + 9"
                         },
                         new
                         {
-                            Id = new Guid("3bc3c542-c15b-4adf-a8e9-5cc91003a377"),
+                            Id = new Guid("1c049424-a4e6-49bf-a3d1-016851362563"),
                             Answer = 13f,
                             Difficulty = (byte)1,
                             Text = "3 + 10"
                         },
                         new
                         {
-                            Id = new Guid("3f1dd2cf-db48-47fb-b983-4790cf904953"),
+                            Id = new Guid("5c69161e-a1dd-45a7-bd1b-b1cc6dbe6e25"),
                             Answer = 14f,
                             Difficulty = (byte)1,
                             Text = "3 + 11"
                         },
                         new
                         {
-                            Id = new Guid("06e02e8b-f5ab-4c5c-a479-2b76ca3262ae"),
+                            Id = new Guid("9c314b50-b8bc-48bd-a41b-46fde4df577f"),
                             Answer = 15f,
                             Difficulty = (byte)1,
                             Text = "3 + 12"
                         },
                         new
                         {
-                            Id = new Guid("906a9da9-3808-40fa-8dde-3ebcfc66aa24"),
+                            Id = new Guid("647e468b-33fd-429b-8992-b078ca505e75"),
                             Answer = 16f,
                             Difficulty = (byte)1,
                             Text = "3 + 13"
                         },
                         new
                         {
-                            Id = new Guid("fac944f5-ca13-481f-8792-8cdc6689d022"),
+                            Id = new Guid("330b197e-0f20-44e1-941e-4734e963c018"),
                             Answer = 17f,
                             Difficulty = (byte)1,
                             Text = "3 + 14"
                         },
                         new
                         {
-                            Id = new Guid("98a15c99-a864-4fb8-8730-8aeecf28341e"),
+                            Id = new Guid("e664c3dc-ec4e-40ea-b901-a613f76a8116"),
                             Answer = 4f,
                             Difficulty = (byte)1,
                             Text = "4 + 0"
                         },
                         new
                         {
-                            Id = new Guid("7f10596f-9796-4fac-b011-025241c5d4d3"),
+                            Id = new Guid("a220449e-d251-448e-9c6a-5f32c53c8b11"),
                             Answer = 5f,
                             Difficulty = (byte)1,
                             Text = "4 + 1"
                         },
                         new
                         {
-                            Id = new Guid("f75cd25d-f671-4110-9184-d2a46b98dbc4"),
+                            Id = new Guid("88d3811e-b19a-4d98-a2c9-0d5c78a76c53"),
                             Answer = 6f,
                             Difficulty = (byte)1,
                             Text = "4 + 2"
                         },
                         new
                         {
-                            Id = new Guid("420a2b70-6146-450c-9478-dd0cb2dc55c5"),
+                            Id = new Guid("4f6511b9-f11b-4ffd-a413-5196f2ba151c"),
                             Answer = 7f,
                             Difficulty = (byte)1,
                             Text = "4 + 3"
                         },
                         new
                         {
-                            Id = new Guid("47ab8fab-393e-4a59-9872-87884e1478c0"),
+                            Id = new Guid("c1bda796-ce9e-4ec2-8ba0-c9a8c8436ddf"),
                             Answer = 8f,
                             Difficulty = (byte)1,
                             Text = "4 + 4"
                         },
                         new
                         {
-                            Id = new Guid("6ceed409-7789-4e20-a70e-a47005c084b0"),
+                            Id = new Guid("dc284571-7d0d-4ac0-8b86-3d496369191f"),
                             Answer = 9f,
                             Difficulty = (byte)1,
                             Text = "4 + 5"
                         },
                         new
                         {
-                            Id = new Guid("7c109874-62e0-499a-886f-e319318e93ca"),
+                            Id = new Guid("3561c725-46fa-433e-9176-1a5543da915b"),
                             Answer = 10f,
                             Difficulty = (byte)1,
                             Text = "4 + 6"
                         },
                         new
                         {
-                            Id = new Guid("f05fd6a0-669d-4fcc-877b-b3d020149bb7"),
+                            Id = new Guid("18644b19-5bfa-40b5-9394-6984c9c4da1a"),
                             Answer = 11f,
                             Difficulty = (byte)1,
                             Text = "4 + 7"
                         },
                         new
                         {
-                            Id = new Guid("6e722dad-8d36-42fc-b1cf-473be9200601"),
+                            Id = new Guid("cae63f60-e489-42b7-8d15-3afad69e20b5"),
                             Answer = 12f,
                             Difficulty = (byte)1,
                             Text = "4 + 8"
                         },
                         new
                         {
-                            Id = new Guid("cfd13b14-fd8a-46e6-9c1c-709d7ba561a1"),
+                            Id = new Guid("9c1fdcd3-a43d-4407-99f2-23eac74af576"),
                             Answer = 13f,
                             Difficulty = (byte)1,
                             Text = "4 + 9"
                         },
                         new
                         {
-                            Id = new Guid("087040a8-a5a2-4b2a-8945-e640d6063105"),
+                            Id = new Guid("3139cfe5-ca6f-4c16-ab08-777e69be00a3"),
                             Answer = 14f,
                             Difficulty = (byte)1,
                             Text = "4 + 10"
                         },
                         new
                         {
-                            Id = new Guid("9742cfac-7bb4-45de-8658-6df58cab0e16"),
+                            Id = new Guid("ad56f05b-8c69-4450-bba5-b888ec15f638"),
                             Answer = 15f,
                             Difficulty = (byte)1,
                             Text = "4 + 11"
                         },
                         new
                         {
-                            Id = new Guid("2ad2e26c-ee73-446c-ae8f-7aebfb9d48c5"),
+                            Id = new Guid("144cad9e-a2da-48bf-8146-af65c641f44a"),
                             Answer = 16f,
                             Difficulty = (byte)1,
                             Text = "4 + 12"
                         },
                         new
                         {
-                            Id = new Guid("0037ace5-17c6-4370-ad23-cb5e9c87fd9c"),
+                            Id = new Guid("c3651a3e-f9a8-4d0a-8342-da0b601c9df1"),
                             Answer = 17f,
                             Difficulty = (byte)1,
                             Text = "4 + 13"
                         },
                         new
                         {
-                            Id = new Guid("e6e7dd42-90d8-4a05-8bbd-c75a7e3184d5"),
+                            Id = new Guid("0315ad97-3215-4ba6-b7d2-4fa501dd7942"),
                             Answer = 18f,
                             Difficulty = (byte)1,
                             Text = "4 + 14"
                         },
                         new
                         {
-                            Id = new Guid("a04f45ea-6a34-499b-97d8-9b878d1c1206"),
+                            Id = new Guid("1dfae402-8866-46cb-895d-ba48555947fa"),
                             Answer = 5f,
                             Difficulty = (byte)1,
                             Text = "5 + 0"
                         },
                         new
                         {
-                            Id = new Guid("16b4cab9-ad1a-4237-aa4c-2609d07b63cb"),
+                            Id = new Guid("2079f50e-508e-4e5b-85b3-42cb1cb30a92"),
                             Answer = 6f,
                             Difficulty = (byte)1,
                             Text = "5 + 1"
                         },
                         new
                         {
-                            Id = new Guid("8f543f95-018d-4b36-85d7-e1a933a74b36"),
+                            Id = new Guid("e970b918-7a09-4398-a95e-d810a9804218"),
                             Answer = 7f,
                             Difficulty = (byte)1,
                             Text = "5 + 2"
                         },
                         new
                         {
-                            Id = new Guid("74f439bf-805d-473e-96a5-adfa87776c51"),
+                            Id = new Guid("68a9ca64-5771-4d74-81a5-b0023dadbb69"),
                             Answer = 8f,
                             Difficulty = (byte)1,
                             Text = "5 + 3"
                         },
                         new
                         {
-                            Id = new Guid("c319d845-55c7-4241-b871-cbeb2fad02b7"),
+                            Id = new Guid("ec420d16-3e1c-4ea1-9cdb-7c2b3df700b8"),
                             Answer = 9f,
                             Difficulty = (byte)1,
                             Text = "5 + 4"
                         },
                         new
                         {
-                            Id = new Guid("b0563f25-58e1-4748-9bb8-5faeb08b5bd2"),
+                            Id = new Guid("99027f1e-827a-4394-bdd1-8f0b5d4a3d7b"),
                             Answer = 10f,
                             Difficulty = (byte)1,
                             Text = "5 + 5"
                         },
                         new
                         {
-                            Id = new Guid("c4752c88-cfcc-496a-ae0a-0418940b7a5a"),
+                            Id = new Guid("7e6a2bd9-2a2e-4b7f-8182-92a73b376117"),
                             Answer = 11f,
                             Difficulty = (byte)1,
                             Text = "5 + 6"
                         },
                         new
                         {
-                            Id = new Guid("6e87e437-35b3-4c66-9937-56080fd93662"),
+                            Id = new Guid("61f3a9a8-ca6b-443a-926f-2f8e0a625066"),
                             Answer = 12f,
                             Difficulty = (byte)1,
                             Text = "5 + 7"
                         },
                         new
                         {
-                            Id = new Guid("9c519769-b6a5-49a5-aad8-c95acbbf5cb4"),
+                            Id = new Guid("4bf124b5-61e1-4b9a-a58c-ae466ae8c032"),
                             Answer = 13f,
                             Difficulty = (byte)1,
                             Text = "5 + 8"
                         },
                         new
                         {
-                            Id = new Guid("f3fc19c3-6c4a-441f-9870-71a244d912c6"),
+                            Id = new Guid("ce77cdb1-f224-4cbc-965d-c29dd7772630"),
                             Answer = 14f,
                             Difficulty = (byte)1,
                             Text = "5 + 9"
                         },
                         new
                         {
-                            Id = new Guid("8b5cdbfc-c19b-4ed9-b280-ce92ef3ffbf4"),
+                            Id = new Guid("613d8bf6-9080-4527-948c-7973dad63f70"),
                             Answer = 15f,
                             Difficulty = (byte)1,
                             Text = "5 + 10"
                         },
                         new
                         {
-                            Id = new Guid("c1fb905b-f4dc-4518-a13b-45e180f0d278"),
+                            Id = new Guid("3931fec2-addb-41cb-bc70-7f0dc11d971b"),
                             Answer = 16f,
                             Difficulty = (byte)1,
                             Text = "5 + 11"
                         },
                         new
                         {
-                            Id = new Guid("6defa922-78b9-4544-8888-a6c89c11a5e5"),
+                            Id = new Guid("f72428df-7526-46ff-b51d-f101d5e86317"),
                             Answer = 17f,
                             Difficulty = (byte)1,
                             Text = "5 + 12"
                         },
                         new
                         {
-                            Id = new Guid("7641098a-71fe-46e9-b2dc-c0cd05b8fdf5"),
+                            Id = new Guid("d48aeddf-5090-40a9-ac6a-d3fa668b618f"),
                             Answer = 18f,
                             Difficulty = (byte)1,
                             Text = "5 + 13"
                         },
                         new
                         {
-                            Id = new Guid("df7fb328-b82d-4cb2-a0f0-d315285cfe54"),
+                            Id = new Guid("9ae9b551-4a98-467b-932a-1c023cefa487"),
                             Answer = 19f,
                             Difficulty = (byte)1,
                             Text = "5 + 14"
                         },
                         new
                         {
-                            Id = new Guid("c31b1888-c044-4eb1-957c-61548eeaf3c9"),
+                            Id = new Guid("29ec8618-9310-4ddd-a63c-baad5006e814"),
                             Answer = 6f,
                             Difficulty = (byte)1,
                             Text = "6 + 0"
                         },
                         new
                         {
-                            Id = new Guid("20c1dad8-670d-4920-9872-94944c07320e"),
+                            Id = new Guid("e245e2fd-e1c9-4277-9129-dc0b3649f75c"),
                             Answer = 7f,
                             Difficulty = (byte)1,
                             Text = "6 + 1"
                         },
                         new
                         {
-                            Id = new Guid("25ea781d-96bb-4cfd-8597-f193e4ed9b67"),
+                            Id = new Guid("8c894268-876d-4248-b5e8-4cb5e9c1be51"),
                             Answer = 8f,
                             Difficulty = (byte)1,
                             Text = "6 + 2"
                         },
                         new
                         {
-                            Id = new Guid("acd3ced1-7943-48d5-851c-128a2c0b2c93"),
+                            Id = new Guid("facbc299-f4ef-48a8-a79b-5dbdce3aa5d7"),
                             Answer = 9f,
                             Difficulty = (byte)1,
                             Text = "6 + 3"
                         },
                         new
                         {
-                            Id = new Guid("5d2f9712-6ad5-4e39-918a-01f8301d075c"),
+                            Id = new Guid("e2b44890-b25c-4b38-b42a-49472dc97db0"),
                             Answer = 10f,
                             Difficulty = (byte)1,
                             Text = "6 + 4"
                         },
                         new
                         {
-                            Id = new Guid("0d2ba0a7-ca2e-4284-b6e5-73356e638e6e"),
+                            Id = new Guid("a97f2827-5f0d-4684-8ecb-101bed93615d"),
                             Answer = 11f,
                             Difficulty = (byte)1,
                             Text = "6 + 5"
                         },
                         new
                         {
-                            Id = new Guid("2436bcff-5075-4bcc-89dd-b53491dc9dc4"),
+                            Id = new Guid("705c8d9d-c05e-414b-a2ae-af742d722f70"),
                             Answer = 12f,
                             Difficulty = (byte)1,
                             Text = "6 + 6"
                         },
                         new
                         {
-                            Id = new Guid("93e73140-daf0-47b5-94a6-afab55464b89"),
+                            Id = new Guid("dd71ca68-e47b-423a-ad4b-ed15d3555ee8"),
                             Answer = 13f,
                             Difficulty = (byte)1,
                             Text = "6 + 7"
                         },
                         new
                         {
-                            Id = new Guid("4595734f-06d6-4788-9e2d-7e6ce1c4a3cf"),
+                            Id = new Guid("b3ce327a-94bf-4fd8-9f4d-560a0102683a"),
                             Answer = 14f,
                             Difficulty = (byte)1,
                             Text = "6 + 8"
                         },
                         new
                         {
-                            Id = new Guid("7c57bc85-f903-4c6b-b434-7c60182c9ffc"),
+                            Id = new Guid("aff138e8-abfe-4844-8ab5-1ba43d82f25d"),
                             Answer = 15f,
                             Difficulty = (byte)1,
                             Text = "6 + 9"
                         },
                         new
                         {
-                            Id = new Guid("2531e970-608a-4b62-99f1-f453f03802c9"),
+                            Id = new Guid("7e1bef1f-0b38-4e4f-b4f6-02e51ef09d40"),
                             Answer = 16f,
                             Difficulty = (byte)1,
                             Text = "6 + 10"
                         },
                         new
                         {
-                            Id = new Guid("0b0beb0c-8376-44e9-ae3e-3cac39e9d54a"),
+                            Id = new Guid("20e06049-ac11-4707-8479-453a1e68258e"),
                             Answer = 17f,
                             Difficulty = (byte)1,
                             Text = "6 + 11"
                         },
                         new
                         {
-                            Id = new Guid("b8634df0-f30d-41ff-92eb-a21fefeb50bf"),
+                            Id = new Guid("6af36c9a-bfc0-4f47-95e9-f8f7af775c18"),
                             Answer = 18f,
                             Difficulty = (byte)1,
                             Text = "6 + 12"
                         },
                         new
                         {
-                            Id = new Guid("19539f0d-f1d7-4e27-9986-6b03062f5dc0"),
+                            Id = new Guid("c7f6b861-0fd4-438c-94a9-55693f08afb9"),
                             Answer = 19f,
                             Difficulty = (byte)1,
                             Text = "6 + 13"
                         },
                         new
                         {
-                            Id = new Guid("a59ccd4d-634f-4ae4-a90f-4a4995905bfc"),
+                            Id = new Guid("c7ee4cf2-4ca2-4e27-bb60-22736143d5e1"),
                             Answer = 20f,
                             Difficulty = (byte)1,
                             Text = "6 + 14"
                         },
                         new
                         {
-                            Id = new Guid("1ce52f43-1cbf-49b2-82e7-ee7f0d296a56"),
+                            Id = new Guid("8d64d4e2-4ec9-4e06-878e-387e31e49474"),
                             Answer = 7f,
                             Difficulty = (byte)1,
                             Text = "7 + 0"
                         },
                         new
                         {
-                            Id = new Guid("ba158bfd-7f1f-41bc-8389-6bd83dbce631"),
+                            Id = new Guid("e3999c72-d1ca-4421-89d9-29e4bfcb7e8a"),
                             Answer = 8f,
                             Difficulty = (byte)1,
                             Text = "7 + 1"
                         },
                         new
                         {
-                            Id = new Guid("01349749-f850-44b2-a45c-608a902c2db2"),
+                            Id = new Guid("a6f3d295-e64a-4968-9145-aa14b7e44adc"),
                             Answer = 9f,
                             Difficulty = (byte)1,
                             Text = "7 + 2"
                         },
                         new
                         {
-                            Id = new Guid("5edbad34-a9bd-46e2-ab69-034928a88bbf"),
+                            Id = new Guid("5193775c-8303-49d9-8e0a-158470773178"),
                             Answer = 10f,
                             Difficulty = (byte)1,
                             Text = "7 + 3"
                         },
                         new
                         {
-                            Id = new Guid("65a088f5-97af-4dbe-85da-61fde96a7505"),
+                            Id = new Guid("a2dfdca1-4b5b-4a9d-8654-dd21e1930c49"),
                             Answer = 11f,
                             Difficulty = (byte)1,
                             Text = "7 + 4"
                         },
                         new
                         {
-                            Id = new Guid("addf8924-f179-4872-82e1-2de05f0194ab"),
+                            Id = new Guid("47bbae4c-76d8-4283-973a-b3e63e78cfb4"),
                             Answer = 12f,
                             Difficulty = (byte)1,
                             Text = "7 + 5"
                         },
                         new
                         {
-                            Id = new Guid("9268052c-f4bc-47a5-9abf-5b7146ec50ff"),
+                            Id = new Guid("abb89eac-3c1d-4230-a124-1b1615c0b6c0"),
                             Answer = 13f,
                             Difficulty = (byte)1,
                             Text = "7 + 6"
                         },
                         new
                         {
-                            Id = new Guid("d7552674-6d7d-4959-8ff9-e188ea269ed8"),
+                            Id = new Guid("2be501a3-9269-410c-94c3-9bf95ec993dd"),
                             Answer = 14f,
                             Difficulty = (byte)1,
                             Text = "7 + 7"
                         },
                         new
                         {
-                            Id = new Guid("5f089b9a-ce5c-4ac0-a79b-f403f283ebbf"),
+                            Id = new Guid("7e8fbd28-8eba-4cee-973d-dce2701581fd"),
                             Answer = 15f,
                             Difficulty = (byte)1,
                             Text = "7 + 8"
                         },
                         new
                         {
-                            Id = new Guid("80317c39-08e0-4c61-a399-2b6b56d2d62e"),
+                            Id = new Guid("f0374d96-e9e3-4802-9495-018281e7da8f"),
                             Answer = 16f,
                             Difficulty = (byte)1,
                             Text = "7 + 9"
                         },
                         new
                         {
-                            Id = new Guid("0059f165-3577-4484-a5aa-2d85eeec80a0"),
+                            Id = new Guid("803ccbe4-4b1d-4416-ab60-c1b2c4898e7a"),
                             Answer = 17f,
                             Difficulty = (byte)1,
                             Text = "7 + 10"
                         },
                         new
                         {
-                            Id = new Guid("566ab7e0-e417-4b46-8e22-8ed42f20ce7c"),
+                            Id = new Guid("29934a15-2c0e-488b-8920-59c799fbfbb3"),
                             Answer = 18f,
                             Difficulty = (byte)1,
                             Text = "7 + 11"
                         },
                         new
                         {
-                            Id = new Guid("19273e26-4493-44b5-997c-5f912caca662"),
+                            Id = new Guid("d415f04a-1c35-44f3-b7d1-f5800c8ac963"),
                             Answer = 19f,
                             Difficulty = (byte)1,
                             Text = "7 + 12"
                         },
                         new
                         {
-                            Id = new Guid("0a9d95c8-95a5-4745-83fa-b8f87ce96c63"),
+                            Id = new Guid("fd952aa2-b8d9-4e17-814e-4e8f85e16a92"),
                             Answer = 20f,
                             Difficulty = (byte)1,
                             Text = "7 + 13"
                         },
                         new
                         {
-                            Id = new Guid("c324cc6d-1686-41f5-a552-1f68830189d3"),
+                            Id = new Guid("7bf048a3-bf01-4520-9514-ab1ab90bf787"),
                             Answer = 21f,
                             Difficulty = (byte)1,
                             Text = "7 + 14"
                         },
                         new
                         {
-                            Id = new Guid("9dec7b32-a30b-47d1-99ff-b02afb9d2443"),
+                            Id = new Guid("45f7abd1-6ac1-4e83-b198-8981a6dab6a4"),
                             Answer = 8f,
                             Difficulty = (byte)1,
                             Text = "8 + 0"
                         },
                         new
                         {
-                            Id = new Guid("ff6be3e3-c87a-487f-8c63-d25c33aec844"),
+                            Id = new Guid("4aebc357-861e-45b1-95cb-6988ca0f6fe5"),
                             Answer = 9f,
                             Difficulty = (byte)1,
                             Text = "8 + 1"
                         },
                         new
                         {
-                            Id = new Guid("472c0c80-44de-4eed-8ee5-adab30f60c78"),
+                            Id = new Guid("5d888602-c7c8-4aed-9930-65b5138970cb"),
                             Answer = 10f,
                             Difficulty = (byte)1,
                             Text = "8 + 2"
                         },
                         new
                         {
-                            Id = new Guid("77144a7b-89d4-414c-9c35-a0630d5e3cdf"),
+                            Id = new Guid("5906595d-d9c5-43a2-ae81-ba9b4affa88e"),
                             Answer = 11f,
                             Difficulty = (byte)1,
                             Text = "8 + 3"
                         },
                         new
                         {
-                            Id = new Guid("2bf2e2b4-64a9-4c77-ba25-23017e6f5eb4"),
+                            Id = new Guid("549b5ecf-09cf-46eb-9a7f-df5c8a49176c"),
                             Answer = 12f,
                             Difficulty = (byte)1,
                             Text = "8 + 4"
                         },
                         new
                         {
-                            Id = new Guid("0491a1b8-0e6e-467b-a378-6624a72a6567"),
+                            Id = new Guid("cbd424a5-0484-4911-ae1c-b41c3e2b8d79"),
                             Answer = 13f,
                             Difficulty = (byte)1,
                             Text = "8 + 5"
                         },
                         new
                         {
-                            Id = new Guid("e4189b9d-28eb-42da-81fd-736936f61b49"),
+                            Id = new Guid("1278e732-65b1-4782-bc3d-d4d73c4c013f"),
                             Answer = 14f,
                             Difficulty = (byte)1,
                             Text = "8 + 6"
                         },
                         new
                         {
-                            Id = new Guid("4bf75310-6b14-4236-a889-fe7c1100bfd3"),
+                            Id = new Guid("6122a062-a434-48f9-8e55-32914df78221"),
                             Answer = 15f,
                             Difficulty = (byte)1,
                             Text = "8 + 7"
                         },
                         new
                         {
-                            Id = new Guid("68023a36-582a-4b61-ac7e-c8866904b35f"),
+                            Id = new Guid("b54aa4b8-1fce-4a99-92e0-b1ba412d7c6d"),
                             Answer = 16f,
                             Difficulty = (byte)1,
                             Text = "8 + 8"
                         },
                         new
                         {
-                            Id = new Guid("5e03a606-426a-469c-8989-e1b06a357ee5"),
+                            Id = new Guid("932582af-c651-4d77-b730-f7e14fb6a798"),
                             Answer = 17f,
                             Difficulty = (byte)1,
                             Text = "8 + 9"
                         },
                         new
                         {
-                            Id = new Guid("2c4baf05-08b9-414f-9c8c-2a37deab9234"),
+                            Id = new Guid("eabc115a-658d-4775-bcae-8c251df04616"),
                             Answer = 18f,
                             Difficulty = (byte)1,
                             Text = "8 + 10"
                         },
                         new
                         {
-                            Id = new Guid("f8792046-d2ff-4e8a-a99c-778595877a76"),
+                            Id = new Guid("5e41039a-5e5d-41f6-91eb-e93a3100f74d"),
                             Answer = 19f,
                             Difficulty = (byte)1,
                             Text = "8 + 11"
                         },
                         new
                         {
-                            Id = new Guid("4355949e-c8df-47ee-86d9-c2d5911f2e0a"),
+                            Id = new Guid("c700ceb3-7bfd-488c-87f1-a96a4cc95b8d"),
                             Answer = 20f,
                             Difficulty = (byte)1,
                             Text = "8 + 12"
                         },
                         new
                         {
-                            Id = new Guid("d530a539-077c-4009-a9b7-fed6d4849259"),
+                            Id = new Guid("f62c2946-1892-40ba-bc7e-3f50ec19efdb"),
                             Answer = 21f,
                             Difficulty = (byte)1,
                             Text = "8 + 13"
                         },
                         new
                         {
-                            Id = new Guid("1c30107f-aa1b-4392-91d5-7fffb5dd36d8"),
+                            Id = new Guid("9849a143-ca26-4366-b443-a43360ad7351"),
                             Answer = 22f,
                             Difficulty = (byte)1,
                             Text = "8 + 14"
                         },
                         new
                         {
-                            Id = new Guid("f7e2fa54-bef2-4e94-b545-eb889e579ded"),
+                            Id = new Guid("458b732c-9362-42ed-b781-764a425df2cc"),
                             Answer = 9f,
                             Difficulty = (byte)1,
                             Text = "9 + 0"
                         },
                         new
                         {
-                            Id = new Guid("7ee7f199-0b71-4506-8f1d-6f6017e2618d"),
+                            Id = new Guid("cf36f11d-b7cc-4045-bfb4-caa7ecbddaf6"),
                             Answer = 10f,
                             Difficulty = (byte)1,
                             Text = "9 + 1"
                         },
                         new
                         {
-                            Id = new Guid("a1022083-fc89-4d6b-8fbc-345e59925be7"),
+                            Id = new Guid("8d616bd5-a704-43dd-8d41-3016474f2a18"),
                             Answer = 11f,
                             Difficulty = (byte)1,
                             Text = "9 + 2"
                         },
                         new
                         {
-                            Id = new Guid("8ccd71a9-d818-4b45-9457-05fe02231b1e"),
+                            Id = new Guid("c00f9aeb-13d1-4766-a3ce-d6c8b4464343"),
                             Answer = 12f,
                             Difficulty = (byte)1,
                             Text = "9 + 3"
                         },
                         new
                         {
-                            Id = new Guid("db2c2f28-2633-4467-949a-0be2d5f55fb6"),
+                            Id = new Guid("b5c7a790-0b85-4318-9482-981df9db017f"),
                             Answer = 13f,
                             Difficulty = (byte)1,
                             Text = "9 + 4"
                         },
                         new
                         {
-                            Id = new Guid("fb25ca05-e3ea-4836-b703-eb632300ddfa"),
+                            Id = new Guid("3bca1897-3ba4-463d-a520-99b69983d1e2"),
                             Answer = 14f,
                             Difficulty = (byte)1,
                             Text = "9 + 5"
                         },
                         new
                         {
-                            Id = new Guid("e165f2ab-2b8e-4ae0-9ea3-a021ce7de936"),
+                            Id = new Guid("b210facb-a5da-4c3e-8e77-9ca187994747"),
                             Answer = 15f,
                             Difficulty = (byte)1,
                             Text = "9 + 6"
                         },
                         new
                         {
-                            Id = new Guid("d98f5919-788e-4722-95db-9a3294c6ffa7"),
+                            Id = new Guid("41d04a71-8241-4fe6-a93a-92a53f674dee"),
                             Answer = 16f,
                             Difficulty = (byte)1,
                             Text = "9 + 7"
                         },
                         new
                         {
-                            Id = new Guid("fd63dfde-4278-4246-8890-729368fc0234"),
+                            Id = new Guid("9f6e091a-1762-4f7a-a69e-fadfe6012ebf"),
                             Answer = 17f,
                             Difficulty = (byte)1,
                             Text = "9 + 8"
                         },
                         new
                         {
-                            Id = new Guid("b45b1c16-940b-4645-a2a6-a6718d9d6579"),
+                            Id = new Guid("875810aa-0d2f-4d82-9bd6-834937f775b3"),
                             Answer = 18f,
                             Difficulty = (byte)1,
                             Text = "9 + 9"
                         },
                         new
                         {
-                            Id = new Guid("33a27247-8691-4988-8584-61a493daf17a"),
+                            Id = new Guid("c1262a3f-18f3-441b-88ba-39b28cf02edc"),
                             Answer = 19f,
                             Difficulty = (byte)1,
                             Text = "9 + 10"
                         },
                         new
                         {
-                            Id = new Guid("bc5e72e9-6b1d-4610-a97b-6cda7fcfc8af"),
+                            Id = new Guid("5222e0b5-653f-4da8-8b80-821661460dd6"),
                             Answer = 20f,
                             Difficulty = (byte)1,
                             Text = "9 + 11"
                         },
                         new
                         {
-                            Id = new Guid("50f50fcc-293c-4ef4-adc2-d8dc810efd5f"),
+                            Id = new Guid("ec1b152f-2ba3-463d-ae22-335e219332d9"),
                             Answer = 21f,
                             Difficulty = (byte)1,
                             Text = "9 + 12"
                         },
                         new
                         {
-                            Id = new Guid("541017f8-2290-4b6f-b0fd-e283694b85bd"),
+                            Id = new Guid("dc141469-f899-4930-a669-d443160e0ceb"),
                             Answer = 22f,
                             Difficulty = (byte)1,
                             Text = "9 + 13"
                         },
                         new
                         {
-                            Id = new Guid("f394a431-d4a4-4d4c-846d-1245e6fdc947"),
+                            Id = new Guid("dca5c3ef-f834-4f97-86c1-22e2e12a0ad1"),
                             Answer = 23f,
                             Difficulty = (byte)1,
                             Text = "9 + 14"
                         },
                         new
                         {
-                            Id = new Guid("acf9944a-3b67-450d-983c-f753fa362944"),
+                            Id = new Guid("ecfb091c-fc5f-450f-8544-f6923412c3b3"),
                             Answer = 10f,
                             Difficulty = (byte)1,
                             Text = "10 + 0"
                         },
                         new
                         {
-                            Id = new Guid("9765ae07-4b5a-437d-bb03-9983abecd135"),
+                            Id = new Guid("39427a49-4bfc-4fe0-ac55-a00ef8ccff39"),
                             Answer = 11f,
                             Difficulty = (byte)1,
                             Text = "10 + 1"
                         },
                         new
                         {
-                            Id = new Guid("e339e41a-6691-4f0b-aff1-9a5d2655aa65"),
+                            Id = new Guid("b0c83071-3bde-4cb1-bbdf-c37448c804b0"),
                             Answer = 12f,
                             Difficulty = (byte)1,
                             Text = "10 + 2"
                         },
                         new
                         {
-                            Id = new Guid("564d2246-7422-4df7-91b3-23c5dc8385f2"),
+                            Id = new Guid("9032b542-af56-4294-b275-6a8185dace4b"),
                             Answer = 13f,
                             Difficulty = (byte)1,
                             Text = "10 + 3"
                         },
                         new
                         {
-                            Id = new Guid("bc1bbc50-6e94-4113-ac83-873426c54cd5"),
+                            Id = new Guid("d3466c23-a754-4e32-8b94-97a3cfd64228"),
                             Answer = 14f,
                             Difficulty = (byte)1,
                             Text = "10 + 4"
                         },
                         new
                         {
-                            Id = new Guid("a5235bd1-2f89-46f4-af2c-56fd17cdb8c8"),
+                            Id = new Guid("858bfa14-73de-4238-b4e8-1461fc174d5e"),
                             Answer = 15f,
                             Difficulty = (byte)1,
                             Text = "10 + 5"
                         },
                         new
                         {
-                            Id = new Guid("306b5048-e53a-4a5a-87d1-afa215c163ca"),
+                            Id = new Guid("0fb0deae-6973-40a0-8e14-f681ab287da2"),
                             Answer = 16f,
                             Difficulty = (byte)1,
                             Text = "10 + 6"
                         },
                         new
                         {
-                            Id = new Guid("2f9fa183-7fa9-4252-a48d-19d923e79914"),
+                            Id = new Guid("cd21b27d-0bdf-4fd2-a505-ab7985780185"),
                             Answer = 17f,
                             Difficulty = (byte)1,
                             Text = "10 + 7"
                         },
                         new
                         {
-                            Id = new Guid("a19c509f-6f84-4640-9980-b1bfcef4c257"),
+                            Id = new Guid("a000ba43-49bc-432b-b562-3b8010cabd89"),
                             Answer = 18f,
                             Difficulty = (byte)1,
                             Text = "10 + 8"
                         },
                         new
                         {
-                            Id = new Guid("447e1b28-97ad-4dc9-a5aa-688644a50eb2"),
+                            Id = new Guid("b647f8e5-623d-4db7-aea6-3c366c3da6e8"),
                             Answer = 19f,
                             Difficulty = (byte)1,
                             Text = "10 + 9"
                         },
                         new
                         {
-                            Id = new Guid("3fd47041-fbc7-4dce-ae08-be5ea90f0b78"),
+                            Id = new Guid("8c172e64-be00-4641-9836-a5c9e6e88843"),
                             Answer = 20f,
                             Difficulty = (byte)1,
                             Text = "10 + 10"
                         },
                         new
                         {
-                            Id = new Guid("058d7cfe-a078-4af3-9a7c-64b9d560b145"),
+                            Id = new Guid("46ad150c-df25-46d6-ba20-416d7f6ca560"),
                             Answer = 21f,
                             Difficulty = (byte)1,
                             Text = "10 + 11"
                         },
                         new
                         {
-                            Id = new Guid("6724c657-38d2-483f-bcc5-aead8b84f72c"),
+                            Id = new Guid("8a34f6ba-408c-4ca2-8424-c53e1638f83b"),
                             Answer = 22f,
                             Difficulty = (byte)1,
                             Text = "10 + 12"
                         },
                         new
                         {
-                            Id = new Guid("91b63222-e0c5-482b-957b-b49a556e50f3"),
+                            Id = new Guid("a2452253-006c-4ccb-848c-0200bc40278e"),
                             Answer = 23f,
                             Difficulty = (byte)1,
                             Text = "10 + 13"
                         },
                         new
                         {
-                            Id = new Guid("17da0cd7-a9ec-4bf4-aea0-9a221336cd59"),
+                            Id = new Guid("e7ab120c-a8bc-42ad-afce-ba8fee3454b5"),
                             Answer = 24f,
                             Difficulty = (byte)1,
                             Text = "10 + 14"
                         },
                         new
                         {
-                            Id = new Guid("e7acd0d8-45fc-4b88-ac5b-4420214f435d"),
+                            Id = new Guid("011bbaeb-5b64-4ac4-a10f-06f3c0aaa877"),
                             Answer = 11f,
                             Difficulty = (byte)1,
                             Text = "11 + 0"
                         },
                         new
                         {
-                            Id = new Guid("ad3f542b-9286-4eea-9a70-658438eadd31"),
+                            Id = new Guid("de185fc8-4795-4d33-93c7-1da4db669975"),
                             Answer = 12f,
                             Difficulty = (byte)1,
                             Text = "11 + 1"
                         },
                         new
                         {
-                            Id = new Guid("d0da7235-f77f-48cb-8a81-26c569dab8f8"),
+                            Id = new Guid("6f40497b-393d-486e-9adc-623940c92f6f"),
                             Answer = 13f,
                             Difficulty = (byte)1,
                             Text = "11 + 2"
                         },
                         new
                         {
-                            Id = new Guid("effac817-0d95-4b8a-8db0-d64aed6bd794"),
+                            Id = new Guid("5faa314a-6b76-4dcc-9acb-e39deace7b70"),
                             Answer = 14f,
                             Difficulty = (byte)1,
                             Text = "11 + 3"
                         },
                         new
                         {
-                            Id = new Guid("f6d804c3-c637-4ec5-bc40-90abd71141a7"),
+                            Id = new Guid("8e984bbe-ac39-4969-a753-76009c1fb4af"),
                             Answer = 15f,
                             Difficulty = (byte)1,
                             Text = "11 + 4"
                         },
                         new
                         {
-                            Id = new Guid("4987de1e-07f6-47b4-a69c-ff712ab13095"),
+                            Id = new Guid("1c59b022-fc6b-4551-9b0d-cc4e180ef986"),
                             Answer = 16f,
                             Difficulty = (byte)1,
                             Text = "11 + 5"
                         },
                         new
                         {
-                            Id = new Guid("28cb868d-4d29-4754-8354-cd267ad09955"),
+                            Id = new Guid("e5bc9f1b-31ce-443a-aa67-348ab93bdae0"),
                             Answer = 17f,
                             Difficulty = (byte)1,
                             Text = "11 + 6"
                         },
                         new
                         {
-                            Id = new Guid("ea4274ff-e4f2-494f-95de-33f3c10e01e1"),
+                            Id = new Guid("ad214681-226d-404e-8638-72c239566104"),
                             Answer = 18f,
                             Difficulty = (byte)1,
                             Text = "11 + 7"
                         },
                         new
                         {
-                            Id = new Guid("afa665e3-5a71-42b0-b66c-8c3059885be7"),
+                            Id = new Guid("154c24c1-5ac7-43f7-a638-d7e02e60ae0c"),
                             Answer = 19f,
                             Difficulty = (byte)1,
                             Text = "11 + 8"
                         },
                         new
                         {
-                            Id = new Guid("2d60e7ab-139e-4952-a660-c85812de0037"),
+                            Id = new Guid("20df3a02-3a72-45e7-b4ac-58727daef0cf"),
                             Answer = 20f,
                             Difficulty = (byte)1,
                             Text = "11 + 9"
                         },
                         new
                         {
-                            Id = new Guid("70ab0c12-7623-468d-9eca-6615f52bcc0e"),
+                            Id = new Guid("1ef5f07a-1392-478a-bcad-cf9fcc010118"),
                             Answer = 21f,
                             Difficulty = (byte)1,
                             Text = "11 + 10"
                         },
                         new
                         {
-                            Id = new Guid("3c9a0bae-9839-46b9-84f4-1bc8f250df9b"),
+                            Id = new Guid("67338c1c-029b-4131-9432-62d41488e16b"),
                             Answer = 22f,
                             Difficulty = (byte)1,
                             Text = "11 + 11"
                         },
                         new
                         {
-                            Id = new Guid("0a6c6b21-da6a-4408-8790-ef3093174343"),
+                            Id = new Guid("e349feca-ca6d-41e1-ad85-68ee3ad22591"),
                             Answer = 23f,
                             Difficulty = (byte)1,
                             Text = "11 + 12"
                         },
                         new
                         {
-                            Id = new Guid("632e90ca-ff86-495c-86a8-532218786a85"),
+                            Id = new Guid("8df802b3-6c55-4c12-bfb5-1f66eaa7f30e"),
                             Answer = 24f,
                             Difficulty = (byte)1,
                             Text = "11 + 13"
                         },
                         new
                         {
-                            Id = new Guid("3645d300-86b9-4c45-9308-3434b6940840"),
+                            Id = new Guid("c19cbd73-511f-4fea-bad7-58f92957ab95"),
                             Answer = 25f,
                             Difficulty = (byte)1,
                             Text = "11 + 14"
                         },
                         new
                         {
-                            Id = new Guid("fd079104-426b-4fa9-9f1f-e0caae940cb9"),
+                            Id = new Guid("f1ffcfcb-0aa8-4301-a9b5-0501421c7bab"),
                             Answer = 12f,
                             Difficulty = (byte)1,
                             Text = "12 + 0"
                         },
                         new
                         {
-                            Id = new Guid("bbfdd738-6e48-4286-990f-d62f124ed9ec"),
+                            Id = new Guid("2f73753e-5eea-4f7b-a0ae-2243bf696823"),
                             Answer = 13f,
                             Difficulty = (byte)1,
                             Text = "12 + 1"
                         },
                         new
                         {
-                            Id = new Guid("d8f40887-a923-45d0-8325-aaedd9145ce2"),
+                            Id = new Guid("a1ad4adf-b9fe-451b-b171-23ab31c5731d"),
                             Answer = 14f,
                             Difficulty = (byte)1,
                             Text = "12 + 2"
                         },
                         new
                         {
-                            Id = new Guid("401da26e-20c0-4efa-b32b-36e1255c9bd8"),
+                            Id = new Guid("d756dfdf-90b0-4c4a-8ef8-d8692e8c4891"),
                             Answer = 15f,
                             Difficulty = (byte)1,
                             Text = "12 + 3"
                         },
                         new
                         {
-                            Id = new Guid("087cd2bc-c9ed-4477-8a9f-30a978217dc9"),
+                            Id = new Guid("52ecc2a6-7183-4aa6-bfa3-e28010d4c7c6"),
                             Answer = 16f,
                             Difficulty = (byte)1,
                             Text = "12 + 4"
                         },
                         new
                         {
-                            Id = new Guid("90f69b80-744d-4021-a15d-125c2dd92baa"),
+                            Id = new Guid("4482d0dc-8b35-40d5-8550-bde8f40733ed"),
                             Answer = 17f,
                             Difficulty = (byte)1,
                             Text = "12 + 5"
                         },
                         new
                         {
-                            Id = new Guid("3620f831-6214-4dd3-84be-1eeace1def8d"),
+                            Id = new Guid("3081bd52-2094-4fa9-9eb0-571d3ff1d375"),
                             Answer = 18f,
                             Difficulty = (byte)1,
                             Text = "12 + 6"
                         },
                         new
                         {
-                            Id = new Guid("54263f95-4176-4c2d-a02b-2bb9ed3c8c07"),
+                            Id = new Guid("4b5b8930-ede0-4dbc-94c9-ddcf7e799987"),
                             Answer = 19f,
                             Difficulty = (byte)1,
                             Text = "12 + 7"
                         },
                         new
                         {
-                            Id = new Guid("a161510b-d528-4a07-81f7-56928c34df6f"),
+                            Id = new Guid("8ddcc778-83cc-4d22-9fb1-8298659f21c6"),
                             Answer = 20f,
                             Difficulty = (byte)1,
                             Text = "12 + 8"
                         },
                         new
                         {
-                            Id = new Guid("6affb8de-7809-4b84-a851-120f071c413a"),
+                            Id = new Guid("cbd3d830-9bc9-4f2a-937d-4b0bfa9154a3"),
                             Answer = 21f,
                             Difficulty = (byte)1,
                             Text = "12 + 9"
                         },
                         new
                         {
-                            Id = new Guid("c369bcaa-6479-44eb-a0d5-59a745e7c64a"),
+                            Id = new Guid("2f35c43a-f4ec-4ac7-9e9e-16b70518825b"),
                             Answer = 22f,
                             Difficulty = (byte)1,
                             Text = "12 + 10"
                         },
                         new
                         {
-                            Id = new Guid("72b458b2-8105-432f-aebf-f601e0dbd883"),
+                            Id = new Guid("a7373afc-4041-4d40-8a92-0fe636ad7125"),
                             Answer = 23f,
                             Difficulty = (byte)1,
                             Text = "12 + 11"
                         },
                         new
                         {
-                            Id = new Guid("ee5e7b3d-bb22-4c43-91ff-6f79d02903e1"),
+                            Id = new Guid("70c89ed5-f0ff-4aea-9d29-761cab29bb88"),
                             Answer = 24f,
                             Difficulty = (byte)1,
                             Text = "12 + 12"
                         },
                         new
                         {
-                            Id = new Guid("267e64eb-732d-4544-9567-02ad294fb70a"),
+                            Id = new Guid("23c2db07-b421-4c82-8d8d-70d463658215"),
                             Answer = 25f,
                             Difficulty = (byte)1,
                             Text = "12 + 13"
                         },
                         new
                         {
-                            Id = new Guid("f73a1309-6dd5-45c8-997e-a9551307fce2"),
+                            Id = new Guid("cb73eb84-47d7-422e-bcf0-7b2b1f364183"),
                             Answer = 26f,
                             Difficulty = (byte)1,
                             Text = "12 + 14"
                         },
                         new
                         {
-                            Id = new Guid("c0378efd-fb69-4b89-9f81-fe36dc49ca2b"),
+                            Id = new Guid("56b8744c-45ac-471c-8ada-b2d1d18521f6"),
                             Answer = 13f,
                             Difficulty = (byte)1,
                             Text = "13 + 0"
                         },
                         new
                         {
-                            Id = new Guid("fe74be95-714c-4929-9c25-2d3d7d9f2d30"),
+                            Id = new Guid("e511368c-5109-4fa8-acfe-6bd287672510"),
                             Answer = 14f,
                             Difficulty = (byte)1,
                             Text = "13 + 1"
                         },
                         new
                         {
-                            Id = new Guid("4a41ba29-c385-4f5a-81cc-067fa85b9e32"),
+                            Id = new Guid("75a895f9-a65f-41e0-9fd3-b14535804f1d"),
                             Answer = 15f,
                             Difficulty = (byte)1,
                             Text = "13 + 2"
                         },
                         new
                         {
-                            Id = new Guid("0f700204-79b2-4bc3-b5c6-238809f34508"),
+                            Id = new Guid("0985d3c7-d227-4bbf-ad11-845ff6840530"),
                             Answer = 16f,
                             Difficulty = (byte)1,
                             Text = "13 + 3"
                         },
                         new
                         {
-                            Id = new Guid("9c2d7d45-4dff-4f28-9819-9f8486fd8b69"),
+                            Id = new Guid("ff3fabb2-c3b4-4b41-8c94-102c82b15ea7"),
                             Answer = 17f,
                             Difficulty = (byte)1,
                             Text = "13 + 4"
                         },
                         new
                         {
-                            Id = new Guid("ce3bd767-4686-478f-a87d-f22be36b294c"),
+                            Id = new Guid("60302a2e-53b3-45ee-8937-d15f4426d160"),
                             Answer = 18f,
                             Difficulty = (byte)1,
                             Text = "13 + 5"
                         },
                         new
                         {
-                            Id = new Guid("2396c93d-900f-46dc-9482-7f77a7481b2c"),
+                            Id = new Guid("0830dc1e-e47b-485f-a6ea-acc245827dd7"),
                             Answer = 19f,
                             Difficulty = (byte)1,
                             Text = "13 + 6"
                         },
                         new
                         {
-                            Id = new Guid("de5e9b50-2113-4a2e-b66f-47623795c7b4"),
+                            Id = new Guid("59a14c83-8deb-44bf-b91c-f5c80227924f"),
                             Answer = 20f,
                             Difficulty = (byte)1,
                             Text = "13 + 7"
                         },
                         new
                         {
-                            Id = new Guid("9f3a9956-67b5-482b-8926-8bebfd20ff08"),
+                            Id = new Guid("a6f1d5a8-2938-423c-b7ca-781c990012c4"),
                             Answer = 21f,
                             Difficulty = (byte)1,
                             Text = "13 + 8"
                         },
                         new
                         {
-                            Id = new Guid("8804ac63-ed0b-4c22-af40-781e00d09162"),
+                            Id = new Guid("45ff3123-3bbf-4563-881b-40d9b2e85819"),
                             Answer = 22f,
                             Difficulty = (byte)1,
                             Text = "13 + 9"
                         },
                         new
                         {
-                            Id = new Guid("0021beb8-c4e7-41f1-be58-313d458cff7c"),
+                            Id = new Guid("71426c32-92a9-4458-8abf-ef99d5b6db16"),
                             Answer = 23f,
                             Difficulty = (byte)1,
                             Text = "13 + 10"
                         },
                         new
                         {
-                            Id = new Guid("c0f6acc6-704c-4d9c-88ac-2933b1b784fb"),
+                            Id = new Guid("136b9622-3c1e-49f1-b7ff-751dca58263b"),
                             Answer = 24f,
                             Difficulty = (byte)1,
                             Text = "13 + 11"
                         },
                         new
                         {
-                            Id = new Guid("a20a115c-ab86-42cb-a1cd-41122bcceb53"),
+                            Id = new Guid("26a36816-077b-467b-98b4-3a552ec545e8"),
                             Answer = 25f,
                             Difficulty = (byte)1,
                             Text = "13 + 12"
                         },
                         new
                         {
-                            Id = new Guid("d169aaff-34a4-4f10-80b7-c3aa16193b3d"),
+                            Id = new Guid("821eecbd-6b9b-4f0e-a081-0dd4bb8c84b4"),
                             Answer = 26f,
                             Difficulty = (byte)1,
                             Text = "13 + 13"
                         },
                         new
                         {
-                            Id = new Guid("a7c5b01a-3e66-41f3-8d28-56d7ef1fe7c2"),
+                            Id = new Guid("b596b0a4-a706-4ca6-ab34-9e793d898f86"),
                             Answer = 27f,
                             Difficulty = (byte)1,
                             Text = "13 + 14"
                         },
                         new
                         {
-                            Id = new Guid("74dda721-a63d-4e92-a079-5e3040e096a7"),
+                            Id = new Guid("5cb1ad6a-1e18-4786-8b14-e2a2e4ad791c"),
                             Answer = 14f,
                             Difficulty = (byte)1,
                             Text = "14 + 0"
                         },
                         new
                         {
-                            Id = new Guid("0d42663a-9025-426c-bb7a-0719e8ae8725"),
+                            Id = new Guid("cb6eb4f7-e044-43b0-9d4c-376f573c62e1"),
                             Answer = 15f,
                             Difficulty = (byte)1,
                             Text = "14 + 1"
                         },
                         new
                         {
-                            Id = new Guid("a85042a0-3bd7-4941-9caa-8afe76ddbe1c"),
+                            Id = new Guid("c795619e-8ac6-4744-b7fa-2ed1dfb4cbbe"),
                             Answer = 16f,
                             Difficulty = (byte)1,
                             Text = "14 + 2"
                         },
                         new
                         {
-                            Id = new Guid("4707f15f-f49f-4e21-8a1a-3881f8a2a788"),
+                            Id = new Guid("877397dc-edc3-4dc9-a5e4-fd8161f4d40f"),
                             Answer = 17f,
                             Difficulty = (byte)1,
                             Text = "14 + 3"
                         },
                         new
                         {
-                            Id = new Guid("29db99e4-0200-432f-a9a2-cf518f55ba14"),
+                            Id = new Guid("abf3c8ad-70cb-48a5-9a55-b35d7e2da12a"),
                             Answer = 18f,
                             Difficulty = (byte)1,
                             Text = "14 + 4"
                         },
                         new
                         {
-                            Id = new Guid("bff8533a-112f-4b3a-9c53-0374241d2775"),
+                            Id = new Guid("52e1be02-4de9-4d2e-b884-cb0ae54cdc42"),
                             Answer = 19f,
                             Difficulty = (byte)1,
                             Text = "14 + 5"
                         },
                         new
                         {
-                            Id = new Guid("ef0e398e-7c1d-4c41-be6f-cb8c63f783c2"),
+                            Id = new Guid("2e3950fc-ef00-47c7-b663-44609b740056"),
                             Answer = 20f,
                             Difficulty = (byte)1,
                             Text = "14 + 6"
                         },
                         new
                         {
-                            Id = new Guid("76946252-ca24-452f-9d92-c00c3a819b4e"),
+                            Id = new Guid("3cb2ea57-5510-46f6-8d01-a926d4fecca8"),
                             Answer = 21f,
                             Difficulty = (byte)1,
                             Text = "14 + 7"
                         },
                         new
                         {
-                            Id = new Guid("25dd1827-06d4-4614-850a-bbdfedb4c8e3"),
+                            Id = new Guid("65652316-515d-4f62-adc3-68cab828d9ca"),
                             Answer = 22f,
                             Difficulty = (byte)1,
                             Text = "14 + 8"
                         },
                         new
                         {
-                            Id = new Guid("2d9c2396-053f-41b8-89e2-94cea7f88138"),
+                            Id = new Guid("90c0b619-e562-46bf-bad9-55d1981e282c"),
                             Answer = 23f,
                             Difficulty = (byte)1,
                             Text = "14 + 9"
                         },
                         new
                         {
-                            Id = new Guid("8eefd17a-d2e4-4a11-9b8b-14c0191ad4bb"),
+                            Id = new Guid("50e693d3-9236-44b0-92fa-efb0465148ec"),
                             Answer = 24f,
                             Difficulty = (byte)1,
                             Text = "14 + 10"
                         },
                         new
                         {
-                            Id = new Guid("042dcb97-02f7-4aef-af6b-6710ab102295"),
+                            Id = new Guid("217482c6-8bc9-48d5-af0c-e416e05ed838"),
                             Answer = 25f,
                             Difficulty = (byte)1,
                             Text = "14 + 11"
                         },
                         new
                         {
-                            Id = new Guid("eb7e4478-6d63-45fa-9501-8c7d1bab0dab"),
+                            Id = new Guid("e26b0747-0aac-4995-83af-bbfc43dccfdd"),
                             Answer = 26f,
                             Difficulty = (byte)1,
                             Text = "14 + 12"
                         },
                         new
                         {
-                            Id = new Guid("6638699e-12ce-433b-a37b-be3cea54ea52"),
+                            Id = new Guid("626de15a-339b-41c3-a4da-93eee12941e2"),
                             Answer = 27f,
                             Difficulty = (byte)1,
                             Text = "14 + 13"
                         },
                         new
                         {
-                            Id = new Guid("1db1e2ab-3da9-49ec-aa48-be653baa5a3a"),
+                            Id = new Guid("11cb8584-5291-4bfb-8d48-008e12c2331b"),
                             Answer = 28f,
                             Difficulty = (byte)1,
                             Text = "14 + 14"
                         },
                         new
                         {
-                            Id = new Guid("5eb4b6bf-8c08-4887-bf95-6e362e4e6742"),
+                            Id = new Guid("6ba8e87e-c9ed-458f-ac1d-40800197d764"),
                             Answer = 15f,
                             Difficulty = (byte)1,
                             Text = "15 + 0"
                         },
                         new
                         {
-                            Id = new Guid("a5763413-3202-4654-9861-2ae34ee10027"),
+                            Id = new Guid("94d1dcb3-4ed8-4df1-aca7-870343b3427c"),
                             Answer = 16f,
                             Difficulty = (byte)1,
                             Text = "15 + 1"
                         },
                         new
                         {
-                            Id = new Guid("8f89201e-ed9b-4e8e-8764-a080c4bd8618"),
+                            Id = new Guid("04ea0cf2-551d-47c5-bf06-12396270bdb7"),
                             Answer = 17f,
                             Difficulty = (byte)1,
                             Text = "15 + 2"
                         },
                         new
                         {
-                            Id = new Guid("0d435ecd-781a-4a62-b17e-060aa9e89d52"),
+                            Id = new Guid("021f7f23-b575-4237-a37b-6518173932d5"),
                             Answer = 18f,
                             Difficulty = (byte)1,
                             Text = "15 + 3"
                         },
                         new
                         {
-                            Id = new Guid("af2376b6-be99-4768-b563-e7b146956e1e"),
+                            Id = new Guid("cc254121-e2f8-4ffd-83bf-5b7178e684f1"),
                             Answer = 19f,
                             Difficulty = (byte)1,
                             Text = "15 + 4"
                         },
                         new
                         {
-                            Id = new Guid("9a396456-c1b4-4a1f-b582-272e974b2d01"),
+                            Id = new Guid("be4e21a1-02fa-48f5-8c12-ae4e0a5264a6"),
                             Answer = 20f,
                             Difficulty = (byte)1,
                             Text = "15 + 5"
                         },
                         new
                         {
-                            Id = new Guid("601b105a-5305-4e2b-adf0-ba674ee59f22"),
+                            Id = new Guid("5a5864f4-7ae0-4cc3-9fad-caa83ab16207"),
                             Answer = 21f,
                             Difficulty = (byte)1,
                             Text = "15 + 6"
                         },
                         new
                         {
-                            Id = new Guid("c44e6dd1-1e30-412a-bc4c-9efe31633961"),
+                            Id = new Guid("433b6b14-2481-4976-9e69-9d9a591c8d50"),
                             Answer = 22f,
                             Difficulty = (byte)1,
                             Text = "15 + 7"
                         },
                         new
                         {
-                            Id = new Guid("07a01b9d-73e2-4874-8307-4e919925a021"),
+                            Id = new Guid("24d562bb-c89a-4d39-8bfc-1b4943de9b6d"),
                             Answer = 23f,
                             Difficulty = (byte)1,
                             Text = "15 + 8"
                         },
                         new
                         {
-                            Id = new Guid("a7ba5998-c1be-44f4-a9b7-55d38d1a50c3"),
+                            Id = new Guid("8f84ec6a-321e-4e2a-9722-c58091801a48"),
                             Answer = 24f,
                             Difficulty = (byte)1,
                             Text = "15 + 9"
                         },
                         new
                         {
-                            Id = new Guid("f4e95a7d-0baa-4f16-8956-a5a03845c188"),
+                            Id = new Guid("efeb539d-e5d3-4fcb-a362-ca1440671a2a"),
                             Answer = 25f,
                             Difficulty = (byte)1,
                             Text = "15 + 10"
                         },
                         new
                         {
-                            Id = new Guid("14a08b93-5dd4-4638-a9b0-3dd6b44f4280"),
+                            Id = new Guid("2f9a101e-25f4-4d65-959d-99c692930067"),
                             Answer = 26f,
                             Difficulty = (byte)1,
                             Text = "15 + 11"
                         },
                         new
                         {
-                            Id = new Guid("f3d2e63c-82a3-4443-a400-3389bb6013ba"),
+                            Id = new Guid("796cfe00-9431-4f44-ab11-cadbfeb95a94"),
                             Answer = 27f,
                             Difficulty = (byte)1,
                             Text = "15 + 12"
                         },
                         new
                         {
-                            Id = new Guid("17fa71b2-90b5-414d-ae3a-a6cfc9a010e6"),
+                            Id = new Guid("1bf42073-ed27-4cbe-b676-c1ea547f2cde"),
                             Answer = 28f,
                             Difficulty = (byte)1,
                             Text = "15 + 13"
                         },
                         new
                         {
-                            Id = new Guid("f88531a1-d8f9-4604-8069-cc15554e5136"),
+                            Id = new Guid("5ab79744-0786-432f-8ca6-7d0cbfb35421"),
                             Answer = 29f,
                             Difficulty = (byte)1,
                             Text = "15 + 14"
@@ -1679,34 +1679,34 @@ namespace JavaHateBE.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("ad58bdfa-08ef-4d5f-9586-db38aa760b29"),
+                            Id = new Guid("fe689ef8-8df3-4d33-94ca-f3b1a1fa23ad"),
                             Email = "david@example.com",
-                            LastLogin = new DateTime(2024, 9, 29, 15, 15, 41, 526, DateTimeKind.Local).AddTicks(9330),
-                            Password = "hDsfwOAXof+bpLnjwmUOmlrv+S/Pyj2sNBqw/A8MigqL8vDegwzFYAQ1XwaDIysn",
+                            LastLogin = new DateTime(2024, 9, 29, 16, 45, 47, 559, DateTimeKind.Local).AddTicks(6300),
+                            Password = "lky7elm96TArktWcrsc/BnahSZ8Rn2WMV5tYbjmSLLzyxuJYmxJEyTDp9UtHo0A8",
                             Username = "David"
                         },
                         new
                         {
-                            Id = new Guid("4fdb1c13-cb50-4f5b-817d-bfa1585dfb3a"),
+                            Id = new Guid("b2b25912-86eb-439f-93ce-c6fb7171caa9"),
                             Email = "robbe@example.com",
-                            LastLogin = new DateTime(2024, 9, 29, 15, 15, 41, 543, DateTimeKind.Local).AddTicks(3210),
-                            Password = "FaH4gMkcI9AMxXvA9fvk0RMWw+DgQFd/TusEC1fFCGJttAs/LW38LmSlJvjEQlZ3",
+                            LastLogin = new DateTime(2024, 9, 29, 16, 45, 47, 576, DateTimeKind.Local).AddTicks(460),
+                            Password = "1A1qLT9m0ODKsyYkqWChw/OJlAucTQLhcvXGobw41vDwoXMt6jTOeGsPmKw9NYKt",
                             Username = "Robbe"
                         },
                         new
                         {
-                            Id = new Guid("caaf7590-48f7-4f28-8946-93523d75b4b3"),
+                            Id = new Guid("ef118dba-27b0-4113-9145-c1ed7da4fdc1"),
                             Email = "valdemar@example.com",
-                            LastLogin = new DateTime(2024, 9, 29, 15, 15, 41, 559, DateTimeKind.Local).AddTicks(5120),
-                            Password = "4avSMEsq5v8nfYUOXZAH+r3pOc5m0tm4KXMOpKGTFN3xTNP/8muv4NsW5YFKdPTz",
+                            LastLogin = new DateTime(2024, 9, 29, 16, 45, 47, 592, DateTimeKind.Local).AddTicks(9810),
+                            Password = "z3i6oB6C0WHzqQ42fwEhlZgcOKI0cJZr2G4P3kZyX2AV3e68Ktu6QMZQZo1Wxdry",
                             Username = "Valdemar"
                         },
                         new
                         {
-                            Id = new Guid("074e31b0-034c-4152-b4f8-d87561fccd27"),
+                            Id = new Guid("1d352f3c-f683-4d8f-80fd-58e22274e450"),
                             Email = "matas@example.com",
-                            LastLogin = new DateTime(2024, 9, 29, 15, 15, 41, 575, DateTimeKind.Local).AddTicks(9780),
-                            Password = "yEzEocUc0nSqIwt38hAx8x4PffSEIAhyUNpivHuM7RYN0you3SfpsdDe6kSLOiiE",
+                            LastLogin = new DateTime(2024, 9, 29, 16, 45, 47, 609, DateTimeKind.Local).AddTicks(6460),
+                            Password = "7/tcPZ0ilHja0bm9c0d4cUTzJrqLv5exZxBuceBjQmB7RokvFDwSTMzpamSgnbPv",
                             Username = "Matas"
                         });
                 });
@@ -1715,8 +1715,9 @@ namespace JavaHateBE.Migrations
                 {
                     b.HasOne("JavaHateBE.model.User", "Gamer")
                         .WithMany("Games")
-                        .HasForeignKey("GamerId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Gamer");
                 });
