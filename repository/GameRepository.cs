@@ -3,59 +3,74 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using JavaHateBE.model;
+using Microsoft.EntityFrameworkCore;
 
 namespace JavaHateBE.repository
 {
     public class GameRepository
     {
-        public List<Game> gameList { get; private set; } = new List<Game>();
+        private readonly SampleDBContext _context;
 
-        public GameRepository() { }
+        public GameRepository(SampleDBContext context)
+        {
+            _context = context;
+        }
 
         public async Task<Game> AddGame(Game game) {
-            gameList.Add(game);
-            return await Task.FromResult(game);
+            await _context.Games.AddAsync(game);
+            await _context.SaveChangesAsync();
+            return game;
         }
 
         public async Task<Game?> RemoveGame(Guid id) {
-            Game? game = await GetGameById(id);
+            var game = await GetGameById(id);
             if (game != null) {
-                gameList.Remove(game);
+                _context.Games.Remove(game);
+                await _context.SaveChangesAsync();
             }
-            return await Task.FromResult(game);
+            return game;
         }
 
         public async Task<Game?> GetGameById(Guid id) {
-            return await Task.FromResult(gameList.FirstOrDefault(game => game.Id == id));
+            return await _context.Games.FindAsync(id);
         }
 
         public async Task<List<Game>> GetAllGames() {
-            return await Task.FromResult(gameList);
+            return await _context.Games.ToListAsync();
         }
 
         public async Task<List<Game>> GetGamesByUser(Guid userId) {
-            return await Task.FromResult(gameList.Where(game => game.Gamer.Id == userId).ToList());
+            return await _context.Games.Where(game => game.Gamer != null && game.Gamer.Id == userId).ToListAsync();
         }
 
         public async Task<List<Game>> GetGamesByUserByGameMode(Guid userId, GameMode gameMode) {
-            return await Task.FromResult(gameList.Where(game => game.Gamer.Id == userId && game.GameMode == gameMode).ToList());
+            return await _context.Games.Where(game => game.Gamer != null && game.Gamer.Id == userId && game.GameMode == gameMode).ToListAsync();
         }
 
         public async Task<List<Game>> GetGamesByGameMode(GameMode gameMode) {
-            return await Task.FromResult(gameList.Where(game => game.GameMode == gameMode).ToList());
+            return await _context.Games.Where(game => game.GameMode == gameMode).ToListAsync();
         }
 
         public async Task<Game?> UpdateGame(Game game) {
-            Game? gameToUpdate = await GetGameById(game.Id);
-            if (gameToUpdate != null) {
-                gameToUpdate.updateEndTime(game.endTime);
-                gameToUpdate.updateGameMode(game.GameMode);
-                gameToUpdate.updateGamer(game.Gamer);
-                gameToUpdate.updateQuestions(game.Questions);
-                gameToUpdate.updateScore(game.Score);
-                gameToUpdate.updateStartTime(game.startTime);
+            Game? existingGame = await GetGameById(game.Id);
+            if (existingGame == null)
+            {
+                return null;
             }
-            return await Task.FromResult(gameToUpdate);
+
+            existingGame.updateEndTime(game.endTime);
+            existingGame.updateGameMode(game.GameMode);
+            existingGame.updateQuestions(game.Questions);
+            existingGame.updateScore(game.Score);
+            existingGame.updateStartTime(game.startTime);
+            if (game.Gamer != null) {
+                existingGame.updateGamer(game.Gamer);
+            }
+            
+            _context.Games.Update(existingGame);
+            await _context.SaveChangesAsync();
+            
+            return existingGame;
         }
         
     }

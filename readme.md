@@ -6,7 +6,12 @@ Welcome to the JavaHate Back-End API! This is a simple project built using **ASP
 
 1. Clone the repository.
 2. Open the project in your preferred IDE.
-3. Run the application using the .NET CLI:
+3. Update the database using the .NET CLI:
+
+    ```bash
+    dotnet ef database update
+    ```
+4. Run the application using the .NET CLI:
 
     ```bash
     dotnet run

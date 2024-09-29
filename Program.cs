@@ -1,4 +1,6 @@
 using JavaHateBE.util;
+using JavaHateBE.model;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,7 @@ builder.Services.AddSwaggerGen();
 //defined in util/DependencyInjections.cs
 builder.Services.AddCustomServices();
 
+builder.Services.AddDbContext<SampleDBContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
