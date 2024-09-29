@@ -44,7 +44,7 @@ namespace JavaHateBE.model
 
         public bool IsPasswordCorrect(string password)
         {
-            return PasswordHasher.VerifyPassword(password, Password);
+            return PasswordHasher.VerifyPassword(password: password, hashedPassword: Password);
         }
 
         public void AddGame(Game game)

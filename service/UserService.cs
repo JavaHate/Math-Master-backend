@@ -1,6 +1,7 @@
 ﻿using JavaHateBE.exceptions;
 using JavaHateBE.model;
 using JavaHateBE.repository;
+using JavaHateBE.model.DTOs;
 
 namespace JavaHateBE.service
 {
@@ -62,7 +63,7 @@ namespace JavaHateBE.service
         /// <param name="user">The user to create.</param>
         /// <returns>The created user.</returns>
         /// <exception cref="IllegalArgumentException">Thrown when a user with the same username or email already exists.</exception>
-        public async Task<User> CreateUser(User user)
+        public async Task<User> CreateUser(UserCreateInput user)
         {
             if (await _userRepository.GetUserByUsername(user.Username) != null)
             {

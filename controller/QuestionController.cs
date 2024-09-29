@@ -2,6 +2,7 @@ using JavaHateBE.exceptions;
 using JavaHateBE.model;
 using JavaHateBE.service;
 using Microsoft.AspNetCore.Mvc;
+using JavaHateBE.model.DTOs;
 
 namespace JavaHateBE.controller
 {
@@ -93,7 +94,7 @@ namespace JavaHateBE.controller
         }
 
         [HttpPost]
-        public async Task<ActionResult<Question>> AddQuestion([FromBody] Question question)
+        public async Task<ActionResult<Question>> AddQuestion([FromBody] QuestionCreateInput question)
         {
             try
             {
