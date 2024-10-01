@@ -206,27 +206,5 @@ namespace JavaHateBE.controller
                 return BadRequest(new Dictionary<string, string> { { "message", e.Message } });
             }
         }
-
-        [HttpGet("generate-problem")]
-        public ActionResult<object> GenerateProblem()
-        {
-            try
-            {
-                Random rand = new Random();
-                int num1 = rand.Next(1,11); //this also needs to be changed to a variable later on
-                int num2 = rand.Next(1,11);
-                string[] operators = {"+", "-", "*"};
-                string selectedOperator = operators [rand.Next(operators.Length)];
-
-                string problem = $"{num1} {selectedOperator} {num2}";
-
-                return Ok(new { problem });
-            }
-            catch (Exception e)
-            {
-                _logger.LogError(e, "Failed to generate a math problem.");
-                return BadRequest(new { message = "Error generating problem" });
-            }
-        }
     }
 }
