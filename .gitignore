@@ -91,6 +91,8 @@ Dockerfile.*
 *.ldf
 *.sqlite
 *.db
+*.db-shm
+*.db-wal
 
 # Rider-specific logs
 .idea/**/workspace.xml

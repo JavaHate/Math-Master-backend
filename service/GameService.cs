@@ -46,7 +46,10 @@ namespace JavaHateBE.service
         /// <returns>The added game.</returns>
         public async Task<Game> AddGame(Game game)
         {
-            await _userRepository.GetUserById(game.Gamer.Id);
+            if (game.Gamer != null)
+            {
+                await _userRepository.GetUserById(game.Gamer.Id);
+            }
             return await _GameRepository.AddGame(game);
         }
 
@@ -123,7 +126,11 @@ namespace JavaHateBE.service
         /// <exception cref="ObjectNotFoundException">Thrown when no user or game is found with the specified ID.</exception>
         public async Task<Game> UpdateGame(Game game)
         {
-            User? user = await _userRepository.GetUserById(game.Gamer.Id);
+            User? user = null;
+            if (game.Gamer != null)
+            {
+                user = await _userRepository.GetUserById(game.Gamer.Id);
+            }
             if (user == null)
             {
                 throw new ObjectNotFoundException("User", "No user found with that ID");

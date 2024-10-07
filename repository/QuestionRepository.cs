@@ -1,62 +1,61 @@
 using JavaHateBE.model;
+using Microsoft.EntityFrameworkCore;
 
 namespace JavaHateBE.repository{
     
     public class QuestionRepository {
-        public List<Question> Questions { get; private set; } = new List<Question>();
-        public QuestionRepository()
+        private readonly SampleDBContext _context;
+
+        public QuestionRepository(SampleDBContext context)
         {
-            for(int i = 1; i <= 15; i++)
-            {
-                for(int j = 0; j < 15; j++)
-                {
-                    Questions.Add(new Question($"{i} + {j}", i + j, 1));
-                }
-            }
+            _context = context;
         }
 
         public async Task<Question?> GetQuestionById(Guid id)
         {
-            return await Task.FromResult(Questions.Find(q => q.Id == id));
+            return await _context.Questions.FindAsync(id);
         }
 
         public async Task<IEnumerable<Question>> GetAllQuestions()
         {
-            return await Task.FromResult(Questions);
+            return await _context.Questions.ToListAsync();
         }
 
         public async Task<Question> AddQuestion(Question question)
         {
-            Questions.Add(question);
-            return await Task.FromResult(question);
+            await _context.Questions.AddAsync(question);
+            await _context.SaveChangesAsync();
+            return question;
         }
 
         public async Task<Question?> UpdateQuestion(Question question)
         {
-            Question? currentQuestion = await GetQuestionById(question.Id);
-            if (currentQuestion == null)
+            var existingQuestion = await GetQuestionById(question.Id);
+            if (existingQuestion == null)
             {
-                return await Task.FromResult(currentQuestion);
+                return null;
             }
-            currentQuestion.UpdateText(question.Text);
-            currentQuestion.UpdateAnswer(question.Answer);
-            return await Task.FromResult(question);
+            existingQuestion.UpdateText(question.Text);
+            existingQuestion.UpdateAnswer(question.Answer);
+            await _context.SaveChangesAsync();
+            return existingQuestion;
         }
 
         public async Task<Question?> DeleteQuestion(Guid id)
         {
-            Question? question = await GetQuestionById(id);
+            var question = await GetQuestionById(id);
             if (question == null)
             {
-                return await Task.FromResult(question);
+                return null;
             }
-            Questions.Remove(question);
-            return await Task.FromResult(question);
+            _context.Questions.Remove(question);
+            await _context.SaveChangesAsync();
+            return question;
         }
 
         public async Task<Question?> GetQuestionFromText(string text)
         {
-            return await Task.FromResult(Questions.Find(q => q.Text == text));
+            return await _context.Questions.FirstOrDefaultAsync(q => q.Text == text);
         }
     }
 }
