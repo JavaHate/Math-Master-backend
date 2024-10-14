@@ -16,11 +16,8 @@ namespace JavaHateBE.model
                entity.Property(g => g.Score).IsRequired();
                entity.Property(g => g.startTime).IsRequired();
                entity.Property(g => g.endTime).IsRequired();
-               entity.HasOne(g => g.Gamer)
-                     .WithMany(u => u.Games)
-                     .HasForeignKey("UserId")
-                     .OnDelete(DeleteBehavior.Cascade)
-                     .IsRequired();
+               entity.Property(g => g.endTime).IsRequired();
+               entity.Property(g => g.UserId).IsRequired();
                entity.HasMany(g => g.Questions);
            });
            modelBuilder.Entity<User>(entity =>

@@ -40,11 +40,11 @@ namespace JavaHateBE.repository
         }
 
         public async Task<List<Game>> GetGamesByUser(Guid userId) {
-            return await _context.Games.Where(game => game.Gamer != null && game.Gamer.Id == userId).ToListAsync();
+            return await _context.Games.Where(game => game.UserId == userId).ToListAsync();
         }
 
         public async Task<List<Game>> GetGamesByUserByGameMode(Guid userId, GameMode gameMode) {
-            return await _context.Games.Where(game => game.Gamer != null && game.Gamer.Id == userId && game.GameMode == gameMode).ToListAsync();
+            return await _context.Games.Where(game => game.UserId == userId && game.GameMode == gameMode).ToListAsync();
         }
 
         public async Task<List<Game>> GetGamesByGameMode(GameMode gameMode) {
@@ -63,9 +63,7 @@ namespace JavaHateBE.repository
             existingGame.updateQuestions(game.Questions);
             existingGame.updateScore(game.Score);
             existingGame.updateStartTime(game.startTime);
-            if (game.Gamer != null) {
-                existingGame.updateGamer(game.Gamer);
-            }
+            existingGame.updateUserId(game.UserId);
             
             _context.Games.Update(existingGame);
             await _context.SaveChangesAsync();

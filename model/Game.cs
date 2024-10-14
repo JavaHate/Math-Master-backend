@@ -2,16 +2,16 @@ namespace JavaHateBE.model
 {
     public class Game : IEquatable<Game> {
         public Guid Id { get; private set; } = Guid.NewGuid();
-        public GameMode GameMode { get; private set; }
-        public uint Score { get; private set; } = 0;
-        public DateTime startTime { get; private set; }
-        public DateTime endTime { get; private set; }
+        public GameMode GameMode { get; set; }  
+        public uint Score { get; set; } = 0;
+        public DateTime startTime { get; set; }
+        public DateTime endTime { get; set; }
         public List<Question> Questions { get; private set; } = new List<Question>();
-        public User? Gamer { get; private set; }
+        public Guid UserId { get; set; }
         
-        public Game(GameMode gameMode, User user) {
+        public Game(GameMode gameMode, Guid userId) {
             GameMode = gameMode;
-            Gamer = user;
+            UserId = userId;
         }
 
         public Game() { }
@@ -52,8 +52,8 @@ namespace JavaHateBE.model
             startTime = DateTime.Now;
         }
 
-        public void updateGamer(User user) {
-            Gamer = user;
+        public void updateUserId(Guid userId) {
+            UserId = userId;
         }
 
         public bool Equals(Game? other) {

@@ -46,10 +46,7 @@ namespace JavaHateBE.service
         /// <returns>The added game.</returns>
         public async Task<Game> AddGame(Game game)
         {
-            if (game.Gamer != null)
-            {
-                await _userRepository.GetUserById(game.Gamer.Id);
-            }
+            await _userRepository.GetUserById(game.UserId);
             return await _GameRepository.AddGame(game);
         }
 
@@ -127,10 +124,7 @@ namespace JavaHateBE.service
         public async Task<Game> UpdateGame(Game game)
         {
             User? user = null;
-            if (game.Gamer != null)
-            {
-                user = await _userRepository.GetUserById(game.Gamer.Id);
-            }
+            user = await _userRepository.GetUserById(game.UserId);
             if (user == null)
             {
                 throw new ObjectNotFoundException("User", "No user found with that ID");
@@ -158,7 +152,7 @@ namespace JavaHateBE.service
                 throw new ObjectNotFoundException("User", "No user found with that ID");
             }
             GameMode mode = Enum.Parse<GameMode>(gameMode, true);
-            Game game = new Game(mode, user);
+            Game game = new Game(mode, user.Id);
             return await _GameRepository.AddGame(game);
         }
     }
