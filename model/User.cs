@@ -54,7 +54,7 @@ namespace JavaHateBE.model
 
         public Game NewGame(GameMode gameMode)
         {
-            Game game = new Game(gameMode, this);
+            Game game = new Game(gameMode, Id);
             Games.Add(game);
             return game;
         }
