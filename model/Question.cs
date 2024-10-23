@@ -4,10 +4,10 @@ namespace JavaHateBE.Model
     {
         public Guid Id { get; set; } = Guid.NewGuid();
         public string Text { get; private set; }
-        public float Answer { get; private set; }
+        public double Answer { get; private set; }
         public byte Difficulty { get; private set; }
 
-        public Question(string text, float answer, byte difficulty = 1)
+        public Question(string text, double answer, byte difficulty = 1)
         {
             Text = text;
             Answer = answer;
@@ -19,7 +19,7 @@ namespace JavaHateBE.Model
             Text = text;
         }
 
-        public void UpdateAnswer(float answer)
+        public void UpdateAnswer(double answer)
         {
             Answer = answer;
         }
