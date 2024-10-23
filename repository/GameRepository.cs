@@ -9,9 +9,9 @@ namespace JavaHateBE.repository
 {
     public class GameRepository
     {
-        private readonly SampleDBContext _context;
+        private readonly MathMasterDBContext _context;
 
-        public GameRepository(SampleDBContext context)
+        public GameRepository(MathMasterDBContext context)
         {
             _context = context;
         }

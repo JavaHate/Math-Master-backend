@@ -5,9 +5,9 @@ namespace JavaHateBE.repository
 {
     public class UserRepository
     {
-        private readonly SampleDBContext _context;
+        private readonly MathMasterDBContext _context;
 
-        public UserRepository(SampleDBContext context)
+        public UserRepository(MathMasterDBContext context)
         {
             _context = context;
         }

@@ -13,7 +13,7 @@ builder.Services.AddSwaggerGen();
 //defined in util/DependencyInjections.cs
 builder.Services.AddCustomServices();
 
-builder.Services.AddDbContext<SampleDBContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<MathMasterDBContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 

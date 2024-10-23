@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 namespace JavaHateBE.repository{
     
     public class QuestionRepository {
-        private readonly SampleDBContext _context;
+        private readonly MathMasterDBContext _context;
 
-        public QuestionRepository(SampleDBContext context)
+        public QuestionRepository(MathMasterDBContext context)
         {
             _context = context;
         }
