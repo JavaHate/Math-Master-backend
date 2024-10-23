@@ -1,4 +1,4 @@
-namespace JavaHateBE.model
+namespace JavaHateBE.Model
 {
     public class Question : IEquatable<Question>
     {

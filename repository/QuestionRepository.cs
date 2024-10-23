@@ -1,8 +1,8 @@
 using JavaHateBE.Data;
-using JavaHateBE.model;
+using JavaHateBE.Model;
 using Microsoft.EntityFrameworkCore;
 
-namespace JavaHateBE.repository{
+namespace JavaHateBE.Repository{
     
     public class QuestionRepository {
         private readonly MathMasterDBContext _context;

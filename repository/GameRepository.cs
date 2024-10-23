@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using JavaHateBE.Data;
-using JavaHateBE.model;
+using JavaHateBE.Model;
 using Microsoft.EntityFrameworkCore;
 
-namespace JavaHateBE.repository
+namespace JavaHateBE.Repository
 {
     public class GameRepository
     {

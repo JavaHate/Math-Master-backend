@@ -1,4 +1,4 @@
-namespace JavaHateBE.model.DTOs
+namespace JavaHateBE.Model.DTOs
 {
     /// <summary>
     /// Data transfer object for question creation (Id should not be passed).

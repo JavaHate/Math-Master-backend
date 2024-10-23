@@ -1,10 +1,10 @@
-﻿using JavaHateBE.exceptions;
-using JavaHateBE.model;
-using JavaHateBE.model.DTOs;
-using JavaHateBE.service;
+﻿using JavaHateBE.Exceptions;
+using JavaHateBE.Model;
+using JavaHateBE.Model.DTOs;
+using JavaHateBE.Service;
 using Microsoft.AspNetCore.Mvc;
 
-namespace JavaHateBE.controller
+namespace JavaHateBE.Controller
 {
     [ApiController]
     [Route("user")]
@@ -166,5 +166,5 @@ namespace JavaHateBE.controller
         }
     }
 
-    
+
 }

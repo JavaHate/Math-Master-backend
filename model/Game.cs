@@ -1,4 +1,4 @@
-namespace JavaHateBE.model
+namespace JavaHateBE.Model
 {
     public class Game : IEquatable<Game> {
         public Guid Id { get; private set; } = Guid.NewGuid();

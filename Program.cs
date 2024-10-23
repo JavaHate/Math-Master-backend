@@ -1,4 +1,4 @@
-using JavaHateBE.util;
+using JavaHateBE.Util;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -6,7 +6,7 @@ using JavaHateBE.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers().AddJsonOptions(options => {options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter(JsonNamingPolicy.CamelCase));});
+builder.Services.AddControllers().AddJsonOptions(options => { options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter(JsonNamingPolicy.CamelCase)); });
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

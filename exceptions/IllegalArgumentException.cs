@@ -1,4 +1,4 @@
-namespace JavaHateBE.exceptions
+namespace JavaHateBE.Exceptions
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="IllegalArgumentException"/> class with a specified 
