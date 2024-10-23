@@ -2,9 +2,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace JavaHateBE.model
 {
-     public partial class SampleDBContext : DbContext
+     public partial class MathMasterDBContext : DbContext
      {
-       public SampleDBContext(DbContextOptions <SampleDBContext> options) : base(options) {}
+       public MathMasterDBContext(DbContextOptions <MathMasterDBContext> options) : base(options) {}
        public virtual DbSet<Game> Games { get; set; }
        public virtual DbSet<User> Users { get; set; }
        public virtual DbSet<Question> Questions { get; set; }
