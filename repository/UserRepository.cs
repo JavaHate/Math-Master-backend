@@ -1,4 +1,5 @@
-﻿using JavaHateBE.model;
+﻿using JavaHateBE.Data;
+using JavaHateBE.model;
 using Microsoft.EntityFrameworkCore;
 
 namespace JavaHateBE.repository

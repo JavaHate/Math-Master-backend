@@ -1,8 +1,8 @@
 using JavaHateBE.util;
-using JavaHateBE.model;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using JavaHateBE.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

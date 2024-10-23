@@ -791,5 +791,6 @@
     {"Text":"15+15", "Answer": 30, "Difficulty": 1},
     {"Text":"15-15", "Answer": 0, "Difficulty": 1},
     {"Text":"15*15", "Answer": 225, "Difficulty": 1},
-    {"Text":"15/15", "Answer": 1, "Difficulty": 1}
+    {"Text":"15/15", "Answer": 1, "Difficulty": 1},
+    {"Text":"16+1","Answer":17,"Difficulty":1}
 ]

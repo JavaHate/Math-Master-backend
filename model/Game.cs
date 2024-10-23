@@ -4,8 +4,8 @@ namespace JavaHateBE.model
         public Guid Id { get; private set; } = Guid.NewGuid();
         public GameMode GameMode { get; set; }  
         public uint Score { get; set; } = 0;
-        public DateTime startTime { get; set; }
-        public DateTime endTime { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
         public List<Question> Questions { get; private set; } = new List<Question>();
         public Guid UserId { get; set; }
         
@@ -25,11 +25,11 @@ namespace JavaHateBE.model
         }
 
         public void updateEndTime() {
-            endTime = DateTime.Now;
+            EndTime = DateTime.Now;
         }
 
         public void updateEndTime(DateTime time) {
-            endTime = time;
+            StartTime = time;
         }
 
         public void updateScore(uint score) {
@@ -45,11 +45,11 @@ namespace JavaHateBE.model
         }
 
         public void updateStartTime(DateTime time) {
-            startTime = time;
+            StartTime = time;
         }
 
         public void updateStartTime() {
-            startTime = DateTime.Now;
+            StartTime = DateTime.Now;
         }
 
         public void updateUserId(Guid userId) {

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using JavaHateBE.Data;
 using JavaHateBE.model;
 using Microsoft.EntityFrameworkCore;
 
@@ -58,11 +59,11 @@ namespace JavaHateBE.repository
                 return null;
             }
 
-            existingGame.updateEndTime(game.endTime);
+            existingGame.updateEndTime(game.EndTime);
             existingGame.updateGameMode(game.GameMode);
             existingGame.updateQuestions(game.Questions);
             existingGame.updateScore(game.Score);
-            existingGame.updateStartTime(game.startTime);
+            existingGame.updateStartTime(game.StartTime);
             existingGame.updateUserId(game.UserId);
             
             _context.Games.Update(existingGame);

@@ -1,4 +1,4 @@
-namespace JavaHateBE.Data
+namespace JavaHateBE.Data.JsonTransformers
 {
     public struct UserData
     {

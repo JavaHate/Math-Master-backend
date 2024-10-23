@@ -1,3 +1,4 @@
+using JavaHateBE.Data;
 using JavaHateBE.model;
 using Microsoft.EntityFrameworkCore;
 
