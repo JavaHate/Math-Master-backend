@@ -1,6 +1,6 @@
 ﻿using System.Security.Cryptography;
 
-namespace JavaHateBE.util
+namespace JavaHateBE.Util
 {
     /// <summary>
     /// Provides methods for hashing and verifying passwords.

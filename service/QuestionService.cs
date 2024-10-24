@@ -1,12 +1,12 @@
-namespace JavaHateBE.service
+namespace JavaHateBE.Service
 {
     using System;
     using System.Collections.Generic;
-    using JavaHateBE.model;
-    using JavaHateBE.repository;
-    using JavaHateBE.exceptions;
-    using JavaHateBE.model.DTOs;
-    using JavaHateBE.extensions;
+    using JavaHateBE.Model;
+    using JavaHateBE.Repository;
+    using JavaHateBE.Exceptions;
+    using JavaHateBE.Model.DTOs;
+    using JavaHateBE.Extensions;
 
     /// <summary>
     /// Provides services for managing questions.

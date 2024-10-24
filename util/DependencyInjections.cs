@@ -1,7 +1,7 @@
-using JavaHateBE.repository;
-using JavaHateBE.service;
+using JavaHateBE.Repository;
+using JavaHateBE.Service;
 
-namespace JavaHateBE.util
+namespace JavaHateBE.Util
 {
     public static class DependencyInjections
     {

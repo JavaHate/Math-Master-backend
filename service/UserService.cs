@@ -1,9 +1,9 @@
-﻿using JavaHateBE.exceptions;
-using JavaHateBE.model;
-using JavaHateBE.repository;
-using JavaHateBE.model.DTOs;
+﻿using JavaHateBE.Exceptions;
+using JavaHateBE.Model;
+using JavaHateBE.Repository;
+using JavaHateBE.Model.DTOs;
 
-namespace JavaHateBE.service
+namespace JavaHateBE.Service
 {
     /// <summary>
     /// Provides services for managing users.

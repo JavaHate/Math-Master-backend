@@ -1,13 +1,14 @@
-﻿using JavaHateBE.model;
+﻿using JavaHateBE.Data;
+using JavaHateBE.Model;
 using Microsoft.EntityFrameworkCore;
 
-namespace JavaHateBE.repository
+namespace JavaHateBE.Repository
 {
     public class UserRepository
     {
-        private readonly SampleDBContext _context;
+        private readonly MathMasterDBContext _context;
 
-        public UserRepository(SampleDBContext context)
+        public UserRepository(MathMasterDBContext context)
         {
             _context = context;
         }

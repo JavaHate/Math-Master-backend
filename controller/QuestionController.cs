@@ -1,10 +1,10 @@
-using JavaHateBE.exceptions;
-using JavaHateBE.model;
-using JavaHateBE.service;
+using JavaHateBE.Exceptions;
+using JavaHateBE.Model;
+using JavaHateBE.Service;
 using Microsoft.AspNetCore.Mvc;
-using JavaHateBE.model.DTOs;
+using JavaHateBE.Model.DTOs;
 
-namespace JavaHateBE.controller
+namespace JavaHateBE.Controller
 {
     [ApiController]
     [Route("question")]

@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using JavaHateBE.exceptions;
-using JavaHateBE.model;
-using JavaHateBE.repository;
+using JavaHateBE.Exceptions;
+using JavaHateBE.Model;
+using JavaHateBE.Repository;
 
-namespace JavaHateBE.service
+namespace JavaHateBE.Service
 {
     /// <summary>
     /// Provides services for managing games.
