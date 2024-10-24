@@ -45,13 +45,15 @@ namespace JavaHateBE.Data
 
         private static T ReadJsonFile<T>(string filePath)
         {
-            var jsonString = File.ReadAllText(filePath);
-            var result = JsonSerializer.Deserialize<T>(jsonString);
-            if (result == null)
+            using (var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
             {
-                throw new InvalidOperationException($"Failed to deserialize JSON from file: {filePath}");
+                var result = JsonSerializer.Deserialize<T>(stream);
+                if (result == null)
+                {
+                    throw new InvalidOperationException($"Failed to deserialize JSON from file: {filePath}");
+                }
+                return result;
             }
-            return result;
         }
     }
 }
