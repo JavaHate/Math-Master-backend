@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using JavaHateBE.exceptions;
-using JavaHateBE.model;
-using JavaHateBE.service;
+using JavaHateBE.Exceptions;
+using JavaHateBE.Model;
+using JavaHateBE.Service;
 using Microsoft.AspNetCore.Mvc;
 
-namespace JavaHateBE.controller
+namespace JavaHateBE.Controller
 {
     [ApiController]
     [Route("game")]

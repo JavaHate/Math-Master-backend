@@ -2,16 +2,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using JavaHateBE.model;
+using JavaHateBE.Data;
+using JavaHateBE.Model;
 using Microsoft.EntityFrameworkCore;
 
-namespace JavaHateBE.repository
+namespace JavaHateBE.Repository
 {
     public class GameRepository
     {
-        private readonly SampleDBContext _context;
+        private readonly MathMasterDBContext _context;
 
-        public GameRepository(SampleDBContext context)
+        public GameRepository(MathMasterDBContext context)
         {
             _context = context;
         }
@@ -58,11 +59,11 @@ namespace JavaHateBE.repository
                 return null;
             }
 
-            existingGame.updateEndTime(game.endTime);
+            existingGame.updateEndTime(game.EndTime);
             existingGame.updateGameMode(game.GameMode);
             existingGame.updateQuestions(game.Questions);
             existingGame.updateScore(game.Score);
-            existingGame.updateStartTime(game.startTime);
+            existingGame.updateStartTime(game.StartTime);
             existingGame.updateUserId(game.UserId);
             
             _context.Games.Update(existingGame);

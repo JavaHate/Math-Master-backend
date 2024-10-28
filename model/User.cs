@@ -1,7 +1,7 @@
-﻿using JavaHateBE.util;
+﻿using JavaHateBE.Util;
 using System.ComponentModel.DataAnnotations;
 
-namespace JavaHateBE.model
+namespace JavaHateBE.Model
 {
     public class User
     {
