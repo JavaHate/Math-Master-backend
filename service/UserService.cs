@@ -73,7 +73,7 @@ namespace JavaHateBE.Service
             {
                 throw new IllegalArgumentException("email", "User with that email already exists");
             }
-            User newUser = await _userRepository.CreateUser(new User(user.Username, user.Email, user.Password));
+            User newUser = await _userRepository.CreateUser(new User(user.Username, user.Password, user.Email));
             return await Task.FromResult(newUser);
         }
 

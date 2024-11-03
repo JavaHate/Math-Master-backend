@@ -43,7 +43,10 @@ namespace JavaHateBE.Repository
                 return null;
             }
             currentUser.UpdateUsername(user.Username);
-            currentUser.UpdatePassword(user.Password);
+            if (currentUser.Password != user.Password)
+            {
+                currentUser.UpdatePassword(user.Password);
+            }
             currentUser.UpdateEmail(user.Email);
             
             _context.Users.Update(currentUser);
