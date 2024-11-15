@@ -7,11 +7,13 @@ namespace JavaHateBE.Model
     {
         [Key]
         public Guid Id { get; set; } = Guid.NewGuid();
-        public string Username { get; private set; }
-        public string Password { get; private set; }
-        public string Email { get; private set; }
+        public string Username { get; protected set; } = string.Empty;
+        public string Password { get; protected set; } = string.Empty;
+        public string Email { get; protected set; } = string.Empty;
         public DateTime LastLogin { get; private set; }
         public List<Game> Games { get; private set; } = new List<Game>();
+
+        public User() { }
 
 
         public User(string username, string password, string email)
