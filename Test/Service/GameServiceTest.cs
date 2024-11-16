@@ -1,0 +1,4 @@
+namespace JavaHateBE.Test.Service
+{
+
+}

@@ -12,6 +12,7 @@ namespace JavaHateBE.Model
         public Game(GameMode gameMode, Guid userId) {
             GameMode = gameMode;
             UserId = userId;
+            updateStartTime();
         }
 
         public Game() { }
@@ -29,7 +30,7 @@ namespace JavaHateBE.Model
         }
 
         public void updateEndTime(DateTime time) {
-            StartTime = time;
+            EndTime = time;
         }
 
         public void updateScore(uint score) {

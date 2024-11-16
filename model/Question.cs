@@ -32,7 +32,7 @@ namespace JavaHateBE.Model
         public bool Equals(Question? other)
         {
             if (other is null) return false;
-            return Id == other.Id;
+            return Id == other.Id || (Text == other.Text && Answer == other.Answer);
         }
     }
 }
