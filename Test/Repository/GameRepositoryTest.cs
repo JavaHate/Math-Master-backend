@@ -225,7 +225,11 @@ namespace JavaHateBE.Test.Repository
             await GameRepository.UpdateGame(ValidGame);
             var Game = await GameRepository.GetGameById(ValidGame.Id);
             // Assert
-            Assert.Equal(newGameMode, Game.GameMode);
+            Assert.NotNull(Game);
+            if (Game != null)
+            {
+                Assert.Equal(newGameMode, Game.GameMode);
+            }
         }
 
         [Fact]

@@ -46,6 +46,7 @@ namespace JavaHateBE.Test.Integration
                         }
                         catch (Exception ex)
                         {
+                            Console.WriteLine(ex);
                             throw;
                         }
                     }
