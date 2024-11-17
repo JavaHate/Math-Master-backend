@@ -67,11 +67,11 @@ namespace JavaHateBE.Service
         {
             if (await _userRepository.GetUserByUsername(user.Username) != null)
             {
-                throw new IllegalArgumentException("username", "User with that username already exists");
+                throw new IllegalArgumentException("username", "Username already exists");
             }
             if (await _userRepository.GetUserByEmail(user.Email) != null)
             {
-                throw new IllegalArgumentException("email", "User with that email already exists");
+                throw new IllegalArgumentException("email", "Email already exists");
             }
             User newUser = await _userRepository.CreateUser(new User(user.Username, user.Password, user.Email));
             return await Task.FromResult(newUser);
@@ -92,11 +92,11 @@ namespace JavaHateBE.Service
             }
             if (await _userRepository.GetUserByUsername(user.Username) != null && (await _userRepository.GetUserByUsername(user.Username))!.Id != user.Id)
             {
-                throw new IllegalArgumentException("username", "User with that username already exists");
+                throw new IllegalArgumentException("username", "Username already exists");
             }
             if (await _userRepository.GetUserByEmail(user.Email) != null && (await _userRepository.GetUserByEmail(user.Email))!.Id != user.Id)
             {
-                throw new IllegalArgumentException("email", "User with that email already exists");
+                throw new IllegalArgumentException("email", "Email already exists");
             }
             User? updatedUser = await _userRepository.UpdateUser(user) ?? throw new ObjectNotFoundException("user", "No users found with that ID");
             return await Task.FromResult(updatedUser);
@@ -123,10 +123,12 @@ namespace JavaHateBE.Service
         /// <exception cref="ObjectNotFoundException">Thrown when no user is found with the specified username.</exception>
         public async Task<User> Login(string password, string username)
         {
-            User user = await _userRepository.GetUserByUsername(username) ?? await _userRepository.GetUserByEmail(username) ?? throw new ObjectNotFoundException("user", "No users found with that username or email");
+            User user = await _userRepository.GetUserByUsername(username) 
+                ?? await _userRepository.GetUserByEmail(username) 
+                ?? throw new ObjectNotFoundException("user", "No users found with that username or email");
             if (!user.IsPasswordCorrect(password))
             {
-                throw new IllegalArgumentException("password", "Incorrect password");
+                throw new IllegalArgumentException("password", "Invalid password");
             }
             user.UpdateLastLogin();
             await _userRepository.UpdateUser(user);

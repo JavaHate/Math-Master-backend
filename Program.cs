@@ -36,6 +36,16 @@ namespace JavaHateBE
 
             var app = builder.Build();
 
+            using (var scope = app.Services.CreateScope())
+            {
+                var dbContext = scope.ServiceProvider.GetRequiredService<MathMasterDBContext>();
+                if (dbContext.Database.IsRelational())
+                {
+                    dbContext.Database.Migrate();
+                    DatabaseSeeder.SeedDatabase(dbContext);
+                }
+            }
+
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -45,13 +55,6 @@ namespace JavaHateBE
             app.UseHttpsRedirection();
             app.UseAuthorization();
             app.MapControllers();
-
-            using (var scope = app.Services.CreateScope())
-            {
-                var context = scope.ServiceProvider.GetRequiredService<MathMasterDBContext>();
-                context.Database.Migrate();
-                DatabaseSeeder.SeedDatabase(context);
-            }
             app.Run();
         }
     }
