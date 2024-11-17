@@ -1,0 +1,14 @@
+11/17/2024 7:15:18 PM [Information] No migrations were applied. The database is already up to date.
+11/17/2024 7:15:19 PM [Information] Now listening on: http://localhost:5032
+11/17/2024 7:15:19 PM [Information] Application started. Press Ctrl+C to shut down.
+11/17/2024 7:15:19 PM [Information] Hosting environment: Development
+11/17/2024 7:15:19 PM [Information] Content root path: /Users/david/Desktop/SAME NAUJAS/Math-Master-backend
+11/17/2024 7:15:27 PM [Warning] Failed to determine the https port for redirect.
+11/17/2024 7:15:27 PM [Error] Incorrect password
+11/17/2024 7:15:28 PM [Error] Incorrect password
+11/17/2024 7:15:28 PM [Error] Incorrect password
+11/17/2024 7:15:30 PM [Warning] No users found with that username or email
+11/17/2024 7:15:31 PM [Warning] No users found with that username or email
+11/17/2024 7:15:31 PM [Warning] No users found with that username or email
+11/17/2024 7:15:31 PM [Warning] No users found with that username or email
+11/17/2024 7:15:37 PM [Information] Application is shutting down...

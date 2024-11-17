@@ -30,12 +30,12 @@ namespace JavaHateBE.Controller
             }
             catch (ObjectNotFoundException e)
             {
-                _logger.LogWarning(e, "Failed to get all questions.");
+                _logger.LogWarning(e, e.Message.ToString());
                 return NotFound(new Dictionary<string, string> { { "message", e.Message }, { "entity", e.Object } });
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "Failed to get all questions.");
+                _logger.LogError(e, e.Message.ToString());
                 return BadRequest(new Dictionary<string, string> { { "message", e.Message } });
             }
         }
@@ -50,12 +50,12 @@ namespace JavaHateBE.Controller
             }
             catch (ObjectNotFoundException e)
             {
-                _logger.LogWarning(e, "Failed to get all questions.");
+                _logger.LogWarning(e, e.Message.ToString());
                 return NotFound(new Dictionary<string, string> { { "message", e.Message }, { "entity", e.Object } });
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "Failed to get all questions.");
+                _logger.LogError(e, e.Message.ToString());
                 return BadRequest(new Dictionary<string, string> { { "message", e.Message } });
             }
         }
@@ -78,17 +78,17 @@ namespace JavaHateBE.Controller
             }
             catch (ObjectNotFoundException e)
             {
-                _logger.LogWarning(e, "Failed to get all questions.");
+                _logger.LogWarning(e, e.Message.ToString());
                 return NotFound(new Dictionary<string, string> { { "message", e.Message }, { "entity", e.Object } });
             }
             catch (IllegalArgumentException e)
             {
-                _logger.LogWarning(e, "Failed to get all questions.");
+                _logger.LogWarning(e, e.Message.ToString());
                 return BadRequest(new Dictionary<string, string> { { "message", e.Message }, { "field", e.Argument } });
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "Failed to get all questions.");
+                _logger.LogError(e, e.Message.ToString());
                 return BadRequest(new Dictionary<string, string> { { "message", e.Message } });
             }
         }
@@ -108,7 +108,7 @@ namespace JavaHateBE.Controller
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "Failed to get all questions.");
+                _logger.LogError(e, e.Message.ToString());
                 return BadRequest(new Dictionary<string, string> { { "message", e.Message } });
             }
         }
@@ -128,12 +128,12 @@ namespace JavaHateBE.Controller
             }
             catch (ObjectNotFoundException e)
             {
-                _logger.LogWarning(e, "Failed to get all questions.");
+                _logger.LogWarning(e, e.Message.ToString());
                 return NotFound(new Dictionary<string, string> { { "message", e.Message }, { "entity", e.Object } });
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "Failed to get all questions.");
+                _logger.LogError(e, e.Message.ToString());
                 return BadRequest(new Dictionary<string, string> { { "message", e.Message } });
             }
         }
@@ -148,12 +148,12 @@ namespace JavaHateBE.Controller
             }
             catch (ObjectNotFoundException e)
             {
-                _logger.LogWarning(e, "Failed to get all questions.");
+                _logger.LogWarning(e, e.Message.ToString());
                 return NotFound(new Dictionary<string, string> { { "message", e.Message }, { "entity", e.Object } });
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "Failed to get all questions.");
+                _logger.LogError(e, e.Message.ToString());
                 return BadRequest(new Dictionary<string, string> { { "message", e.Message } });
             }
         }
