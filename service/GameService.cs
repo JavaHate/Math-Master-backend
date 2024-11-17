@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Collections.Concurrent;
 using JavaHateBE.Exceptions;
 using JavaHateBE.Model;
 using JavaHateBE.Repository;
@@ -15,6 +16,7 @@ namespace JavaHateBE.Service
     {
         private readonly GameRepository _GameRepository;
         private readonly UserRepository _userRepository;
+        private readonly ConcurrentDictionary<Guid, Game> _gamesCache = new ConcurrentDictionary<Guid, Game>();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GameService"/> class.
@@ -35,8 +37,14 @@ namespace JavaHateBE.Service
         /// <exception cref="ObjectNotFoundException">Thrown when no game is found with the specified ID.</exception>
         public async Task<Game> GetGameById(Guid id)
         {
-            Game? Game = await _GameRepository.GetGameById(id) ?? throw new ObjectNotFoundException("Game", "No Games found with that ID");
-            return await Task.FromResult(Game);
+            if (_gamesCache.TryGetValue(id, out Game? cachedGame))
+            {
+                return await Task.FromResult(cachedGame);
+            }
+
+            Game? game = await _GameRepository.GetGameById(id) ?? throw new ObjectNotFoundException("Game", "No Games found with that ID");
+            _gamesCache[id] = game;
+            return game;
         }
 
         /// <summary>
@@ -47,7 +55,9 @@ namespace JavaHateBE.Service
         public async Task<Game> AddGame(Game game)
         {
             await _userRepository.GetUserById(game.UserId);
-            return await _GameRepository.AddGame(game);
+            Game addedGame = await _GameRepository.AddGame(game);
+            _gamesCache[addedGame.Id] = addedGame;
+            return addedGame;
         }
 
         /// <summary>
@@ -63,6 +73,7 @@ namespace JavaHateBE.Service
             {
                 throw new ObjectNotFoundException("Game", "No Games found with that ID");
             }
+            _gamesCache.TryRemove(id, out _);
             return await _GameRepository.RemoveGame(id);
         }
 
@@ -123,18 +134,18 @@ namespace JavaHateBE.Service
         /// <exception cref="ObjectNotFoundException">Thrown when no user or game is found with the specified ID.</exception>
         public async Task<Game> UpdateGame(Game game)
         {
-            User? user = null;
-            user = await _userRepository.GetUserById(game.UserId);
+            User? user = await _userRepository.GetUserById(game.UserId);
             if (user == null)
             {
                 throw new ObjectNotFoundException("User", "No user found with that ID");
             }
-            Game? newGame = await _GameRepository.UpdateGame(game);
-            if (newGame == null)
+            Game? updatedGame = await _GameRepository.UpdateGame(game);
+            if (updatedGame == null)
             {
                 throw new ObjectNotFoundException("Game", "No game found with that ID");
             }
-            return newGame;
+            _gamesCache[updatedGame.Id] = updatedGame;
+            return updatedGame;
         }
 
         /// <summary>

@@ -87,7 +87,7 @@ namespace JavaHateBE.Controller
             }
         }
 
-        [HttpGet]
+        [HttpGet("all")]
         public async Task<ActionResult<List<Game>>> GetAllGames()
         {
             try
