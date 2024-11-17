@@ -3,14 +3,20 @@ using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using JavaHateBE.Data;
+using Microsoft.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Configure logging
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+builder.Logging.AddFile(builder.Configuration.GetSection("Logging:File"));
 
 builder.Services.AddControllers().AddJsonOptions(options => { options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter(JsonNamingPolicy.CamelCase)); });
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//defined in util/DependencyInjections.cs
+// Defined in util/DependencyInjections.cs
 builder.Services.AddCustomServices();
 
 builder.Services.AddDbContext<MathMasterDBContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
