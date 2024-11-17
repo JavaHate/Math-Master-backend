@@ -140,3 +140,4 @@ coverage/
 *.sln.docstates
 
 Migrations/
+logs.txt
