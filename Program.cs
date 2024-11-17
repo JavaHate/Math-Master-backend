@@ -29,4 +29,11 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<MathMasterDBContext>();
+    context.Database.Migrate();
+    DatabaseSeeder.SeedDatabase(context);
+}
+
 app.Run();
