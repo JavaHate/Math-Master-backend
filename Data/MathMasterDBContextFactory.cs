@@ -8,15 +8,9 @@ namespace JavaHateBE.Data
         public MathMasterDBContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<MathMasterDBContext>();
-
             optionsBuilder.UseSqlite("Data Source=localdatabase.db");
 
-            var context = new MathMasterDBContext(optionsBuilder.Options);
-
-            context.Database.Migrate();
-            DatabaseSeeder.SeedDatabase(context);
-
-            return context;
+            return new MathMasterDBContext(optionsBuilder.Options);
         }
     }
 }
