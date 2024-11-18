@@ -130,4 +130,14 @@ coverage/
 *.class
 *.jar
 
+# visual studio
+.vs/
+*.vspscc
+*.vssscc
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
 Migrations/
+logs.txt

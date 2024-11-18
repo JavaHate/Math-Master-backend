@@ -101,11 +101,11 @@ namespace JavaHateBE.Controller
         }
 
         [HttpPut]
-        public async Task<ActionResult<User>> UpdateUser([FromBody] User user)
+        public async Task<ActionResult<User>> UpdateUser([FromBody] UpdateUserInput user)
         {
             try
             {
-                User updatedUser = await _userService.UpdateUser(user);
+                User updatedUser = await _userService.UpdateUser(Model.User.From(user));
                 return Ok(updatedUser);
             }
             catch (ObjectNotFoundException e)
@@ -130,8 +130,8 @@ namespace JavaHateBE.Controller
         {
             try
             {
-                await _userService.DeleteUser(id);
-                return Ok();
+                User user = await _userService.DeleteUser(id);
+                return Ok(user);
             }
             catch (ObjectNotFoundException e)
             {

@@ -121,6 +121,11 @@ namespace JavaHateBE.Controller
                 Question updatedQuestion = await _questionService.UpdateQuestion(question);
                 return Ok(updatedQuestion);
             }
+            catch (IllegalArgumentException e)
+            {
+                _logger.LogWarning(e, "Failed to add question.");
+                return BadRequest(new Dictionary<string, string> { { "message", e.Message }, { "field", e.Argument } });
+            }
             catch (ObjectNotFoundException e)
             {
                 _logger.LogWarning(e, e.Message.ToString());
@@ -138,8 +143,8 @@ namespace JavaHateBE.Controller
         {
             try
             {
-                await _questionService.DeleteQuestion(id);
-                return NoContent();
+                var deletedQuestion = await _questionService.DeleteQuestion(id);
+                return Ok(deletedQuestion);
             }
             catch (ObjectNotFoundException e)
             {

@@ -89,6 +89,11 @@ namespace JavaHateBE.Service
         /// <exception cref="ObjectNotFoundException">Thrown when no question is found with the specified ID.</exception>
         public async Task<Question> UpdateQuestion(Question question)
         {
+            Question? existingQuestion = await _questionRepository.GetQuestionFromText(question.Text);
+            if( existingQuestion != null && existingQuestion?.Id != question.Id)
+            {
+                throw new IllegalArgumentException("text", "A question with that text already exists");
+            }
             Question? currentQuestion = await _questionRepository.GetQuestionById(question.Id);
             if (currentQuestion == null)
             {
@@ -96,7 +101,8 @@ namespace JavaHateBE.Service
             }
             currentQuestion.UpdateText(question.Text);
             currentQuestion.UpdateAnswer(question.Answer);
-            return await Task.FromResult(currentQuestion);
+            currentQuestion.UpdateDifficulty(question.Difficulty);
+            return await Task.FromResult(await _questionRepository.UpdateQuestion(currentQuestion) ?? throw new ObjectNotFoundException("question", "No questions found with that ID"));
         }
 
         /// <summary>

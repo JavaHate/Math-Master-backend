@@ -12,6 +12,7 @@ Welcome to the JavaHate Back-End API! This is a simple project built using **ASP
     dotnet ef migrations add InitialCreate
     dotnet ef database update
     ```
+
 4. Run the application using the .NET CLI:
 
     ```bash
@@ -22,5 +23,19 @@ Welcome to the JavaHate Back-End API! This is a simple project built using **ASP
 
 1. Start the project
 2. Go to localhost:{Port}/swagger
+
+## Testing
+
+1. Make sure you have all dependencies installed:
+
+    ```bash
+    dotnet restore
+    ```
+
+2. run them with the command:
+
+    ```bash
+    dotnet test
+    ```
 
 Enjoy using the API!

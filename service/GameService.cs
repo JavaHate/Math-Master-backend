@@ -54,7 +54,9 @@ namespace JavaHateBE.Service
         /// <returns>The added game.</returns>
         public async Task<Game> AddGame(Game game)
         {
-            await _userRepository.GetUserById(game.UserId);
+            if(await _userRepository.GetUserById(game.UserId) == null){
+                throw new ObjectNotFoundException("User", "No user found with that ID");
+            }
             Game addedGame = await _GameRepository.AddGame(game);
             _gamesCache[addedGame.Id] = addedGame;
             return addedGame;
@@ -83,7 +85,8 @@ namespace JavaHateBE.Service
         /// <returns>A list of all games.</returns>
         public async Task<List<Game>> GetAllGames()
         {
-            return await _GameRepository.GetAllGames();
+            var games = await _GameRepository.GetAllGames();
+            return games;
         }
 
         /// <summary>
@@ -93,7 +96,11 @@ namespace JavaHateBE.Service
         /// <returns>A list of games associated with the specified user.</returns>
         public async Task<List<Game>> GetGamesByUser(Guid userId)
         {
-            await _userRepository.GetUserById(userId);
+            var User = await _userRepository.GetUserById(userId);
+            if (User == null)
+            {
+                throw new ObjectNotFoundException("User", "No user found with that ID");
+            }
             return await _GameRepository.GetGamesByUser(userId);
         }
 
@@ -155,6 +162,7 @@ namespace JavaHateBE.Service
         /// <param name="gameMode">The game mode.</param>
         /// <returns>The newly created game.</returns>
         /// <exception cref="ObjectNotFoundException">Thrown when no user is found with the specified ID.</exception>
+        /// <exception cref="ArgumentException">Thrown when the game mode is invalid.</exception>
         public async Task<Game> NewGame(Guid userId, string gameMode)
         {
             User? user = await _userRepository.GetUserById(userId);
@@ -163,8 +171,11 @@ namespace JavaHateBE.Service
                 throw new ObjectNotFoundException("User", "No user found with that ID");
             }
             GameMode mode = Enum.Parse<GameMode>(gameMode, true);
-            Game game = new Game(mode, user.Id);
-            return await _GameRepository.AddGame(game);
+            Game game = user.NewGame(mode);
+            Game addedGame = await _GameRepository.AddGame(game);
+            await _userRepository.UpdateUser(user);
+            _gamesCache[addedGame.Id] = addedGame;
+            return addedGame;
         }
     }
 }
