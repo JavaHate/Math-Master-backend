@@ -2,8 +2,10 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using JavaHateBE.Data;
 using JavaHateBE.Model;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
+using Moq;
 using Xunit;
 
 namespace JavaHateBE.Test.Integration
@@ -15,6 +17,7 @@ namespace JavaHateBE.Test.Integration
 
         public QuestionIntegrationTest(WebApplicationFactory<Program> factory)
         {
+            
             _factory = factory.WithWebHostBuilder(builder =>
             {
                 builder.UseEnvironment("Testing");
@@ -27,7 +30,7 @@ namespace JavaHateBE.Test.Integration
 
                     services.AddDbContext<MathMasterDBContext>(options =>
                     {
-                        options.UseInMemoryDatabase("TestDatabase");
+                        options.UseInMemoryDatabase("TestDatabaseQuestion");
                         options.UseInternalServiceProvider(serviceProvider);
                     });
 

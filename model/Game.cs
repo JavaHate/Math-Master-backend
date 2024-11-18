@@ -15,8 +15,6 @@ namespace JavaHateBE.Model
             updateStartTime();
         }
 
-        public Game() { }
-
         public void AddQuestion(Question question) {
             Questions.Add(question);
         }

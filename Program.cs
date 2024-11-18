@@ -1,6 +1,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using JavaHateBE.Data;
+using JavaHateBE.FileLogger;
 using JavaHateBE.Util;
 using Microsoft.EntityFrameworkCore;
 namespace JavaHateBE
@@ -11,28 +12,41 @@ namespace JavaHateBE
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            var environment = builder.Environment;
 
-            builder.Logging.ClearProviders();
-            builder.Logging.AddProvider(new FileLoggerProvider("logs.txt"));
+            if (environment.IsEnvironment("Testing"))
+            {
+                builder.Logging.ClearProviders();
+                builder.Logging.AddProvider(new NoOpLoggerProvider());
+            }
+            else
+            {
+                builder.Logging.ClearProviders();
+                builder.Logging.AddProvider(new FileLoggerProvider("logs.txt"));
 
-            builder.Logging.AddFilter("Microsoft.EntityFrameworkCore.Database.Command", LogLevel.Warning);
-            builder.Logging.AddFilter("Microsoft.EntityFrameworkCore.Infrastructure", LogLevel.Warning);
+                builder.Logging.AddFilter("Microsoft.EntityFrameworkCore.Database.Command", LogLevel.Warning);
+                builder.Logging.AddFilter("Microsoft.EntityFrameworkCore.Infrastructure", LogLevel.Warning);
+            }
 
             builder.Services.AddControllers().AddJsonOptions(options =>
             {
                 options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter(JsonNamingPolicy.CamelCase));
+                options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
             });
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddCustomServices();
 
-            var environment = builder.Environment;
 
             if (environment.IsEnvironment("Testing"))
             {
                 builder.Services.AddDbContext<MathMasterDBContext>(options =>
-                    options.UseInMemoryDatabase("TestDatabase"));
+                    options.UseInMemoryDatabase("TestDatabaseUser"));
+                builder.Services.AddDbContext<MathMasterDBContext>(options =>
+                    options.UseInMemoryDatabase("TestDatabaseGame"));
+                builder.Services.AddDbContext<MathMasterDBContext>(options =>
+                    options.UseInMemoryDatabase("TestDatabaseUser"));
             }
             else
             {

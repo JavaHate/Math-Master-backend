@@ -2,6 +2,7 @@ using Xunit;
 using JavaHateBE.Model;
 using JavaHateBE.Util;
 using JavaHateBE.Exceptions;
+using JavaHateBE.Model.DTOs;
 
 namespace JavaHateBE.Test.Domain
 {
@@ -183,6 +184,19 @@ namespace JavaHateBE.Test.Domain
             Assert.Equal(DateTime.MinValue, Game.EndTime);
             Assert.Single(User.Games);
             Assert.Contains(Game, User.Games);
+        }
+
+        [Fact]
+        public void UserFromReturnsValidUser() {
+            var validID = Guid.NewGuid();
+            var UpdateUser = new UpdateUserInput(validID, ValidUsername, PasswordHasher.HashPassword(ValidPassword), ValidEmail);
+            var User = Model.User.From(UpdateUser);
+
+            Assert.Equal(validID, User.Id);
+            Assert.Equal(ValidUsername, User.Username);
+            Assert.True(PasswordHasher.VerifyPassword(ValidPassword, User.Password));
+            Assert.Equal(ValidEmail, User.Email);
+            Assert.NotEqual(DateTime.MinValue, User.LastLogin);
         }
     }
 }

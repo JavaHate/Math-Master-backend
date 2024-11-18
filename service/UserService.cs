@@ -2,6 +2,7 @@
 using JavaHateBE.Model;
 using JavaHateBE.Repository;
 using JavaHateBE.Model.DTOs;
+using JavaHateBE.Util;
 
 namespace JavaHateBE.Service
 {
@@ -86,19 +87,34 @@ namespace JavaHateBE.Service
         /// <exception cref="IllegalArgumentException">Thrown when a user with the same username or email already exists.</exception>
         public async Task<User> UpdateUser(User user)
         {
-            if (await _userRepository.GetUserById(user.Id) == null)
+            var existingUser = await _userRepository.GetUserById(user.Id);
+            if (existingUser == null)
             {
                 throw new ObjectNotFoundException("user", "No users found with that ID");
             }
-            if (await _userRepository.GetUserByUsername(user.Username) != null && (await _userRepository.GetUserByUsername(user.Username))!.Id != user.Id)
+
+            var existingUserByUsername = await _userRepository.GetUserByUsername(user.Username);
+            if (existingUserByUsername != null && existingUserByUsername.Id != user.Id)
             {
                 throw new IllegalArgumentException("username", "Username already exists");
             }
-            if (await _userRepository.GetUserByEmail(user.Email) != null && (await _userRepository.GetUserByEmail(user.Email))!.Id != user.Id)
+
+            var existingUserByEmail = await _userRepository.GetUserByEmail(user.Email);
+            if (existingUserByEmail != null && existingUserByEmail.Id != user.Id)
             {
                 throw new IllegalArgumentException("email", "Email already exists");
             }
-            User? updatedUser = await _userRepository.UpdateUser(user) ?? throw new ObjectNotFoundException("user", "No users found with that ID");
+
+            existingUser.UpdateUsername(user.Username);
+            existingUser.UpdateEmail(user.Email);
+            if(user.Password != null && user.Password != "" && user.Password != existingUser.Password) 
+            {
+                existingUser.UpdatePassword(user.Password);
+            }
+
+            User? updatedUser = await _userRepository.UpdateUser(existingUser)
+                ?? throw new ObjectNotFoundException("user", "No users found with that ID");
+
             return await Task.FromResult(updatedUser);
         }
 
@@ -126,7 +142,7 @@ namespace JavaHateBE.Service
             User user = await _userRepository.GetUserByUsername(username) 
                 ?? await _userRepository.GetUserByEmail(username) 
                 ?? throw new ObjectNotFoundException("user", "No users found with that username or email");
-            if (!user.IsPasswordCorrect(password))
+            if (!PasswordHasher.VerifyPassword(password, user.Password))
             {
                 throw new IllegalArgumentException("password", "Invalid password");
             }

@@ -1,4 +1,6 @@
 ﻿using System.Security.Cryptography;
+using System.Text;
+using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 
 namespace JavaHateBE.Util
 {
@@ -7,10 +9,6 @@ namespace JavaHateBE.Util
     /// </summary>
     public class PasswordHasher
     {
-        private const int SaltSize = 16; // 128 bit
-        private const int KeySize = 32; // 256 bit
-        private const int Iterations = 10000;
-
         /// <summary>
         /// Hashes the specified password.
         /// </summary>
@@ -18,21 +16,22 @@ namespace JavaHateBE.Util
         /// <returns>The hashed password.</returns>
         public static string HashPassword(string password)
         {
-            using (var algorithm = new Rfc2898DeriveBytes(password, SaltSize, Iterations, HashAlgorithmName.SHA256))
+            Console.WriteLine("Hashing password: " + password);
+
+            byte[] salt = new byte[128 / 8];
+            using (var rng = RandomNumberGenerator.Create())
             {
-                var salt = algorithm.Salt;
-                var key = algorithm.GetBytes(KeySize);
-
-                // Boxing and unboxing example
-                object boxedSalt = salt; // Boxing
-                object boxedKey = key;   // Boxing
-
-                var hashBytes = new byte[SaltSize + KeySize];
-                Array.Copy((byte[])boxedSalt, 0, hashBytes, 0, SaltSize);      // Unboxing
-                Array.Copy((byte[])boxedKey, 0, hashBytes, SaltSize, KeySize); // Unboxing
-
-                return Convert.ToBase64String(hashBytes);
+                rng.GetBytes(salt);
             }
+
+            string hashed = Convert.ToBase64String(KeyDerivation.Pbkdf2(
+                password: password,
+                salt: salt,
+                prf: KeyDerivationPrf.HMACSHA256,
+                iterationCount: 10000,
+                numBytesRequested: 256 / 8));
+
+            return $"{Convert.ToBase64String(salt)}.{hashed}";
         }
 
         /// <summary>
@@ -43,23 +42,25 @@ namespace JavaHateBE.Util
         /// <returns>True if the password is verified, otherwise false.</returns>
         public static bool VerifyPassword(string password, string hashedPassword)
         {
-            var hashBytes = Convert.FromBase64String(hashedPassword);
-            var salt = new byte[SaltSize];
-            Array.Copy(hashBytes, 0, salt, 0, SaltSize);
+            Console.WriteLine("Verifying password: " + password);
 
-            using (var algorithm = new Rfc2898DeriveBytes(password, salt, Iterations, HashAlgorithmName.SHA256))
+            var parts = hashedPassword.Split('.');
+            if (parts.Length != 2)
             {
-                var key = algorithm.GetBytes(KeySize);
-                for (int i = 0; i < KeySize; i++)
-                {
-                    if (hashBytes[i + SaltSize] != key[i])
-                    {
-                        return false;
-                    }
-                }
+                return false;
             }
 
-            return true;
+            var salt = Convert.FromBase64String(parts[0]);
+            var storedHash = parts[1];
+
+            string hashed = Convert.ToBase64String(KeyDerivation.Pbkdf2(
+                password: password,
+                salt: salt,
+                prf: KeyDerivationPrf.HMACSHA256,
+                iterationCount: 10000,
+                numBytesRequested: 256 / 8));
+
+            return hashed == storedHash;
         }
     }
 }

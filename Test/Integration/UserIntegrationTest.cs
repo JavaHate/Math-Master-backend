@@ -1,9 +1,12 @@
 using System.Net;
+using JavaHateBE.Controller;
 using JavaHateBE.Data;
 using JavaHateBE.Model;
 using JavaHateBE.Model.DTOs;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
+using Moq;
 using Xunit;
 
 namespace JavaHateBE.Test.Integration
@@ -15,6 +18,7 @@ namespace JavaHateBE.Test.Integration
 
         public UserIntegrationTest(WebApplicationFactory<Program> factory)
         {
+
             _factory = factory.WithWebHostBuilder(builder =>
             {
                 builder.UseEnvironment("Testing");
@@ -27,7 +31,7 @@ namespace JavaHateBE.Test.Integration
 
                     services.AddDbContext<MathMasterDBContext>(options =>
                     {
-                        options.UseInMemoryDatabase("TestDatabase");
+                        options.UseInMemoryDatabase("TestDatabaseUser");
                         options.UseInternalServiceProvider(serviceProvider);
                     });
 
@@ -194,6 +198,211 @@ namespace JavaHateBE.Test.Integration
             Assert.NotNull(createdUser);
             Assert.Equal(user.Username, createdUser.Username);
             Assert.Equal(user.Email, createdUser.Email);
+        }
+
+        [Fact]
+        public async Task CreateUser_WithDuplicateUsername_ReturnsBadRequest()
+        {
+            // Arrange
+            var OGuser = new UserCreateInput("test", "testoste", "valid@email.com");
+            var createOriginal = await _client.PostAsJsonAsync("/user", OGuser);
+            createOriginal.EnsureSuccessStatusCode();
+            var user = new UserCreateInput("test", "testoste", "valleid@email.com");
+
+            // Act
+            var response = await _client.PostAsJsonAsync("/user", user);
+
+            // Assert
+            Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+        }
+
+        [Fact]
+        public async Task CreateUser_WithDuplicateEmail_ReturnsBadRequest()
+        {
+            // Arrange
+            var OGuser = new UserCreateInput("test", "testoste", "valid@email.com");
+            var createOriginal = await _client.PostAsJsonAsync("/user", OGuser);
+            createOriginal.EnsureSuccessStatusCode();
+            var user = new UserCreateInput("test2", "testoste", "valid@email.com");
+
+            // Act
+            var response = await _client.PostAsJsonAsync("/user", user);
+
+            // Assert
+            Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+        }
+
+        [Fact]
+        public async Task DeleteUser_WithValidId_ReturnsDeletedUser()
+        {
+            // Arrange
+            var user = new UserCreateInput("test", "testoste", "valid@email.com");
+            var createOriginal = await _client.PostAsJsonAsync("/user", user);
+            createOriginal.EnsureSuccessStatusCode();
+            var createdUser = await createOriginal.Content.ReadAsAsync<User>();
+
+            // Act
+            var response = await _client.DeleteAsync($"/user/id/{createdUser.Id}");
+
+            // Assert
+            response.EnsureSuccessStatusCode();
+            var deltedUser = await response.Content.ReadAsAsync<User>();
+            Assert.NotNull(deltedUser);
+            Assert.Equal(createdUser.Id, deltedUser.Id);
+        }
+
+        [Fact]
+        public async Task DeleteUser_WithInvalidId_ReturnsNotFound()
+        {
+            // Arrange
+            var userId = Guid.NewGuid();
+
+            // Act
+            var response = await _client.DeleteAsync($"/user/id/{userId}");
+
+            // Assert
+            Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
+        }
+
+        [Fact]
+        public async Task Login_WithValidUserNameAndPassword_ReturnsUser()
+        {
+            // Arrange
+            var password = "testoste";
+            var user = new UserCreateInput("test", password, "valid@email.com");
+            var createOriginal = await _client.PostAsJsonAsync("/user", user);
+            createOriginal.EnsureSuccessStatusCode();
+            var createdUser = await createOriginal.Content.ReadAsAsync<User>();
+            var login = new UserLogin(createdUser.Username, password);
+
+            // Act
+            var response = await _client.PostAsJsonAsync("/user/login", login);
+
+            // Assert
+            response.EnsureSuccessStatusCode();
+            var loggedInUser = await response.Content.ReadAsAsync<User>();
+            Assert.NotNull(loggedInUser);
+            Assert.Equal(createdUser.Id, loggedInUser.Id);
+        }
+
+        [Fact]
+        public async Task Login_WithValidEmailAndPassword_ReturnsUser()
+        {
+            // Arrange
+            var password = "testoste";
+            var user = new UserCreateInput("test", password, "valid@email.com");
+            var createOriginal = await _client.PostAsJsonAsync("/user", user);
+            createOriginal.EnsureSuccessStatusCode();
+            var createdUser = await createOriginal.Content.ReadAsAsync<User>();
+            var login = new UserLogin(createdUser.Email, password);
+
+            // Act
+            var response = await _client.PostAsJsonAsync("/user/login", login);
+
+            // Assert
+            response.EnsureSuccessStatusCode();
+            var loggedInUser = await response.Content.ReadAsAsync<User>();
+            Assert.NotNull(loggedInUser);
+            Assert.Equal(createdUser.Id, loggedInUser.Id);
+        }
+
+        [Theory]
+        [InlineData("test")]
+        [InlineData("test@testtest.com")]
+        public async Task Login_WithInvalidUserNameOrEmail_ReturnsNotFound(string usernameOrEmail)
+        {
+            // Arrange
+            var login = new UserLogin(usernameOrEmail, "password");
+
+            // Act
+            var response = await _client.PostAsJsonAsync("/user/login", login);
+
+            // Assert
+            Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
+        }
+
+        [Fact]
+        public async Task Login_WithInvalidPassword_ReturnsBadRequest()
+        {
+            // Arrange
+            var password = "testoste";
+            var user = new UserCreateInput("test", password, "valid@email.com");
+            var createOriginal = await _client.PostAsJsonAsync("/user", user);
+            createOriginal.EnsureSuccessStatusCode();
+            var createdUser = await createOriginal.Content.ReadAsAsync<User>();
+            var login = new UserLogin(createdUser.Username, "password");
+
+            // Act
+            var response = await _client.PostAsJsonAsync("/user/login", login);
+
+            // Assert
+            Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+        }
+
+        [Fact]
+        public async Task UpdateUser_WithValidUser_ReturnsUpdatedUser()
+        {
+            // Arrange
+            var user = new UserCreateInput("test", "testoste", "valid@email.com");
+            var createOriginal = await _client.PostAsJsonAsync("/user", user);
+            createOriginal.EnsureSuccessStatusCode();
+            var createdUser = await createOriginal.Content.ReadAsAsync<User>();
+            var updatedUser = new User(createdUser.Id, "updated", "updated", "updated@updated.com", createdUser.LastLogin);
+
+            // Act
+            var response = await _client.PutAsJsonAsync("/user", updatedUser);
+
+            // Assert
+            response.EnsureSuccessStatusCode();
+            var updatedUserResponse = await response.Content.ReadAsAsync<User>();
+            Assert.NotNull(updatedUserResponse);
+        }
+
+        [Fact]
+        public async Task UpdateUser_WithInvalidUser_ReturnsNotFound()
+        {
+            // Arrange
+            var user = new User(Guid.NewGuid(), "test", "testoste", "test@test.com", DateTime.Now);
+
+            // Act
+            var response = await _client.PutAsJsonAsync("/user", user);
+
+            // Assert
+            Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
+        }
+
+        [Fact]
+        public async Task UpdateUser_WithDuplicateUsername_ReturnsBadRequest()
+        {
+            // Arrange
+            var user = new UserCreateInput("test", "testoste", "test@test.com");
+            var createOriginal = await _client.PostAsJsonAsync("/user", user);
+            createOriginal.EnsureSuccessStatusCode();
+            var createdUser = await createOriginal.Content.ReadAsAsync<User>();
+            var updatedUser = new User(createdUser.Id, "David", "updated", "test2@test.com", DateTime.Now);
+
+            // Act
+            var response = await _client.PutAsJsonAsync("/user", updatedUser);
+
+            // Assert
+            Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+        }
+
+        [Fact]
+        public async Task UpdateUser_WithDuplicateEmail_ReturnsBadRequest()
+        {
+            // Arrange
+            var user = new UserCreateInput("test", "testoste", "test@test.com");
+            var createOriginal = await _client.PostAsJsonAsync("/user", user);
+            createOriginal.EnsureSuccessStatusCode();
+            var createdUser = await createOriginal.Content.ReadAsAsync<User>();
+            var updatedUser = new User(createdUser.Id, "test2", "updated", "david@example.com", DateTime.Now);
+
+            // Act
+            var response = await _client.PutAsJsonAsync("/user", updatedUser);
+
+            // Assert
+            Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
         }
     }
 }

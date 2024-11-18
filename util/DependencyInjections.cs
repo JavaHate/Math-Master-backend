@@ -1,5 +1,7 @@
+using JavaHateBE.Data;
 using JavaHateBE.Repository;
 using JavaHateBE.Service;
+using Microsoft.AspNetCore.Hosting;
 
 namespace JavaHateBE.Util
 {
@@ -17,6 +19,8 @@ namespace JavaHateBE.Util
             services.AddScoped<UserService>();
             services.AddScoped<QuestionService>();
             services.AddScoped<GameService>();
+            services.AddScoped<MathMasterDbContextFactory>();
+            services.AddScoped<ILogger, Logger<IStartup>>();
 
             return services;
         }
