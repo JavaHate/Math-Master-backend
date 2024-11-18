@@ -16,7 +16,6 @@ namespace JavaHateBE.Util
         /// <returns>The hashed password.</returns>
         public static string HashPassword(string password)
         {
-            Console.WriteLine("Hashing password: " + password);
 
             byte[] salt = new byte[128 / 8];
             using (var rng = RandomNumberGenerator.Create())
@@ -42,7 +41,6 @@ namespace JavaHateBE.Util
         /// <returns>True if the password is verified, otherwise false.</returns>
         public static bool VerifyPassword(string password, string hashedPassword)
         {
-            Console.WriteLine("Verifying password: " + password);
 
             var parts = hashedPassword.Split('.');
             if (parts.Length != 2)
