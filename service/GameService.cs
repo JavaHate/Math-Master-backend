@@ -52,14 +52,8 @@ namespace JavaHateBE.Service
         /// </summary>
         public async Task<Game> AddGame(Game game)
         {
-            if (!_validator.Validate(game, game.UserId))
-            {
-                throw new ArgumentException("Invalid game entity or user ID.");
-            }
-
             await _userRepository.GetUserById(game.UserId);
-
-            Game addedGame = await _gameRepository.AddGame(game);
+            Game addedGame = await _GameRepository.AddGame(game);
             _gamesCache[addedGame.Id] = addedGame;
             return addedGame;
         }
@@ -84,7 +78,7 @@ namespace JavaHateBE.Service
         /// </summary>
         public async Task<List<Game>> GetAllGames()
         {
-            return await _gameRepository.GetAllGames();
+            return await _GameRepository.GetAllGames();
         }
 
         /// <summary>
@@ -93,7 +87,7 @@ namespace JavaHateBE.Service
         public async Task<List<Game>> GetGamesByUser(Guid userId)
         {
             await _userRepository.GetUserById(userId);
-            return await _gameRepository.GetGamesByUser(userId);
+            return await _GameRepository.GetGamesByUser(userId);
         }
 
         /// <summary>
@@ -150,6 +144,10 @@ namespace JavaHateBE.Service
         /// <summary>
         /// Creates a new game for a user with a specified game mode.
         /// </summary>
+        /// <param name="userId">The ID of the user.</param>
+        /// <param name="gameMode">The game mode.</param>
+        /// <returns>The newly created game.</returns>
+        /// <exception cref="ObjectNotFoundException">Thrown when no user is found with the specified ID.</exception>
         public async Task<Game> NewGame(Guid userId, string gameMode)
         {
             User? user = await _userRepository.GetUserById(userId);
@@ -160,13 +158,7 @@ namespace JavaHateBE.Service
 
             GameMode mode = Enum.Parse<GameMode>(gameMode, true);
             Game game = new Game(mode, user.Id);
-
-            if (!_validator.Validate(game, user.Id))
-            {
-                throw new ArgumentException("Invalid game entity or user ID.");
-            }
-
-            return await _gameRepository.AddGame(game);
+            return await _GameRepository.AddGame(game);
         }
     }
 }
