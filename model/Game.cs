@@ -1,7 +1,10 @@
+using JavaHateBE.Model.DTOs;
+using Newtonsoft.Json;
+
 namespace JavaHateBE.Model
 {
     public class Game : IEquatable<Game> {
-        public Guid Id { get; private set; } = Guid.NewGuid();
+        public Guid Id { get; private set; } 
         public GameMode GameMode { get; set; }  
         public uint Score { get; set; } = 0;
         public DateTime StartTime { get; set; }
@@ -13,7 +16,21 @@ namespace JavaHateBE.Model
             GameMode = gameMode;
             UserId = userId;
             updateStartTime();
+            Id = Guid.NewGuid();
         }
+
+        [JsonConstructor]
+        public Game(Guid id, GameMode gameMode, uint score, DateTime startTime, DateTime endTime, List<Question> questions, Guid userId) {
+            Id = id;
+            GameMode = gameMode;
+            Score = score;
+            StartTime = startTime;
+            EndTime = endTime;
+            Questions = questions;
+            UserId = userId;
+        }
+
+        public Game() {}
 
         public void AddQuestion(Question question) {
             Questions.Add(question);
@@ -58,6 +75,10 @@ namespace JavaHateBE.Model
         public bool Equals(Game? other) {
             if (other is null) return false;
             return Id == other.Id;
+        }
+
+        public static Game From(UpdateGameInput input) {
+            return new Game(input.Id, input.GameMode, input.Score, input.StartTime, input.EndTime, input.Questions, input.UserId);
         }
     }
 }

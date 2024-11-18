@@ -1,5 +1,6 @@
 using Xunit;
 using JavaHateBE.Model;
+using JavaHateBE.Model.DTOs;
 
 namespace JavaHateBE.Test.Domain
 {
@@ -117,6 +118,22 @@ namespace JavaHateBE.Test.Domain
             var Game2 = new Game(ValidGameMode, ValidUser.Id);
 
             Assert.False(Game1.Equals(Game2));
+        }
+
+        [Fact]
+        public void FromUpdateGameInput_ReturnsGame_WhenGivenValidUpdateGameInput() {
+            var updateGameInput = new UpdateGameInput(Guid.NewGuid(), GameMode.FIVE_MINUTES, 5, DateTime.Now, DateTime.Now, new List<Question> { ValidQuestion1, ValidQuestion2 }, Guid.NewGuid());
+
+            var Game = Model.Game.From(updateGameInput);
+
+            Assert.NotNull(Game);
+            Assert.Equal(updateGameInput.Id, Game.Id);
+            Assert.Equal(updateGameInput.GameMode, Game.GameMode);
+            Assert.Equal(updateGameInput.Score, Game.Score);
+            Assert.Equal(updateGameInput.StartTime, Game.StartTime);
+            Assert.Equal(updateGameInput.EndTime, Game.EndTime);
+            Assert.Equal(updateGameInput.Questions, Game.Questions);
+            Assert.Equal(updateGameInput.UserId, Game.UserId);
         }
     }
 }

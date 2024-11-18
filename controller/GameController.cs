@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using JavaHateBE.Exceptions;
 using JavaHateBE.Model;
+using JavaHateBE.Model.DTOs;
 using JavaHateBE.Service;
 using Microsoft.AspNetCore.Mvc;
 
@@ -69,10 +70,6 @@ namespace JavaHateBE.Controller
             try
             {
                 Game? game = await _gameService.RemoveGame(id);
-                if (game == null)
-                {
-                    return NotFound();
-                }
                 return Ok(game);
             }
             catch (ObjectNotFoundException e)
@@ -168,11 +165,11 @@ namespace JavaHateBE.Controller
         }
 
         [HttpPut]
-        public async Task<ActionResult<Game>> UpdateGame([FromBody] Game game)
+        public async Task<ActionResult<Game>> UpdateGame([FromBody] UpdateGameInput game)
         {
             try
             {
-                Game updatedGame = await _gameService.UpdateGame(game);
+                Game updatedGame = await _gameService.UpdateGame(Game.From(game));
                 return Ok(updatedGame);
             }
             catch (ObjectNotFoundException e)
