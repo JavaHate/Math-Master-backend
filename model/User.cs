@@ -13,9 +13,9 @@ namespace JavaHateBE.Model
     {
         [Key]
         public Guid Id { get; set; }
-        public string Username { get; protected set; } 
-        public string Password { get; protected set; } 
-        public string Email { get; protected set; } 
+        public string Username { get; protected set; } = string.Empty;
+        public string Password { get; protected set; } = string.Empty;
+        public string Email { get; protected set; } = string.Empty;
         public DateTime LastLogin { get; private set; }
         public List<Game> Games { get; private set; } = new List<Game>();
 
