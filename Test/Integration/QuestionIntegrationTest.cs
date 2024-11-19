@@ -21,7 +21,7 @@ namespace JavaHateBE.Test.Integration
             _factory = factory.WithWebHostBuilder(builder =>
             {
                 builder.UseEnvironment("Testing");
-                builder.UseContentRoot("../../../../JavaHateBE");
+                builder.UseContentRoot("../../../");
                 builder.ConfigureServices(services =>
                 {
                     var serviceProvider = new ServiceCollection()
