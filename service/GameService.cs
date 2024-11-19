@@ -6,6 +6,7 @@ using System.Collections.Concurrent;
 using JavaHateBE.Exceptions;
 using JavaHateBE.Model;
 using JavaHateBE.Repository;
+using JavaHateBE.Util;
 
 namespace JavaHateBE.Service
 {
@@ -54,6 +55,9 @@ namespace JavaHateBE.Service
         /// <returns>The added game.</returns>
         public async Task<Game> AddGame(Game game)
         {
+            var validator = new Validator<Game>();
+            validator.Validate(game, game.UserId);
+
             if(await _userRepository.GetUserById(game.UserId) == null){
                 throw new ObjectNotFoundException("User", "No user found with that ID");
             }
@@ -70,6 +74,9 @@ namespace JavaHateBE.Service
         /// <exception cref="ObjectNotFoundException">Thrown when no game is found with the specified ID.</exception>
         public async Task<Game?> RemoveGame(Guid id)
         {
+            var validator = new Validator<Game>();
+            validator.Validate(new Game(), id);
+
             Game? game = await _GameRepository.GetGameById(id);
             if (game == null)
             {
@@ -96,6 +103,9 @@ namespace JavaHateBE.Service
         /// <returns>A list of games associated with the specified user.</returns>
         public async Task<List<Game>> GetGamesByUser(Guid userId)
         {
+            var validator = new Validator<User>();
+            validator.Validate(new User(), userId);
+
             var User = await _userRepository.GetUserById(userId);
             if (User == null)
             {
@@ -113,6 +123,9 @@ namespace JavaHateBE.Service
         /// <exception cref="ObjectNotFoundException">Thrown when no user is found with the specified ID.</exception>
         public async Task<List<Game>> GetGamesByUserByGameMode(Guid userId, string gameMode)
         {
+            var validator = new Validator<User>();
+            validator.Validate(new User(), userId);
+
             GameMode mode = Enum.Parse<GameMode>(gameMode);
             User? user = await _userRepository.GetUserById(userId);
             if (user == null)
@@ -141,6 +154,9 @@ namespace JavaHateBE.Service
         /// <exception cref="ObjectNotFoundException">Thrown when no user or game is found with the specified ID.</exception>
         public async Task<Game> UpdateGame(Game game)
         {
+            var validator = new Validator<Game>();
+            validator.Validate(game, game.UserId);
+
             User? user = await _userRepository.GetUserById(game.UserId);
             if (user == null)
             {
@@ -165,6 +181,9 @@ namespace JavaHateBE.Service
         /// <exception cref="ArgumentException">Thrown when the game mode is invalid.</exception>
         public async Task<Game> NewGame(Guid userId, string gameMode)
         {
+            var Validator = new Validator<User>();
+            Validator.Validate(new User(), userId);
+
             User? user = await _userRepository.GetUserById(userId);
             if (user == null)
             {
