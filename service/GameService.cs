@@ -75,14 +75,10 @@ namespace JavaHateBE.Service
         public async Task<Game?> RemoveGame(Guid id)
         {
             var validator = new Validator<Game>();
-            validator.Validate(new Game(), id);
-
             Game? game = await _GameRepository.GetGameById(id);
-            if (game == null)
-            {
-                throw new ObjectNotFoundException("Game", "No Games found with that ID");
-            }
+            validator.Validate(game, id, () => new ObjectNotFoundException("Game", "No Games found with that ID"));
             _gamesCache.TryRemove(id, out _);
+
             return await _GameRepository.RemoveGame(id);
         }
 
@@ -104,13 +100,9 @@ namespace JavaHateBE.Service
         public async Task<List<Game>> GetGamesByUser(Guid userId)
         {
             var validator = new Validator<User>();
-            validator.Validate(new User(), userId);
-
             var User = await _userRepository.GetUserById(userId);
-            if (User == null)
-            {
-                throw new ObjectNotFoundException("User", "No user found with that ID");
-            }
+            validator.Validate(User, userId, () => new ObjectNotFoundException("User", "No user found with that ID"));
+
             return await _GameRepository.GetGamesByUser(userId);
         }
 
@@ -124,14 +116,10 @@ namespace JavaHateBE.Service
         public async Task<List<Game>> GetGamesByUserByGameMode(Guid userId, string gameMode)
         {
             var validator = new Validator<User>();
-            validator.Validate(new User(), userId);
-
-            GameMode mode = Enum.Parse<GameMode>(gameMode);
             User? user = await _userRepository.GetUserById(userId);
-            if (user == null)
-            {
-                throw new ObjectNotFoundException("User", "No user found with that ID");
-            }
+            validator.Validate(user, userId, () => new ObjectNotFoundException("User", "No user found with that ID"));
+            GameMode mode = Enum.Parse<GameMode>(gameMode);
+
             return await _GameRepository.GetGamesByUserByGameMode(userId, mode);
         }
 
@@ -154,19 +142,16 @@ namespace JavaHateBE.Service
         /// <exception cref="ObjectNotFoundException">Thrown when no user or game is found with the specified ID.</exception>
         public async Task<Game> UpdateGame(Game game)
         {
-            var validator = new Validator<Game>();
-            validator.Validate(game, game.UserId);
+            var gameValidator = new Validator<Game>();
+            gameValidator.Validate(game, game.UserId);
 
+            var userValidator = new Validator<User>();
             User? user = await _userRepository.GetUserById(game.UserId);
-            if (user == null)
-            {
-                throw new ObjectNotFoundException("User", "No user found with that ID");
-            }
+            userValidator.Validate(user, game.UserId, () => new ObjectNotFoundException("User", "No user found with that ID"));
+
             Game? updatedGame = await _GameRepository.UpdateGame(game);
-            if (updatedGame == null)
-            {
-                throw new ObjectNotFoundException("Game", "No game found with that ID");
-            }
+            gameValidator.Validate(updatedGame, game.UserId, () => new ObjectNotFoundException("Game", "No game found with that ID"));
+
             _gamesCache[updatedGame.Id] = updatedGame;
             return updatedGame;
         }
@@ -181,14 +166,11 @@ namespace JavaHateBE.Service
         /// <exception cref="ArgumentException">Thrown when the game mode is invalid.</exception>
         public async Task<Game> NewGame(Guid userId, string gameMode)
         {
-            var Validator = new Validator<User>();
-            Validator.Validate(new User(), userId);
+            var validator = new Validator<User>();
 
             User? user = await _userRepository.GetUserById(userId);
-            if (user == null)
-            {
-                throw new ObjectNotFoundException("User", "No user found with that ID");
-            }
+            validator.Validate(user, userId, () => new ObjectNotFoundException("User", "No user found with that ID"));
+
             GameMode mode = Enum.Parse<GameMode>(gameMode, true);
             Game game = user.NewGame(mode);
             Game addedGame = await _GameRepository.AddGame(game);
