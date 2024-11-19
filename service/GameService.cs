@@ -6,6 +6,7 @@ using System.Collections.Concurrent;
 using JavaHateBE.Exceptions;
 using JavaHateBE.Model;
 using JavaHateBE.Repository;
+using JavaHateBE.Util;
 
 namespace JavaHateBE.Service
 {
@@ -54,6 +55,10 @@ namespace JavaHateBE.Service
         /// <returns>The added game.</returns>
         public async Task<Game> AddGame(Game game)
         {
+
+            var validator = new Validator<Game>();
+            validator.Validate(game, game.UserId);
+
             if(await _userRepository.GetUserById(game.UserId) == null){
                 throw new ObjectNotFoundException("User", "No user found with that ID");
             }
