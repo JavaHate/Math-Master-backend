@@ -1,909 +1,4597 @@
 [
-    {"Text":"1+1", "Answer": 2, "Difficulty": 1},
-    {"Text":"2+1", "Answer": 3, "Difficulty": 1},
-    {"Text":"3+1", "Answer": 4, "Difficulty": 1},
-    {"Text":"4+1", "Answer": 5, "Difficulty": 1},
-    {"Text":"5+1", "Answer": 6, "Difficulty": 1},
-    {"Text":"6+1", "Answer": 7, "Difficulty": 1},
-    {"Text":"7+1", "Answer": 8, "Difficulty": 1},
-    {"Text":"8+1", "Answer": 9, "Difficulty": 1},
-    {"Text":"9+1", "Answer": 10, "Difficulty": 1},
-    {"Text":"10+1", "Answer": 11, "Difficulty": 1},
-    {"Text":"11+1", "Answer": 12, "Difficulty": 1},
-    {"Text":"12+1", "Answer": 13, "Difficulty": 1},
-    {"Text":"13+1", "Answer": 14, "Difficulty": 1},
-    {"Text":"14+1", "Answer": 15, "Difficulty": 1},
-    {"Text":"15+1", "Answer": 16, "Difficulty": 1},
-    {"Text":"1-1", "Answer": 0, "Difficutly": 1},
-    {"Text":"2-1", "Answer": 1, "Difficulty": 1},
-    {"Text":"3-1", "Answer": 2, "Difficulty": 1},
-    {"Text":"4-1", "Answer": 3, "Difficulty": 1},
-    {"Text":"5-1", "Answer": 4, "Difficulty": 1},
-    {"Text":"6-1", "Answer": 5, "Difficulty": 1},
-    {"Text":"7-1", "Answer": 6, "Difficulty": 1},
-    {"Text":"8-1", "Answer": 7, "Difficulty": 1},
-    {"Text":"9-1", "Answer": 8, "Difficulty": 1},
-    {"Text":"10-1", "Answer": 9, "Difficulty": 1},
-    {"Text":"11-1", "Answer": 10, "Difficulty": 1},
-    {"Text":"12-1", "Answer": 11, "Difficulty": 1},
-    {"Text":"13-1", "Answer": 12, "Difficulty": 1},
-    {"Text":"14-1", "Answer": 13, "Difficulty": 1},
-    {"Text":"15-1", "Answer": 14, "Difficulty": 1},
-    {"Text":"1*1", "Answer": 1, "Difficulty": 1},
-    {"Text":"2*1", "Answer": 2, "Difficulty": 1},
-    {"Text":"3*1", "Answer": 3, "Difficulty": 1},
-    {"Text":"4*1", "Answer": 4, "Difficulty": 1},
-    {"Text":"5*1", "Answer": 5, "Difficulty": 1},
-    {"Text":"6*1", "Answer": 6, "Difficulty": 1},
-    {"Text":"7*1", "Answer": 7, "Difficulty": 1},
-    {"Text":"8*1", "Answer": 8, "Difficulty": 1},
-    {"Text":"9*1", "Answer": 9, "Difficulty": 1},
-    {"Text":"10*1", "Answer": 10, "Difficulty": 1},
-    {"Text":"11*1", "Answer": 11, "Difficulty": 1},
-    {"Text":"12*1", "Answer": 12, "Difficulty": 1},
-    {"Text":"13*1", "Answer": 13, "Difficulty": 1},
-    {"Text":"14*1", "Answer": 14, "Difficulty": 1},
-    {"Text":"15*1", "Answer": 15, "Difficulty": 1},
-    {"Text":"1/1", "Answer": 1, "Difficulty": 1},
-    {"Text":"2/1", "Answer": 2, "Difficulty": 1},
-    {"Text":"3/1", "Answer": 3, "Difficulty": 1},
-    {"Text":"4/1", "Answer": 4, "Difficulty": 1},
-    {"Text":"5/1", "Answer": 5, "Difficulty": 1},
-    {"Text":"6/1", "Answer": 6, "Difficulty": 1},
-    {"Text":"7/1", "Answer": 7, "Difficulty": 1},
-    {"Text":"8/1", "Answer": 8, "Difficulty": 1},
-    {"Text":"9/1", "Answer": 9, "Difficulty": 1},
-    {"Text":"10/1", "Answer": 10, "Difficulty": 1},
-    {"Text":"11/1", "Answer": 11, "Difficulty": 1},
-    {"Text":"12/1", "Answer": 12, "Difficulty": 1},
-    {"Text":"13/1", "Answer": 13, "Difficulty": 1},
-    {"Text":"14/1", "Answer": 14, "Difficulty": 1},
-    {"Text":"15/1", "Answer": 15, "Difficulty": 1},
-    {"Text":"1+2", "Answer": 3, "Difficulty": 1},
-    {"Text":"2+2", "Answer": 4, "Difficulty": 1},
-    {"Text":"3+2", "Answer": 5, "Difficulty": 1},
-    {"Text":"4+2", "Answer": 6, "Difficulty": 1},
-    {"Text":"5+2", "Answer": 7, "Difficulty": 1},
-    {"Text":"6+2", "Answer": 8, "Difficulty": 1},
-    {"Text":"7+2", "Answer": 9, "Difficulty": 1},
-    {"Text":"8+2", "Answer": 10, "Difficulty": 1},
-    {"Text":"9+2", "Answer": 11, "Difficulty": 1},
-    {"Text":"10+2", "Answer": 12, "Difficulty": 1},
-    {"Text":"11+2", "Answer": 13, "Difficulty": 1},
-    {"Text":"12+2", "Answer": 14, "Difficulty": 1},
-    {"Text":"13+2", "Answer": 15, "Difficulty": 1},
-    {"Text":"14+2", "Answer": 16, "Difficulty": 1},
-    {"Text":"15+2", "Answer": 17, "Difficulty": 1},
-    {"Text":"1-2", "Answer": -1, "Difficulty": 1},
-    {"Text":"2-2", "Answer": 0, "Difficulty": 1},
-    {"Text":"3-2", "Answer": 1, "Difficulty": 1},
-    {"Text":"4-2", "Answer": 2, "Difficulty": 1},
-    {"Text":"5-2", "Answer": 3, "Difficulty": 1},
-    {"Text":"6-2", "Answer": 4, "Difficulty": 1},
-    {"Text":"7-2", "Answer": 5, "Difficulty": 1},
-    {"Text":"8-2", "Answer": 6, "Difficulty": 1},
-    {"Text":"9-2", "Answer": 7, "Difficulty": 1},
-    {"Text":"10-2", "Answer": 8, "Difficulty": 1},
-    {"Text":"11-2", "Answer": 9, "Difficulty": 1},
-    {"Text":"12-2", "Answer": 10, "Difficulty": 1},
-    {"Text":"13-2", "Answer": 11, "Difficulty": 1},
-    {"Text":"14-2", "Answer": 12, "Difficulty": 1},
-    {"Text":"15-2", "Answer": 13, "Difficulty": 1},
-    {"Text":"1*2", "Answer": 2, "Difficulty": 1},
-    {"Text":"2*2", "Answer": 4, "Difficulty": 1},
-    {"Text":"3*2", "Answer": 6, "Difficulty": 1},
-    {"Text":"4*2", "Answer": 8, "Difficulty": 1},
-    {"Text":"5*2", "Answer": 10, "Difficulty": 1},
-    {"Text":"6*2", "Answer": 12, "Difficulty": 1},
-    {"Text":"7*2", "Answer": 14, "Difficulty": 1},
-    {"Text":"8*2", "Answer": 16, "Difficulty": 1},
-    {"Text":"9*2", "Answer": 18, "Difficulty": 1},
-    {"Text":"10*2", "Answer": 20, "Difficulty": 1},
-    {"Text":"11*2", "Answer": 22, "Difficulty": 1},
-    {"Text":"12*2", "Answer": 24, "Difficulty": 1},
-    {"Text":"13*2", "Answer": 26, "Difficulty": 1},
-    {"Text":"14*2", "Answer": 28, "Difficulty": 1},
-    {"Text":"15*2", "Answer": 30, "Difficulty": 1},
-    {"Text":"1/2", "Answer": 0.5, "Difficulty": 1},
-    {"Text":"2/2", "Answer": 1, "Difficulty": 1},
-    {"Text":"3/2", "Answer": 1.5, "Difficulty": 1},
-    {"Text":"4/2", "Answer": 2, "Difficulty": 1},
-    {"Text":"5/2", "Answer": 2.5, "Difficulty": 1},
-    {"Text":"6/2", "Answer": 3, "Difficulty": 1},
-    {"Text":"7/2", "Answer": 3.5, "Difficulty": 1},
-    {"Text":"8/2", "Answer": 4, "Difficulty": 1},
-    {"Text":"9/2", "Answer": 4.5, "Difficulty": 1},
-    {"Text":"10/2", "Answer": 5, "Difficulty": 1},
-    {"Text":"11/2", "Answer": 5.5, "Difficulty": 1},
-    {"Text":"12/2", "Answer": 6, "Difficulty": 1},
-    {"Text":"13/2", "Answer": 6.5, "Difficulty": 1},
-    {"Text":"14/2", "Answer": 7, "Difficulty": 1},
-    {"Text":"15/2", "Answer": 7.5, "Difficulty": 1},
-    {"Text":"1+3", "Answer": 4, "Difficulty": 1},
-    {"Text":"2+3", "Answer": 5, "Difficulty": 1},
-    {"Text":"3+3", "Answer": 6, "Difficulty": 1},
-    {"Text":"4+3", "Answer": 7, "Difficulty": 1},
-    {"Text":"5+3", "Answer": 8, "Difficulty": 1},
-    {"Text":"6+3", "Answer": 9, "Difficulty": 1},
-    {"Text":"7+3", "Answer": 10, "Difficulty": 1},
-    {"Text":"8+3", "Answer": 11, "Difficulty": 1},
-    {"Text":"9+3", "Answer": 12, "Difficulty": 1},
-    {"Text":"10+3", "Answer": 13, "Difficulty": 1},
-    {"Text":"11+3", "Answer": 14, "Difficulty": 1},
-    {"Text":"12+3", "Answer": 15, "Difficulty": 1},
-    {"Text":"13+3", "Answer": 16, "Difficulty": 1},
-    {"Text":"14+3", "Answer": 17, "Difficulty": 1},
-    {"Text":"15+3", "Answer": 18, "Difficulty": 1},
-    {"Text":"1-3", "Answer": -2, "Difficulty": 1},
-    {"Text":"2-3", "Answer": -1, "Difficulty": 1},
-    {"Text":"3-3", "Answer": 0, "Difficulty": 1},
-    {"Text":"4-3", "Answer": 1, "Difficulty": 1},
-    {"Text":"5-3", "Answer": 2, "Difficulty": 1},
-    {"Text":"6-3", "Answer": 3, "Difficulty": 1},
-    {"Text":"7-3", "Answer": 4, "Difficulty": 1},
-    {"Text":"8-3", "Answer": 5, "Difficulty": 1},
-    {"Text":"9-3", "Answer": 6, "Difficulty": 1},
-    {"Text":"10-3", "Answer": 7, "Difficulty": 1},
-    {"Text":"11-3", "Answer": 8, "Difficulty": 1},
-    {"Text":"12-3", "Answer": 9, "Difficulty": 1},
-    {"Text":"13-3", "Answer": 10, "Difficulty": 1},
-    {"Text":"14-3", "Answer": 11, "Difficulty": 1},
-    {"Text":"15-3", "Answer": 12, "Difficulty": 1},
-    {"Text":"1*3", "Answer": 3, "Difficulty": 1},
-    {"Text":"2*3", "Answer": 6, "Difficulty": 1},
-    {"Text":"3*3", "Answer": 9, "Difficulty": 1},
-    {"Text":"4*3", "Answer": 12, "Difficulty": 1},
-    {"Text":"5*3", "Answer": 15, "Difficulty": 1},
-    {"Text":"6*3", "Answer": 18, "Difficulty": 1},
-    {"Text":"7*3", "Answer": 21, "Difficulty": 1},
-    {"Text":"8*3", "Answer": 24, "Difficulty": 1},
-    {"Text":"9*3", "Answer": 27, "Difficulty": 1},
-    {"Text":"10*3", "Answer": 30, "Difficulty": 1},
-    {"Text":"11*3", "Answer": 33, "Difficulty": 1},
-    {"Text":"12*3", "Answer": 36, "Difficulty": 1},
-    {"Text":"13*3", "Answer": 39, "Difficulty": 1},
-    {"Text":"14*3", "Answer": 42, "Difficulty": 1},
-    {"Text":"15*3", "Answer": 45, "Difficulty": 1},
-    {"Text":"3/3", "Answer": 1, "Difficulty": 1},
-    {"Text":"6/3", "Answer": 2, "Difficulty": 1},
-    {"Text":"9/3", "Answer": 3, "Difficulty": 1},
-    {"Text":"12/3", "Answer": 4, "Difficulty": 1},
-    {"Text":"15/3", "Answer": 5, "Difficulty": 1},
-    {"Text":"1+4", "Answer": 5, "Difficulty": 1},
-    {"Text":"1-4", "Answer": -3, "Difficulty": 1},
-    {"Text":"1*4", "Answer": 4, "Difficulty": 1},
-    {"Text":"1/4", "Answer": 0.25, "Difficulty": 1},
-    {"Text":"2+4", "Answer": 6, "Difficulty": 1},
-    {"Text":"2-4", "Answer": -2, "Difficulty": 1},
-    {"Text":"2*4", "Answer": 8, "Difficulty": 1},
-    {"Text":"2/4", "Answer": 0.5, "Difficulty": 1},
-    {"Text":"3+4", "Answer": 7, "Difficulty": 1},
-    {"Text":"3-4", "Answer": -1, "Difficulty": 1},
-    {"Text":"3*4", "Answer": 12, "Difficulty": 1},
-    {"Text":"3/4", "Answer": 0.75, "Difficulty": 1},
-    {"Text":"4+4", "Answer": 8, "Difficulty": 1},
-    {"Text":"4-4", "Answer": 0, "Difficulty": 1},
-    {"Text":"4*4", "Answer": 16, "Difficulty": 1},
-    {"Text":"4/4", "Answer": 1, "Difficulty": 1},
-    {"Text":"5+4", "Answer": 9, "Difficulty": 1},
-    {"Text":"5-4", "Answer": 1, "Difficulty": 1},
-    {"Text":"5*4", "Answer": 20, "Difficulty": 1},
-    {"Text":"5/4", "Answer": 1.25, "Difficulty": 1},
-    {"Text":"6+4", "Answer": 10, "Difficulty": 1},
-    {"Text":"6-4", "Answer": 2, "Difficulty": 1},
-    {"Text":"6*4", "Answer": 24, "Difficulty": 1},
-    {"Text":"6/4", "Answer": 1.5, "Difficulty": 1},
-    {"Text":"7+4", "Answer": 11, "Difficulty": 1},
-    {"Text":"7-4", "Answer": 3, "Difficulty": 1},
-    {"Text":"7*4", "Answer": 28, "Difficulty": 1},
-    {"Text":"7/4", "Answer": 1.75, "Difficulty": 1},
-    {"Text":"8+4", "Answer": 12, "Difficulty": 1},
-    {"Text":"8-4", "Answer": 4, "Difficulty": 1},
-    {"Text":"8*4", "Answer": 32, "Difficulty": 1},
-    {"Text":"8/4", "Answer": 2, "Difficulty": 1},
-    {"Text":"9+4", "Answer": 13, "Difficulty": 1},
-    {"Text":"9-4", "Answer": 5, "Difficulty": 1},
-    {"Text":"9*4", "Answer": 36, "Difficulty": 1},
-    {"Text":"9/4", "Answer": 2.25, "Difficulty": 1},
-    {"Text":"10+4", "Answer": 14, "Difficulty": 1},
-    {"Text":"10-4", "Answer": 6, "Difficulty": 1},
-    {"Text":"10*4", "Answer": 40, "Difficulty": 1},
-    {"Text":"10/4", "Answer": 2.5, "Difficulty": 1},
-    {"Text":"11+4", "Answer": 15, "Difficulty": 1},
-    {"Text":"11-4", "Answer": 7, "Difficulty": 1},
-    {"Text":"11*4", "Answer": 44, "Difficulty": 1},
-    {"Text":"11/4", "Answer": 2.75, "Difficulty": 1},
-    {"Text":"12+4", "Answer": 16, "Difficulty": 1},
-    {"Text":"12-4", "Answer": 8, "Difficulty": 1},
-    {"Text":"12*4", "Answer": 48, "Difficulty": 1},
-    {"Text":"12/4", "Answer": 3, "Difficulty": 1},
-    {"Text":"13+4", "Answer": 17, "Difficulty": 1},
-    {"Text":"13-4", "Answer": 9, "Difficulty": 1},
-    {"Text":"13*4", "Answer": 52, "Difficulty": 1},
-    {"Text":"13/4", "Answer": 3.25, "Difficulty": 1},
-    {"Text":"14+4", "Answer": 18, "Difficulty": 1},
-    {"Text":"14-4", "Answer": 10, "Difficulty": 1},
-    {"Text":"14*4", "Answer": 56, "Difficulty": 1},
-    {"Text":"14/4", "Answer": 3.5, "Difficulty": 1},
-    {"Text":"15+4", "Answer": 19, "Difficulty": 1},
-    {"Text":"15-4", "Answer": 11, "Difficulty": 1},
-    {"Text":"15*4", "Answer": 60, "Difficulty": 1},
-    {"Text":"15/4", "Answer": 3.75, "Difficulty": 1},
-    {"Text":"1+5", "Answer": 6, "Difficulty": 1},
-    {"Text":"1-5", "Answer": -4, "Difficulty": 1},
-    {"Text":"1*5", "Answer": 5, "Difficulty": 1},
-    {"Text":"1/5", "Answer": 0.2, "Difficulty": 1},
-    {"Text":"2+5", "Answer": 7, "Difficulty": 1},
-    {"Text":"2-5", "Answer": -3, "Difficulty": 1},
-    {"Text":"2*5", "Answer": 10, "Difficulty": 1},
-    {"Text":"2/5", "Answer": 0.4, "Difficulty": 1},
-    {"Text":"3+5", "Answer": 8, "Difficulty": 1},
-    {"Text":"3-5", "Answer": -2, "Difficulty": 1},
-    {"Text":"3*5", "Answer": 15, "Difficulty": 1},
-    {"Text":"3/5", "Answer": 0.6, "Difficulty": 1},
-    {"Text":"4+5", "Answer": 9, "Difficulty": 1},
-    {"Text":"4-5", "Answer": -1, "Difficulty": 1},
-    {"Text":"4*5", "Answer": 20, "Difficulty": 1},
-    {"Text":"4/5", "Answer": 0.8, "Difficulty": 1},
-    {"Text":"5+5", "Answer": 10, "Difficulty": 1},
-    {"Text":"5-5", "Answer": 0, "Difficulty": 1},
-    {"Text":"5*5", "Answer": 25, "Difficulty": 1},
-    {"Text":"5/5", "Answer": 1, "Difficulty": 1},
-    {"Text":"6+5", "Answer": 11, "Difficulty": 1},
-    {"Text":"6-5", "Answer": 1, "Difficulty": 1},
-    {"Text":"6*5", "Answer": 30, "Difficulty": 1},
-    {"Text":"6/5", "Answer": 1.2, "Difficulty": 1},
-    {"Text":"7+5", "Answer": 12, "Difficulty": 1},
-    {"Text":"7-5", "Answer": 2, "Difficulty": 1},
-    {"Text":"7*5", "Answer": 35, "Difficulty": 1},
-    {"Text":"7/5", "Answer": 1.4, "Difficulty": 1},
-    {"Text":"8+5", "Answer": 13, "Difficulty": 1},
-    {"Text":"8-5", "Answer": 3, "Difficulty": 1},
-    {"Text":"8*5", "Answer": 40, "Difficulty": 1},
-    {"Text":"8/5", "Answer": 1.6, "Difficulty": 1},
-    {"Text":"9+5", "Answer": 14, "Difficulty": 1},
-    {"Text":"9-5", "Answer": 4, "Difficulty": 1},
-    {"Text":"9*5", "Answer": 45, "Difficulty": 1},
-    {"Text":"9/5", "Answer": 1.8, "Difficulty": 1},
-    {"Text":"10+5", "Answer": 15, "Difficulty": 1},
-    {"Text":"10-5", "Answer": 5, "Difficulty": 1},
-    {"Text":"10*5", "Answer": 50, "Difficulty": 1},
-    {"Text":"10/5", "Answer": 2, "Difficulty": 1},
-    {"Text":"11+5", "Answer": 16, "Difficulty": 1},
-    {"Text":"11-5", "Answer": 6, "Difficulty": 1},
-    {"Text":"11*5", "Answer": 55, "Difficulty": 1},
-    {"Text":"11/5", "Answer": 2.2, "Difficulty": 1},
-    {"Text":"12+5", "Answer": 17, "Difficulty": 1},
-    {"Text":"12-5", "Answer": 7, "Difficulty": 1},
-    {"Text":"12*5", "Answer": 60, "Difficulty": 1},
-    {"Text":"12/5", "Answer": 2.4, "Difficulty": 1},
-    {"Text":"13+5", "Answer": 18, "Difficulty": 1},
-    {"Text":"13-5", "Answer": 8, "Difficulty": 1},
-    {"Text":"13*5", "Answer": 65, "Difficulty": 1},
-    {"Text":"13/5", "Answer": 2.6, "Difficulty": 1},
-    {"Text":"14+5", "Answer": 19, "Difficulty": 1},
-    {"Text":"14-5", "Answer": 9, "Difficulty": 1},
-    {"Text":"14*5", "Answer": 70, "Difficulty": 1},
-    {"Text":"14/5", "Answer": 2.8, "Difficulty": 1},
-    {"Text":"15+5", "Answer": 20, "Difficulty": 1},
-    {"Text":"15-5", "Answer": 10, "Difficulty": 1},
-    {"Text":"15*5", "Answer": 75, "Difficulty": 1},
-    {"Text":"15/5", "Answer": 3, "Difficulty": 1},
-    {"Text":"1+6", "Answer": 7, "Difficulty": 1},
-    {"Text":"1-6", "Answer": -5, "Difficulty": 1},
-    {"Text":"1*6", "Answer": 6, "Difficulty": 1},
-    {"Text":"2+6", "Answer": 8, "Difficulty": 1},
-    {"Text":"2-6", "Answer": -4, "Difficulty": 1},
-    {"Text":"2*6", "Answer": 12, "Difficulty": 1},
-    {"Text":"3+6", "Answer": 9, "Difficulty": 1},
-    {"Text":"3-6", "Answer": -3, "Difficulty": 1},
-    {"Text":"3*6", "Answer": 18, "Difficulty": 1},
-    {"Text":"3/6", "Answer": 0.5, "Difficulty": 1},
-    {"Text":"4+6", "Answer": 10, "Difficulty": 1},
-    {"Text":"4-6", "Answer": -2, "Difficulty": 1},
-    {"Text":"4*6", "Answer": 24, "Difficulty": 1},
-    {"Text":"5+6", "Answer": 11, "Difficulty": 1},
-    {"Text":"5-6", "Answer": -1, "Difficulty": 1},
-    {"Text":"5*6", "Answer": 30, "Difficulty": 1},
-    {"Text":"6+6", "Answer": 12, "Difficulty": 1},
-    {"Text":"6-6", "Answer": 0, "Difficulty": 1},
-    {"Text":"6*6", "Answer": 36, "Difficulty": 1},
-    {"Text":"6/6", "Answer": 1, "Difficulty": 1},
-    {"Text":"7+6", "Answer": 13, "Difficulty": 1},
-    {"Text":"7-6", "Answer": 1, "Difficulty": 1},
-    {"Text":"7*6", "Answer": 42, "Difficulty": 1},
-    {"Text":"8+6", "Answer": 14, "Difficulty": 1},
-    {"Text":"8-6", "Answer": 2, "Difficulty": 1},
-    {"Text":"8*6", "Answer": 48, "Difficulty": 1},
-    {"Text":"9+6", "Answer": 15, "Difficulty": 1},
-    {"Text":"9-6", "Answer": 3, "Difficulty": 1},
-    {"Text":"9*6", "Answer": 54, "Difficulty": 1},
-    {"Text":"9/6", "Answer": 1.5, "Difficulty": 1},
-    {"Text":"10+6", "Answer": 16, "Difficulty": 1},
-    {"Text":"10-6", "Answer": 4, "Difficulty": 1},
-    {"Text":"10*6", "Answer": 60, "Difficulty": 1},
-    {"Text":"11+6", "Answer": 17, "Difficulty": 1},
-    {"Text":"11-6", "Answer": 5, "Difficulty": 1},
-    {"Text":"11*6", "Answer": 66, "Difficulty": 1},
-    {"Text":"12+6", "Answer": 18, "Difficulty": 1},
-    {"Text":"12-6", "Answer": 6, "Difficulty": 1},
-    {"Text":"12*6", "Answer": 72, "Difficulty": 1},
-    {"Text":"12/6", "Answer": 2, "Difficulty": 1},
-    {"Text":"13+6", "Answer": 19, "Difficulty": 1},
-    {"Text":"13-6", "Answer": 7, "Difficulty": 1},
-    {"Text":"13*6", "Answer": 78, "Difficulty": 1},
-    {"Text":"14+6", "Answer": 20, "Difficulty": 1},
-    {"Text":"14-6", "Answer": 8, "Difficulty": 1},
-    {"Text":"14*6", "Answer": 84, "Difficulty": 1},
-    {"Text":"15+6", "Answer": 21, "Difficulty": 1},
-    {"Text":"15-6", "Answer": 9, "Difficulty": 1},
-    {"Text":"15*6", "Answer": 90, "Difficulty": 1},
-    {"Text":"15/6", "Answer": 2.5, "Difficulty": 1},
-    {"Text":"1+7", "Answer": 8, "Difficulty": 1},
-    {"Text":"1-7", "Answer": -6, "Difficulty": 1},
-    {"Text":"1*7", "Answer": 7, "Difficulty": 1},
-    {"Text":"2+7", "Answer": 9, "Difficulty": 1},
-    {"Text":"2-7", "Answer": -5, "Difficulty": 1},
-    {"Text":"2*7", "Answer": 14, "Difficulty": 1},
-    {"Text":"3+7", "Answer": 10, "Difficulty": 1},
-    {"Text":"3-7", "Answer": -4, "Difficulty": 1},
-    {"Text":"3*7", "Answer": 21, "Difficulty": 1},
-    {"Text":"4+7", "Answer": 11, "Difficulty": 1},
-    {"Text":"4-7", "Answer": -3, "Difficulty": 1},
-    {"Text":"4*7", "Answer": 28, "Difficulty": 1},
-    {"Text":"5+7", "Answer": 12, "Difficulty": 1},
-    {"Text":"5-7", "Answer": -2, "Difficulty": 1},
-    {"Text":"5*7", "Answer": 35, "Difficulty": 1},
-    {"Text":"6+7", "Answer": 13, "Difficulty": 1},
-    {"Text":"6-7", "Answer": -1, "Difficulty": 1},
-    {"Text":"6*7", "Answer": 42, "Difficulty": 1},
-    {"Text":"7+7", "Answer": 14, "Difficulty": 1},
-    {"Text":"7-7", "Answer": 0, "Difficulty": 1},
-    {"Text":"7*7", "Answer": 49, "Difficulty": 1},
-    {"Text":"7/7", "Answer": 1, "Difficulty": 1},
-    {"Text":"8+7", "Answer": 15, "Difficulty": 1},
-    {"Text":"8-7", "Answer": 1, "Difficulty": 1},
-    {"Text":"8*7", "Answer": 56, "Difficulty": 1},
-    {"Text":"9+7", "Answer": 16, "Difficulty": 1},
-    {"Text":"9-7", "Answer": 2, "Difficulty": 1},
-    {"Text":"9*7", "Answer": 63, "Difficulty": 1},
-    {"Text":"10+7", "Answer": 17, "Difficulty": 1},
-    {"Text":"10-7", "Answer": 3, "Difficulty": 1},
-    {"Text":"10*7", "Answer": 70, "Difficulty": 1},
-    {"Text":"11+7", "Answer": 18, "Difficulty": 1},
-    {"Text":"11-7", "Answer": 4, "Difficulty": 1},
-    {"Text":"11*7", "Answer": 77, "Difficulty": 1},
-    {"Text":"12+7", "Answer": 19, "Difficulty": 1},
-    {"Text":"12-7", "Answer": 5, "Difficulty": 1},
-    {"Text":"12*7", "Answer": 84, "Difficulty": 1},
-    {"Text":"13+7", "Answer": 20, "Difficulty": 1},
-    {"Text":"13-7", "Answer": 6, "Difficulty": 1},
-    {"Text":"13*7", "Answer": 91, "Difficulty": 1},
-    {"Text":"14+7", "Answer": 21, "Difficulty": 1},
-    {"Text":"14-7", "Answer": 7, "Difficulty": 1},
-    {"Text":"14*7", "Answer": 98, "Difficulty": 1},
-    {"Text":"14/7", "Answer": 2, "Difficulty": 1},
-    {"Text":"15+7", "Answer": 22, "Difficulty": 1},
-    {"Text":"15-7", "Answer": 8, "Difficulty": 1},
-    {"Text":"15*7", "Answer": 105, "Difficulty": 1},
-    {"Text":"1+8", "Answer": 9, "Difficulty": 1},
-    {"Text":"1-8", "Answer": -7, "Difficulty": 1},
-    {"Text":"1*8", "Answer": 8, "Difficulty": 1},
-    {"Text":"1/8", "Answer": 0.125, "Difficulty": 2},
-    {"Text":"2+8", "Answer": 10, "Difficulty": 1},
-    {"Text":"2-8", "Answer": -6, "Difficulty": 1},
-    {"Text":"2*8", "Answer": 16, "Difficulty": 1},
-    {"Text":"2/8", "Answer": 0.25, "Difficulty": 1},
-    {"Text":"3+8", "Answer": 11, "Difficulty": 1},
-    {"Text":"3-8", "Answer": -5, "Difficulty": 1},
-    {"Text":"3*8", "Answer": 24, "Difficulty": 1},
-    {"Text":"3/8", "Answer": 0.375, "Difficulty": 2},
-    {"Text":"4+8", "Answer": 12, "Difficulty": 1},
-    {"Text":"4-8", "Answer": -4, "Difficulty": 1},
-    {"Text":"4*8", "Answer": 32, "Difficulty": 1},
-    {"Text":"4/8", "Answer": 0.5, "Difficulty": 1},
-    {"Text":"5+8", "Answer": 13, "Difficulty": 1},
-    {"Text":"5-8", "Answer": -3, "Difficulty": 1},
-    {"Text":"5*8", "Answer": 40, "Difficulty": 1},
-    {"Text":"5/8", "Answer": 0.625, "Difficulty": 2},
-    {"Text":"6+8", "Answer": 14, "Difficulty": 1},
-    {"Text":"6-8", "Answer": -2, "Difficulty": 1},
-    {"Text":"6*8", "Answer": 48, "Difficulty": 1},
-    {"Text":"6/8", "Answer": 0.75, "Difficulty": 2},
-    {"Text":"7+8", "Answer": 15, "Difficulty": 1},
-    {"Text":"7-8", "Answer": -1, "Difficulty": 1},
-    {"Text":"7*8", "Answer": 56, "Difficulty": 1},
-    {"Text":"7/8", "Answer": 0.875, "Difficulty": 2},
-    {"Text":"8+8", "Answer": 16, "Difficulty": 1},
-    {"Text":"8-8", "Answer": 0, "Difficulty": 1},
-    {"Text":"8*8", "Answer": 64, "Difficulty": 1},
-    {"Text":"8/8", "Answer": 1, "Difficulty": 1},
-    {"Text":"9+8", "Answer": 17, "Difficulty": 1},
-    {"Text":"9-8", "Answer": 1, "Difficulty": 1},
-    {"Text":"9*8", "Answer": 72, "Difficulty": 1},
-    {"Text":"9/8", "Answer": 1.125, "Difficulty": 2},
-    {"Text":"10+8", "Answer": 18, "Difficulty": 1},
-    {"Text":"10-8", "Answer": 2, "Difficulty": 1},
-    {"Text":"10*8", "Answer": 80, "Difficulty": 1},
-    {"Text":"10/8", "Answer": 1.25, "Difficulty": 2},
-    {"Text":"11+8", "Answer": 19, "Difficulty": 1},
-    {"Text":"11-8", "Answer": 3, "Difficulty": 1},
-    {"Text":"11*8", "Answer": 88, "Difficulty": 1},
-    {"Text":"11/8", "Answer": 1.375, "Difficulty": 2},
-    {"Text":"12+8", "Answer": 20, "Difficulty": 1},
-    {"Text":"12-8", "Answer": 4, "Difficulty": 1},
-    {"Text":"12*8", "Answer": 96, "Difficulty": 1},
-    {"Text":"12/8", "Answer": 1.5, "Difficulty": 2},
-    {"Text":"13+8", "Answer": 21, "Difficulty": 1},
-    {"Text":"13-8", "Answer": 5, "Difficulty": 1},
-    {"Text":"13*8", "Answer": 104, "Difficulty": 1},
-    {"Text":"13/8", "Answer": 1.625, "Difficulty": 2},
-    {"Text":"14+8", "Answer": 22, "Difficulty": 1},
-    {"Text":"14-8", "Answer": 6, "Difficulty": 1},
-    {"Text":"14*8", "Answer": 112, "Difficulty": 1},
-    {"Text":"14/8", "Answer": 1.75, "Difficulty": 2},
-    {"Text":"15+8", "Answer": 23, "Difficulty": 1},
-    {"Text":"15-8", "Answer": 7, "Difficulty": 1},
-    {"Text":"15*8", "Answer": 120, "Difficulty": 1},
-    {"Text":"15/8", "Answer": 1.875, "Difficulty": 2},
-    {"Text":"1+9", "Answer": 10, "Difficulty": 1},
-    {"Text":"1-9", "Answer": -8, "Difficulty": 1},
-    {"Text":"1*9", "Answer": 9, "Difficulty": 1},
-    {"Text":"2+9", "Answer": 11, "Difficulty": 1},
-    {"Text":"2-9", "Answer": -7, "Difficulty": 1},
-    {"Text":"2*9", "Answer": 18, "Difficulty": 1},
-    {"Text":"3+9", "Answer": 12, "Difficulty": 1},
-    {"Text":"3-9", "Answer": -6, "Difficulty": 1},
-    {"Text":"3*9", "Answer": 27, "Difficulty": 1},
-    {"Text":"4+9", "Answer": 13, "Difficulty": 1},
-    {"Text":"4-9", "Answer": -5, "Difficulty": 1},
-    {"Text":"4*9", "Answer": 36, "Difficulty": 1},
-    {"Text":"5+9", "Answer": 14, "Difficulty": 1},
-    {"Text":"5-9", "Answer": -4, "Difficulty": 1},
-    {"Text":"5*9", "Answer": 45, "Difficulty": 1},
-    {"Text":"6+9", "Answer": 15, "Difficulty": 1},
-    {"Text":"6-9", "Answer": -3, "Difficulty": 1},
-    {"Text":"6*9", "Answer": 54, "Difficulty": 1},
-    {"Text":"7+9", "Answer": 16, "Difficulty": 1},
-    {"Text":"7-9", "Answer": -2, "Difficulty": 1},
-    {"Text":"7*9", "Answer": 63, "Difficulty": 1},
-    {"Text":"8+9", "Answer": 17, "Difficulty": 1},
-    {"Text":"8-9", "Answer": -1, "Difficulty": 1},
-    {"Text":"8*9", "Answer": 72, "Difficulty": 1},
-    {"Text":"9+9", "Answer": 18, "Difficulty": 1},
-    {"Text":"9-9", "Answer": 0, "Difficulty": 1},
-    {"Text":"9*9", "Answer": 81, "Difficulty": 1},
-    {"Text":"9/9", "Answer": 1, "Difficulty": 1},
-    {"Text":"10+9", "Answer": 19, "Difficulty": 1},
-    {"Text":"10-9", "Answer": 1, "Difficulty": 1},
-    {"Text":"10*9", "Answer": 90, "Difficulty": 1},
-    {"Text":"11+9", "Answer": 20, "Difficulty": 1},
-    {"Text":"11-9", "Answer": 2, "Difficulty": 1},
-    {"Text":"11*9", "Answer": 99, "Difficulty": 1},
-    {"Text":"12+9", "Answer": 21, "Difficulty": 1},
-    {"Text":"12-9", "Answer": 3, "Difficulty": 1},
-    {"Text":"12*9", "Answer": 108, "Difficulty": 1},
-    {"Text":"13+9", "Answer": 22, "Difficulty": 1},
-    {"Text":"13-9", "Answer": 4, "Difficulty": 1},
-    {"Text":"13*9", "Answer": 117, "Difficulty": 1},
-    {"Text":"14+9", "Answer": 23, "Difficulty": 1},
-    {"Text":"14-9", "Answer": 5, "Difficulty": 1},
-    {"Text":"14*9", "Answer": 126, "Difficulty": 1},
-    {"Text":"15+9", "Answer": 24, "Difficulty": 1},
-    {"Text":"15-9", "Answer": 6, "Difficulty": 1},
-    {"Text":"15*9", "Answer": 135, "Difficulty": 1},
-    {"Text":"1+10", "Answer": 11, "Difficulty": 1},
-    {"Text":"1-10", "Answer": -9, "Difficulty": 1},
-    {"Text":"1*10", "Answer": 10, "Difficulty": 1},
-    {"Text":"1/10", "Answer": 0.1, "Difficulty": 1},
-    {"Text":"2+10", "Answer": 12, "Difficulty": 1},
-    {"Text":"2-10", "Answer": -8, "Difficulty": 1},
-    {"Text":"2*10", "Answer": 20, "Difficulty": 1},
-    {"Text":"2/10", "Answer": 0.2, "Difficulty": 1},
-    {"Text":"3+10", "Answer": 13, "Difficulty": 1},
-    {"Text":"3-10", "Answer": -7, "Difficulty": 1},
-    {"Text":"3*10", "Answer": 30, "Difficulty": 1},
-    {"Text":"3/10", "Answer": 0.3, "Difficulty": 1},
-    {"Text":"4+10", "Answer": 14, "Difficulty": 1},
-    {"Text":"4-10", "Answer": -6, "Difficulty": 1},
-    {"Text":"4*10", "Answer": 40, "Difficulty": 1},
-    {"Text":"4/10", "Answer": 0.4, "Difficulty": 1},
-    {"Text":"5+10", "Answer": 15, "Difficulty": 1},
-    {"Text":"5-10", "Answer": -5, "Difficulty": 1},
-    {"Text":"5*10", "Answer": 50, "Difficulty": 1},
-    {"Text":"5/10", "Answer": 0.5, "Difficulty": 1},
-    {"Text":"6+10", "Answer": 16, "Difficulty": 1},
-    {"Text":"6-10", "Answer": -4, "Difficulty": 1},
-    {"Text":"6*10", "Answer": 60, "Difficulty": 1},
-    {"Text":"6/10", "Answer": 0.6, "Difficulty": 1},
-    {"Text":"7+10", "Answer": 17, "Difficulty": 1},
-    {"Text":"7-10", "Answer": -3, "Difficulty": 1},
-    {"Text":"7*10", "Answer": 70, "Difficulty": 1},
-    {"Text":"7/10", "Answer": 0.7, "Difficulty": 1},
-    {"Text":"8+10", "Answer": 18, "Difficulty": 1},
-    {"Text":"8-10", "Answer": -2, "Difficulty": 1},
-    {"Text":"8*10", "Answer": 80, "Difficulty": 1},
-    {"Text":"8/10", "Answer": 0.8, "Difficulty": 1},
-    {"Text":"9+10", "Answer": 19, "Difficulty": 1},
-    {"Text":"9-10", "Answer": -1, "Difficulty": 1},
-    {"Text":"9*10", "Answer": 90, "Difficulty": 1},
-    {"Text":"9/10", "Answer": 0.9, "Difficulty": 1},
-    {"Text":"10+10", "Answer": 20, "Difficulty": 1},
-    {"Text":"10-10", "Answer": 0, "Difficulty": 1},
-    {"Text":"10*10", "Answer": 100, "Difficulty": 1},
-    {"Text":"10/10", "Answer": 1, "Difficulty": 1},
-    {"Text":"11+10", "Answer": 21, "Difficulty": 1},
-    {"Text":"11-10", "Answer": 1, "Difficulty": 1},
-    {"Text":"11*10", "Answer": 110, "Difficulty": 1},
-    {"Text":"11/10", "Answer": 1.1, "Difficulty": 1},
-    {"Text":"12+10", "Answer": 22, "Difficulty": 1},
-    {"Text":"12-10", "Answer": 2, "Difficulty": 1},
-    {"Text":"12*10", "Answer": 120, "Difficulty": 1},
-    {"Text":"12/10", "Answer": 1.2, "Difficulty": 1},
-    {"Text":"13+10", "Answer": 23, "Difficulty": 1},
-    {"Text":"13-10", "Answer": 3, "Difficulty": 1},
-    {"Text":"13*10", "Answer": 130, "Difficulty": 1},
-    {"Text":"13/10", "Answer": 1.3, "Difficulty": 1},
-    {"Text":"14+10", "Answer": 24, "Difficulty": 1},
-    {"Text":"14-10", "Answer": 4, "Difficulty": 1},
-    {"Text":"14*10", "Answer": 140, "Difficulty": 1},
-    {"Text":"14/10", "Answer": 1.4, "Difficulty": 1},
-    {"Text":"15+10", "Answer": 25, "Difficulty": 1},
-    {"Text":"15-10", "Answer": 5, "Difficulty": 1},
-    {"Text":"15*10", "Answer": 150, "Difficulty": 1},
-    {"Text":"15/10", "Answer": 1.5, "Difficulty": 1},
-    {"Text":"1+11", "Answer": 12, "Difficulty": 1},
-    {"Text":"1-11", "Answer": -10, "Difficulty": 1},
-    {"Text":"1*11", "Answer": 11, "Difficulty": 1},
-    {"Text":"2+11", "Answer": 13, "Difficulty": 1},
-    {"Text":"2-11", "Answer": -9, "Difficulty": 1},
-    {"Text":"2*11", "Answer": 22, "Difficulty": 1},
-    {"Text":"3+11", "Answer": 14, "Difficulty": 1},
-    {"Text":"3-11", "Answer": -8, "Difficulty": 1},
-    {"Text":"3*11", "Answer": 33, "Difficulty": 1},
-    {"Text":"4+11", "Answer": 15, "Difficulty": 1},
-    {"Text":"4-11", "Answer": -7, "Difficulty": 1},
-    {"Text":"4*11", "Answer": 44, "Difficulty": 1},
-    {"Text":"5+11", "Answer": 16, "Difficulty": 1},
-    {"Text":"5-11", "Answer": -6, "Difficulty": 1},
-    {"Text":"5*11", "Answer": 55, "Difficulty": 1},
-    {"Text":"6+11", "Answer": 17, "Difficulty": 1},
-    {"Text":"6-11", "Answer": -5, "Difficulty": 1},
-    {"Text":"6*11", "Answer": 66, "Difficulty": 1},
-    {"Text":"7+11", "Answer": 18, "Difficulty": 1},
-    {"Text":"7-11", "Answer": -4, "Difficulty": 1},
-    {"Text":"7*11", "Answer": 77, "Difficulty": 1},
-    {"Text":"8+11", "Answer": 19, "Difficulty": 1},
-    {"Text":"8-11", "Answer": -3, "Difficulty": 1},
-    {"Text":"8*11", "Answer": 88, "Difficulty": 1},
-    {"Text":"9+11", "Answer": 20, "Difficulty": 1},
-    {"Text":"9-11", "Answer": -2, "Difficulty": 1},
-    {"Text":"9*11", "Answer": 99, "Difficulty": 1},
-    {"Text":"10+11", "Answer": 21, "Difficulty": 1},
-    {"Text":"10-11", "Answer": -1, "Difficulty": 1},
-    {"Text":"10*11", "Answer": 110, "Difficulty": 1},
-    {"Text":"11+11", "Answer": 22, "Difficulty": 1},
-    {"Text":"11-11", "Answer": 0, "Difficulty": 1},
-    {"Text":"11*11", "Answer": 121, "Difficulty": 1},
-    {"Text":"11/11", "Answer": 1, "Difficulty": 1},
-    {"Text":"12+11", "Answer": 23, "Difficulty": 1},
-    {"Text":"12-11", "Answer": 1, "Difficulty": 1},
-    {"Text":"12*11", "Answer": 132, "Difficulty": 1},
-    {"Text":"13+11", "Answer": 24, "Difficulty": 1},
-    {"Text":"13-11", "Answer": 2, "Difficulty": 1},
-    {"Text":"13*11", "Answer": 143, "Difficulty": 1},
-    {"Text":"14+11", "Answer": 25, "Difficulty": 1},
-    {"Text":"14-11", "Answer": 3, "Difficulty": 1},
-    {"Text":"14*11", "Answer": 154, "Difficulty": 1},
-    {"Text":"15+11", "Answer": 26, "Difficulty": 1},
-    {"Text":"15-11", "Answer": 4, "Difficulty": 1},
-    {"Text":"15*11", "Answer": 165, "Difficulty": 1},
-    {"Text":"1+12", "Answer": 13, "Difficulty": 1},
-    {"Text":"1-12", "Answer": -11, "Difficulty": 1},
-    {"Text":"1*12", "Answer": 12, "Difficulty": 1},
-    {"Text":"2+12", "Answer": 14, "Difficulty": 1},
-    {"Text":"2-12", "Answer": -10, "Difficulty": 1},
-    {"Text":"2*12", "Answer": 24, "Difficulty": 1},
-    {"Text":"3+12", "Answer": 15, "Difficulty": 1},
-    {"Text":"3-12", "Answer": -9, "Difficulty": 1},
-    {"Text":"3*12", "Answer": 36, "Difficulty": 1},
-    {"Text":"3/12", "Answer": 0.25, "Difficulty": 2},
-    {"Text":"4+12", "Answer": 16, "Difficulty": 1},
-    {"Text":"4-12", "Answer": -8, "Difficulty": 1},
-    {"Text":"4*12", "Answer": 48, "Difficulty": 1},
-    {"Text":"5+12", "Answer": 17, "Difficulty": 1},
-    {"Text":"5-12", "Answer": -7, "Difficulty": 1},
-    {"Text":"5*12", "Answer": 60, "Difficulty": 1},
-    {"Text":"6+12", "Answer": 18, "Difficulty": 1},
-    {"Text":"6-12", "Answer": -6, "Difficulty": 1},
-    {"Text":"6*12", "Answer": 72, "Difficulty": 1},
-    {"Text":"6/12", "Answer": 0.5, "Difficulty": 1},
-    {"Text":"7+12", "Answer": 19, "Difficulty": 1},
-    {"Text":"7-12", "Answer": -5, "Difficulty": 1},
-    {"Text":"7*12", "Answer": 84, "Difficulty": 1},
-    {"Text":"8+12", "Answer": 20, "Difficulty": 1},
-    {"Text":"8-12", "Answer": -4, "Difficulty": 1},
-    {"Text":"8*12", "Answer": 96, "Difficulty": 1},
-    {"Text":"9+12", "Answer": 21, "Difficulty": 1},
-    {"Text":"9-12", "Answer": -3, "Difficulty": 1},
-    {"Text":"9*12", "Answer": 108, "Difficulty": 1},
-    {"Text":"9/12", "Answer": 0.75, "Difficulty": 2},
-    {"Text":"10+12", "Answer": 22, "Difficulty": 1},
-    {"Text":"10-12", "Answer": -2, "Difficulty": 1},
-    {"Text":"10*12", "Answer": 120, "Difficulty": 1},
-    {"Text":"11+12", "Answer": 23, "Difficulty": 1},
-    {"Text":"11-12", "Answer": -1, "Difficulty": 1},
-    {"Text":"11*12", "Answer": 132, "Difficulty": 1},
-    {"Text":"12+12", "Answer": 24, "Difficulty": 1},
-    {"Text":"12-12", "Answer": 0, "Difficulty": 1},
-    {"Text":"12*12", "Answer": 144, "Difficulty": 1},
-    {"Text":"12/12", "Answer": 1, "Difficulty": 1},
-    {"Text":"13+12", "Answer": 25, "Difficulty": 1},
-    {"Text":"13-12", "Answer": 1, "Difficulty": 1},
-    {"Text":"13*12", "Answer": 156, "Difficulty": 1},
-    {"Text":"14+12", "Answer": 26, "Difficulty": 1},
-    {"Text":"14-12", "Answer": 2, "Difficulty": 1},
-    {"Text":"14*12", "Answer": 168, "Difficulty": 1},
-    {"Text":"15+12", "Answer": 27, "Difficulty": 1},
-    {"Text":"15-12", "Answer": 3, "Difficulty": 1},
-    {"Text":"15*12", "Answer": 180, "Difficulty": 1},
-    {"Text":"15/12", "Answer": 1.25, "Difficulty": 2},
-    {"Text":"1+13", "Answer": 14, "Difficulty": 1},
-    {"Text":"1-13", "Answer": -12, "Difficulty": 1},
-    {"Text":"1*13", "Answer": 13, "Difficulty": 1},
-    {"Text":"1/13", "Answer": 0.0769, "Difficulty": 1},
-    {"Text":"2+13", "Answer": 15, "Difficulty": 1},
-    {"Text":"2-13", "Answer": -11, "Difficulty": 1},
-    {"Text":"2*13", "Answer": 26, "Difficulty": 1},
-    {"Text":"3+13", "Answer": 16, "Difficulty": 1},
-    {"Text":"3-13", "Answer": -10, "Difficulty": 1},
-    {"Text":"3*13", "Answer": 39, "Difficulty": 1},
-    {"Text":"4+13", "Answer": 17, "Difficulty": 1},
-    {"Text":"4-13", "Answer": -9, "Difficulty": 1},
-    {"Text":"4*13", "Answer": 52, "Difficulty": 1},
-    {"Text":"5+13", "Answer": 18, "Difficulty": 1},
-    {"Text":"5-13", "Answer": -8, "Difficulty": 1},
-    {"Text":"5*13", "Answer": 65, "Difficulty": 1},
-    {"Text":"6+13", "Answer": 19, "Difficulty": 1},
-    {"Text":"6-13", "Answer": -7, "Difficulty": 1},
-    {"Text":"6*13", "Answer": 78, "Difficulty": 1},
-    {"Text":"7+13", "Answer": 20, "Difficulty": 1},
-    {"Text":"7-13", "Answer": -6, "Difficulty": 1},
-    {"Text":"7*13", "Answer": 91, "Difficulty": 1},
-    {"Text":"8+13", "Answer": 21, "Difficulty": 1},
-    {"Text":"8-13", "Answer": -5, "Difficulty": 1},
-    {"Text":"8*13", "Answer": 104, "Difficulty": 1},
-    {"Text":"9+13", "Answer": 22, "Difficulty": 1},
-    {"Text":"9-13", "Answer": -4, "Difficulty": 1},
-    {"Text":"9*13", "Answer": 117, "Difficulty": 1},
-    {"Text":"10+13", "Answer": 23, "Difficulty": 1},
-    {"Text":"10-13", "Answer": -3, "Difficulty": 1},
-    {"Text":"10*13", "Answer": 130, "Difficulty": 1},
-    {"Text":"11+13", "Answer": 24, "Difficulty": 1},
-    {"Text":"11-13", "Answer": -2, "Difficulty": 1},
-    {"Text":"11*13", "Answer": 143, "Difficulty": 1},
-    {"Text":"12+13", "Answer": 25, "Difficulty": 1},
-    {"Text":"12-13", "Answer": -1, "Difficulty": 1},
-    {"Text":"12*13", "Answer": 156, "Difficulty": 1},
-    {"Text":"13+13", "Answer": 26, "Difficulty": 1},
-    {"Text":"13-13", "Answer": 0, "Difficulty": 1},
-    {"Text":"13*13", "Answer": 169, "Difficulty": 1},
-    {"Text":"13/13", "Answer": 1, "Difficulty": 1},
-    {"Text":"14+13", "Answer": 27, "Difficulty": 1},
-    {"Text":"14-13", "Answer": 1, "Difficulty": 1},
-    {"Text":"14*13", "Answer": 182, "Difficulty": 1},
-    {"Text":"15+13", "Answer": 28, "Difficulty": 1},
-    {"Text":"15-13", "Answer": 2, "Difficulty": 1},
-    {"Text":"15*13", "Answer": 195, "Difficulty": 1},
-    {"Text":"1+14", "Answer": 15, "Difficulty": 1},
-    {"Text":"1-14", "Answer": -13, "Difficulty": 1},
-    {"Text":"1*14", "Answer": 14, "Difficulty": 1},
-    {"Text":"2+14", "Answer": 16, "Difficulty": 1},
-    {"Text":"2-14", "Answer": -12, "Difficulty": 1},
-    {"Text":"2*14", "Answer": 28, "Difficulty": 1},
-    {"Text":"3+14", "Answer": 17, "Difficulty": 1},
-    {"Text":"3-14", "Answer": -11, "Difficulty": 1},
-    {"Text":"3*14", "Answer": 42, "Difficulty": 1},
-    {"Text":"4+14", "Answer": 18, "Difficulty": 1},
-    {"Text":"4-14", "Answer": -10, "Difficulty": 1},
-    {"Text":"4*14", "Answer": 56, "Difficulty": 1},
-    {"Text":"5+14", "Answer": 19, "Difficulty": 1},
-    {"Text":"5-14", "Answer": -9, "Difficulty": 1},
-    {"Text":"5*14", "Answer": 70, "Difficulty": 1},
-    {"Text":"6+14", "Answer": 20, "Difficulty": 1},
-    {"Text":"6-14", "Answer": -8, "Difficulty": 1},
-    {"Text":"6*14", "Answer": 84, "Difficulty": 1},
-    {"Text":"7+14", "Answer": 21, "Difficulty": 1},
-    {"Text":"7-14", "Answer": -7, "Difficulty": 1},
-    {"Text":"7*14", "Answer": 98, "Difficulty": 1},
-    {"Text":"7/14", "Answer": 0.5, "Difficulty": 1},
-    {"Text":"8+14", "Answer": 22, "Difficulty": 1},
-    {"Text":"8-14", "Answer": -6, "Difficulty": 1},
-    {"Text":"8*14", "Answer": 112, "Difficulty": 1},
-    {"Text":"9+14", "Answer": 23, "Difficulty": 1},
-    {"Text":"9-14", "Answer": -5, "Difficulty": 1},
-    {"Text":"9*14", "Answer": 126, "Difficulty": 1},
-    {"Text":"10+14", "Answer": 24, "Difficulty": 1},
-    {"Text":"10-14", "Answer": -4, "Difficulty": 1},
-    {"Text":"10*14", "Answer": 140, "Difficulty": 1},
-    {"Text":"11+14", "Answer": 25, "Difficulty": 1},
-    {"Text":"11-14", "Answer": -3, "Difficulty": 1},
-    {"Text":"11*14", "Answer": 154, "Difficulty": 1},
-    {"Text":"12+14", "Answer": 26, "Difficulty": 1},
-    {"Text":"12-14", "Answer": -2, "Difficulty": 1},
-    {"Text":"12*14", "Answer": 168, "Difficulty": 1},
-    {"Text":"13+14", "Answer": 27, "Difficulty": 1},
-    {"Text":"13-14", "Answer": -1, "Difficulty": 1},
-    {"Text":"13*14", "Answer": 182, "Difficulty": 1},
-    {"Text":"14+14", "Answer": 28, "Difficulty": 1},
-    {"Text":"14-14", "Answer": 0, "Difficulty": 1},
-    {"Text":"14*14", "Answer": 196, "Difficulty": 1},
-    {"Text":"14/14", "Answer": 1, "Difficulty": 1},
-    {"Text":"15+14", "Answer": 29, "Difficulty": 1},
-    {"Text":"15-14", "Answer": 1, "Difficulty": 1},
-    {"Text":"15*14", "Answer": 210, "Difficulty": 1},
-    {"Text":"1+15", "Answer": 16, "Difficulty": 1},
-    {"Text":"1-15", "Answer": -14, "Difficulty": 1},
-    {"Text":"1*15", "Answer": 15, "Difficulty": 1},
-    {"Text":"2+15", "Answer": 17, "Difficulty": 1},
-    {"Text":"2-15", "Answer": -13, "Difficulty": 1},
-    {"Text":"2*15", "Answer": 30, "Difficulty": 1},
-    {"Text":"3+15", "Answer": 18, "Difficulty": 1},
-    {"Text":"3-15", "Answer": -12, "Difficulty": 1},
-    {"Text":"3*15", "Answer": 45, "Difficulty": 1},
-    {"Text":"3/15", "Answer": 0.2, "Difficulty": 2},
-    {"Text":"4+15", "Answer": 19, "Difficulty": 1},
-    {"Text":"4-15", "Answer": -11, "Difficulty": 1},
-    {"Text":"4*15", "Answer": 60, "Difficulty": 1},
-    {"Text":"5+15", "Answer": 20, "Difficulty": 1},
-    {"Text":"5-15", "Answer": -10, "Difficulty": 1},
-    {"Text":"5*15", "Answer": 75, "Difficulty": 1},
-    {"Text":"6+15", "Answer": 21, "Difficulty": 1},
-    {"Text":"6-15", "Answer": -9, "Difficulty": 1},
-    {"Text":"6*15", "Answer": 90, "Difficulty": 1},
-    {"Text":"6/15", "Answer": 0.4, "Difficulty": 2},
-    {"Text":"7+15", "Answer": 22, "Difficulty": 1},
-    {"Text":"7-15", "Answer": -8, "Difficulty": 1},
-    {"Text":"7*15", "Answer": 105, "Difficulty": 1},
-    {"Text":"8+15", "Answer": 23, "Difficulty": 1},
-    {"Text":"8-15", "Answer": -7, "Difficulty": 1},
-    {"Text":"8*15", "Answer": 120, "Difficulty": 1},
-    {"Text":"9+15", "Answer": 24, "Difficulty": 1},
-    {"Text":"9-15", "Answer": -6, "Difficulty": 1},
-    {"Text":"9*15", "Answer": 135, "Difficulty": 1},
-    {"Text":"9/15", "Answer": 0.6, "Difficulty": 2},
-    {"Text":"10+15", "Answer": 25, "Difficulty": 1},
-    {"Text":"10-15", "Answer": -5, "Difficulty": 1},
-    {"Text":"10*15", "Answer": 150, "Difficulty": 1},
-    {"Text":"11+15", "Answer": 26, "Difficulty": 1},
-    {"Text":"11-15", "Answer": -4, "Difficulty": 1},
-    {"Text":"11*15", "Answer": 165, "Difficulty": 1},
-    {"Text":"12+15", "Answer": 27, "Difficulty": 1},
-    {"Text":"12-15", "Answer": -3, "Difficulty": 1},
-    {"Text":"12*15", "Answer": 180, "Difficulty": 1},
-    {"Text":"12/15", "Answer": 0.8, "Difficulty": 2},
-    {"Text":"13+15", "Answer": 28, "Difficulty": 1},
-    {"Text":"13-15", "Answer": -2, "Difficulty": 1},
-    {"Text":"13*15", "Answer": 195, "Difficulty": 1},
-    {"Text":"14+15", "Answer": 29, "Difficulty": 1},
-    {"Text":"14-15", "Answer": -1, "Difficulty": 1},
-    {"Text":"14*15", "Answer": 210, "Difficulty": 1},
-    {"Text":"15+15", "Answer": 30, "Difficulty": 1},
-    {"Text":"15-15", "Answer": 0, "Difficulty": 1},
-    {"Text":"15*15", "Answer": 225, "Difficulty": 1},
-    {"Text":"15/15", "Answer": 1, "Difficulty": 1},
-    {"Text":"16+1","Answer":17,"Difficulty":1},
-    {"Text":"16-1","Answer":15,"Difficulty":1},
-    {"Text":"16*1","Answer":16,"Difficulty":1},
-    {"Text":"16/1","Answer":16,"Difficulty":1},
-    {"Text":"16+2","Answer":18,"Difficulty":1},
-    {"Text":"16-2","Answer":14,"Difficulty":1},
-    {"Text":"16*2","Answer":32,"Difficulty":1},
-    {"Text":"16/2","Answer":8,"Difficulty":1},
-    {"Text":"16+3","Answer":19,"Difficulty":1},
-    {"Text":"16-3","Answer":13,"Difficulty":1},
-    {"Text":"16*3","Answer":48,"Difficulty":1},
-    {"Text":"16+4","Answer":20,"Difficulty":1},
-    {"Text":"16-4","Answer":12,"Difficulty":1},
-    {"Text":"16*4","Answer":64,"Difficulty":1},
-    {"Text":"16/4","Answer":4,"Difficulty":1},
-    {"Text":"16+5","Answer":21,"Difficulty":1},
-    {"Text":"16-5","Answer":11,"Difficulty":1},
-    {"Text":"16*5","Answer":80,"Difficulty":1},
-    {"Text":"16/5","Answer":3.2,"Difficulty":2},
-    {"Text":"16+6","Answer":22,"Difficulty":1},
-    {"Text":"16-6","Answer":10,"Difficulty":1},
-    {"Text":"16*6","Answer":96,"Difficulty":1},
-    {"Text":"16+7","Answer":23,"Difficulty":1},
-    {"Text":"16-7","Answer":9,"Difficulty":1},
-    {"Text":"16*7","Answer":112,"Difficulty":1},
-    {"Text":"16+8","Answer":24,"Difficulty":1},
-    {"Text":"16-8","Answer":8,"Difficulty":1},
-    {"Text":"16*8","Answer":128,"Difficulty":1},
-    {"Text":"16/8","Answer":2,"Difficulty":1},
-    {"Text":"16+9","Answer":25,"Difficulty":1},
-    {"Text":"16-9","Answer":7,"Difficulty":1},
-    {"Text":"16*9","Answer":144,"Difficulty":1},
-    {"Text":"16+10","Answer":26,"Difficulty":1},
-    {"Text":"16-10","Answer":6,"Difficulty":1},
-    {"Text":"16*10","Answer":160,"Difficulty":1},
-    {"Text":"16/10","Answer":1.6,"Difficulty":1},
-    {"Text":"16+11","Answer":27,"Difficulty":1},
-    {"Text":"16-11","Answer":5,"Difficulty":1},
-    {"Text":"16*11","Answer":176,"Difficulty":1},
-    {"Text":"16+12","Answer":28,"Difficulty":1},
-    {"Text":"16-12","Answer":4,"Difficulty":1},
-    {"Text":"16*12","Answer":192,"Difficulty":1},
-    {"Text":"16+13","Answer":29,"Difficulty":1},
-    {"Text":"16-13","Answer":3,"Difficulty":1},
-    {"Text":"16*13","Answer":208,"Difficulty":1},
-    {"Text":"16+14","Answer":30,"Difficulty":1},
-    {"Text":"16-14","Answer":2,"Difficulty":1},
-    {"Text":"16*14","Answer":224,"Difficulty":1},
-    {"Text":"16+15","Answer":31,"Difficulty":1},
-    {"Text":"16-15","Answer":1,"Difficulty":1},
-    {"Text":"16*15","Answer":240,"Difficulty":1},
-    {"Text":"16+16","Answer":32,"Difficulty":1},
-    {"Text":"16-16","Answer":0,"Difficulty":1},
-    {"Text":"16*16","Answer":256,"Difficulty":1},
-    {"Text":"16/16","Answer":1,"Difficulty":1},
-    {"Text":"17+1","Answer":18,"Difficulty":1},
-    {"Text":"17-1","Answer":16,"Difficulty":1},
-    {"Text":"17*1","Answer":17,"Difficulty":1},
-    {"Text":"17/1","Answer":17,"Difficulty":1},
-    {"Text":"17+2","Answer":19,"Difficulty":1},
-    {"Text":"17-2","Answer":15,"Difficulty":1},
-    {"Text":"17*2","Answer":34,"Difficulty":1},
-    {"Text":"17/2","Answer":8.5,"Difficulty":1},
-    {"Text":"17+3","Answer":20,"Difficulty":1},
-    {"Text":"17-3","Answer":14,"Difficulty":1},
-    {"Text":"17*3","Answer":51,"Difficulty":1},
-    {"Text":"17+4","Answer":21,"Difficulty":1},
-    {"Text":"17-4","Answer":13,"Difficulty":1},
-    {"Text":"17*4","Answer":68,"Difficulty":1},
-    {"Text":"17/4","Answer":4.25,"Difficulty":1},
-    {"Text":"17+5","Answer":22,"Difficulty":1},
-    {"Text":"17-5","Answer":12,"Difficulty":1},
-    {"Text":"17*5","Answer":85,"Difficulty":1},
-    {"Text":"17/5","Answer":3.4,"Difficulty":1},
-    {"Text":"17+6","Answer":23,"Difficulty":1},
-    {"Text":"17-6","Answer":11,"Difficulty":1},
-    {"Text":"17*6","Answer":102,"Difficulty":1},
-    {"Text":"17+7","Answer":24,"Difficulty":1},
-    {"Text":"17-7","Answer":10,"Difficulty":1},
-    {"Text":"17*7","Answer":119,"Difficulty":1},
-    {"Text":"17+8","Answer":25,"Difficulty":1},
-    {"Text":"17-8","Answer":9,"Difficulty":1},
-    {"Text":"17*8","Answer":136,"Difficulty":1},
-    {"Text":"17/8","Answer":2.125,"Difficulty":1},
-    {"Text":"17+9","Answer":26,"Difficulty":1},
-    {"Text":"17-9","Answer":8,"Difficulty":1},
-    {"Text":"17*9","Answer":153,"Difficulty":1},
-    {"Text":"17+10","Answer":27,"Difficulty":1},
-    {"Text":"17-10","Answer":7,"Difficulty":1},
-    {"Text":"17*10","Answer":170,"Difficulty":1},
-    {"Text":"17/10","Answer":1.7,"Difficulty":1},
-    {"Text":"17+11","Answer":28,"Difficulty":1},
-    {"Text":"17-11","Answer":6,"Difficulty":1},
-    {"Text":"17*11","Answer":187,"Difficulty":1},
-    {"Text":"17+12","Answer":29,"Difficulty":1},
-    {"Text":"17-12","Answer":5,"Difficulty":1},
-    {"Text":"17*12","Answer":204,"Difficulty":1},
-    {"Text":"17+13","Answer":30,"Difficulty":1},
-    {"Text":"17-13","Answer":4,"Difficulty":1},
-    {"Text":"17*13","Answer":221,"Difficulty":1},
-    {"Text":"17+14","Answer":31,"Difficulty":1},
-    {"Text":"17-14","Answer":3,"Difficulty":1},
-    {"Text":"17*14","Answer":238,"Difficulty":1},
-    {"Text":"17+15","Answer":32,"Difficulty":1},
-    {"Text":"17-15","Answer":2,"Difficulty":1},
-    {"Text":"17*15","Answer":255,"Difficulty":1},
-    {"Text":"17+16","Answer":33,"Difficulty":1},
-    {"Text":"17-16","Answer":1,"Difficulty":1},
-    {"Text":"17*16","Answer":272,"Difficulty":1},
-    {"Text":"17/16","Answer":1.0625,"Difficulty":2},
-    {"Text":"17+17","Answer":34,"Difficulty":1},
-    {"Text":"17-17","Answer":0,"Difficulty":1},
-    {"Text":"17*17","Answer":289,"Difficulty":1},
-    {"Text":"17/17","Answer":1,"Difficulty":1}
+    {
+        "Text": "1+1",
+        "Answer": 2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1-1",
+        "Answer": 0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1*1",
+        "Answer": 1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1/1",
+        "Answer": 1.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1+2",
+        "Answer": 3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1-2",
+        "Answer": -1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1*2",
+        "Answer": 2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1+3",
+        "Answer": 4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1-3",
+        "Answer": -2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1*3",
+        "Answer": 3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1+4",
+        "Answer": 5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1-4",
+        "Answer": -3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1*4",
+        "Answer": 4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1+5",
+        "Answer": 6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1-5",
+        "Answer": -4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1*5",
+        "Answer": 5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1+6",
+        "Answer": 7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1-6",
+        "Answer": -5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1*6",
+        "Answer": 6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1+7",
+        "Answer": 8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1-7",
+        "Answer": -6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1*7",
+        "Answer": 7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1+8",
+        "Answer": 9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1-8",
+        "Answer": -7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1*8",
+        "Answer": 8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1+9",
+        "Answer": 10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1-9",
+        "Answer": -8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1*9",
+        "Answer": 9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1+10",
+        "Answer": 11,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1-10",
+        "Answer": -9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1*10",
+        "Answer": 10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1+11",
+        "Answer": 12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1-11",
+        "Answer": -10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1*11",
+        "Answer": 11,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1+12",
+        "Answer": 13,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1-12",
+        "Answer": -11,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1*12",
+        "Answer": 12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1+13",
+        "Answer": 14,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1-13",
+        "Answer": -12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1*13",
+        "Answer": 13,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1+14",
+        "Answer": 15,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1-14",
+        "Answer": -13,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1*14",
+        "Answer": 14,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1+15",
+        "Answer": 16,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1-15",
+        "Answer": -14,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1*15",
+        "Answer": 15,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1+16",
+        "Answer": 17,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1-16",
+        "Answer": -15,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1*16",
+        "Answer": 16,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1+17",
+        "Answer": 18,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1-17",
+        "Answer": -16,
+        "Difficulty": 1
+    },
+    {
+        "Text": "1*17",
+        "Answer": 17,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2+1",
+        "Answer": 3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2-1",
+        "Answer": 1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2*1",
+        "Answer": 2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2/1",
+        "Answer": 2.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2+2",
+        "Answer": 4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2-2",
+        "Answer": 0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2*2",
+        "Answer": 4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2/2",
+        "Answer": 1.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2+3",
+        "Answer": 5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2-3",
+        "Answer": -1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2*3",
+        "Answer": 6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2+4",
+        "Answer": 6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2-4",
+        "Answer": -2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2*4",
+        "Answer": 8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2+5",
+        "Answer": 7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2-5",
+        "Answer": -3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2*5",
+        "Answer": 10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2+6",
+        "Answer": 8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2-6",
+        "Answer": -4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2*6",
+        "Answer": 12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2+7",
+        "Answer": 9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2-7",
+        "Answer": -5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2*7",
+        "Answer": 14,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2+8",
+        "Answer": 10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2-8",
+        "Answer": -6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2*8",
+        "Answer": 16,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2+9",
+        "Answer": 11,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2-9",
+        "Answer": -7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2*9",
+        "Answer": 18,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2+10",
+        "Answer": 12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2-10",
+        "Answer": -8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2*10",
+        "Answer": 20,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2+11",
+        "Answer": 13,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2-11",
+        "Answer": -9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2*11",
+        "Answer": 22,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2+12",
+        "Answer": 14,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2-12",
+        "Answer": -10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2*12",
+        "Answer": 24,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2+13",
+        "Answer": 15,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2-13",
+        "Answer": -11,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2*13",
+        "Answer": 26,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2+14",
+        "Answer": 16,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2-14",
+        "Answer": -12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2*14",
+        "Answer": 28,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2+15",
+        "Answer": 17,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2-15",
+        "Answer": -13,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2*15",
+        "Answer": 30,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2+16",
+        "Answer": 18,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2-16",
+        "Answer": -14,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2*16",
+        "Answer": 32,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2+17",
+        "Answer": 19,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2-17",
+        "Answer": -15,
+        "Difficulty": 1
+    },
+    {
+        "Text": "2*17",
+        "Answer": 34,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3+1",
+        "Answer": 4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3-1",
+        "Answer": 2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3*1",
+        "Answer": 3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3/1",
+        "Answer": 3.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3+2",
+        "Answer": 5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3-2",
+        "Answer": 1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3*2",
+        "Answer": 6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3+3",
+        "Answer": 6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3-3",
+        "Answer": 0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3*3",
+        "Answer": 9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3/3",
+        "Answer": 1.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3+4",
+        "Answer": 7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3-4",
+        "Answer": -1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3*4",
+        "Answer": 12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3+5",
+        "Answer": 8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3-5",
+        "Answer": -2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3*5",
+        "Answer": 15,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3+6",
+        "Answer": 9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3-6",
+        "Answer": -3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3*6",
+        "Answer": 18,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3+7",
+        "Answer": 10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3-7",
+        "Answer": -4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3*7",
+        "Answer": 21,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3+8",
+        "Answer": 11,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3-8",
+        "Answer": -5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3*8",
+        "Answer": 24,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3+9",
+        "Answer": 12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3-9",
+        "Answer": -6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3*9",
+        "Answer": 27,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3+10",
+        "Answer": 13,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3-10",
+        "Answer": -7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3*10",
+        "Answer": 30,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3+11",
+        "Answer": 14,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3-11",
+        "Answer": -8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3*11",
+        "Answer": 33,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3+12",
+        "Answer": 15,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3-12",
+        "Answer": -9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3*12",
+        "Answer": 36,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3+13",
+        "Answer": 16,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3-13",
+        "Answer": -10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3*13",
+        "Answer": 39,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3+14",
+        "Answer": 17,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3-14",
+        "Answer": -11,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3*14",
+        "Answer": 42,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3+15",
+        "Answer": 18,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3-15",
+        "Answer": -12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3*15",
+        "Answer": 45,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3+16",
+        "Answer": 19,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3-16",
+        "Answer": -13,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3*16",
+        "Answer": 48,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3+17",
+        "Answer": 20,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3-17",
+        "Answer": -14,
+        "Difficulty": 1
+    },
+    {
+        "Text": "3*17",
+        "Answer": 51,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4+1",
+        "Answer": 5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4-1",
+        "Answer": 3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4*1",
+        "Answer": 4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4/1",
+        "Answer": 4.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4+2",
+        "Answer": 6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4-2",
+        "Answer": 2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4*2",
+        "Answer": 8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4/2",
+        "Answer": 2.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4+3",
+        "Answer": 7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4-3",
+        "Answer": 1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4*3",
+        "Answer": 12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4+4",
+        "Answer": 8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4-4",
+        "Answer": 0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4*4",
+        "Answer": 16,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4/4",
+        "Answer": 1.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4+5",
+        "Answer": 9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4-5",
+        "Answer": -1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4*5",
+        "Answer": 20,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4+6",
+        "Answer": 10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4-6",
+        "Answer": -2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4*6",
+        "Answer": 24,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4+7",
+        "Answer": 11,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4-7",
+        "Answer": -3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4*7",
+        "Answer": 28,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4+8",
+        "Answer": 12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4-8",
+        "Answer": -4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4*8",
+        "Answer": 32,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4+9",
+        "Answer": 13,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4-9",
+        "Answer": -5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4*9",
+        "Answer": 36,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4+10",
+        "Answer": 14,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4-10",
+        "Answer": -6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4*10",
+        "Answer": 40,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4+11",
+        "Answer": 15,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4-11",
+        "Answer": -7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4*11",
+        "Answer": 44,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4+12",
+        "Answer": 16,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4-12",
+        "Answer": -8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4*12",
+        "Answer": 48,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4+13",
+        "Answer": 17,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4-13",
+        "Answer": -9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4*13",
+        "Answer": 52,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4+14",
+        "Answer": 18,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4-14",
+        "Answer": -10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4*14",
+        "Answer": 56,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4+15",
+        "Answer": 19,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4-15",
+        "Answer": -11,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4*15",
+        "Answer": 60,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4+16",
+        "Answer": 20,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4-16",
+        "Answer": -12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4*16",
+        "Answer": 64,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4+17",
+        "Answer": 21,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4-17",
+        "Answer": -13,
+        "Difficulty": 1
+    },
+    {
+        "Text": "4*17",
+        "Answer": 68,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5+1",
+        "Answer": 6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5-1",
+        "Answer": 4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5*1",
+        "Answer": 5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5/1",
+        "Answer": 5.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5+2",
+        "Answer": 7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5-2",
+        "Answer": 3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5*2",
+        "Answer": 10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5+3",
+        "Answer": 8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5-3",
+        "Answer": 2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5*3",
+        "Answer": 15,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5+4",
+        "Answer": 9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5-4",
+        "Answer": 1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5*4",
+        "Answer": 20,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5+5",
+        "Answer": 10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5-5",
+        "Answer": 0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5*5",
+        "Answer": 25,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5/5",
+        "Answer": 1.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5+6",
+        "Answer": 11,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5-6",
+        "Answer": -1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5*6",
+        "Answer": 30,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5+7",
+        "Answer": 12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5-7",
+        "Answer": -2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5*7",
+        "Answer": 35,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5+8",
+        "Answer": 13,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5-8",
+        "Answer": -3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5*8",
+        "Answer": 40,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5+9",
+        "Answer": 14,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5-9",
+        "Answer": -4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5*9",
+        "Answer": 45,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5+10",
+        "Answer": 15,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5-10",
+        "Answer": -5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5*10",
+        "Answer": 50,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5+11",
+        "Answer": 16,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5-11",
+        "Answer": -6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5*11",
+        "Answer": 55,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5+12",
+        "Answer": 17,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5-12",
+        "Answer": -7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5*12",
+        "Answer": 60,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5+13",
+        "Answer": 18,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5-13",
+        "Answer": -8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5*13",
+        "Answer": 65,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5+14",
+        "Answer": 19,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5-14",
+        "Answer": -9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5*14",
+        "Answer": 70,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5+15",
+        "Answer": 20,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5-15",
+        "Answer": -10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5*15",
+        "Answer": 75,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5+16",
+        "Answer": 21,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5-16",
+        "Answer": -11,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5*16",
+        "Answer": 80,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5+17",
+        "Answer": 22,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5-17",
+        "Answer": -12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "5*17",
+        "Answer": 85,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6+1",
+        "Answer": 7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6-1",
+        "Answer": 5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6*1",
+        "Answer": 6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6/1",
+        "Answer": 6.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6+2",
+        "Answer": 8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6-2",
+        "Answer": 4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6*2",
+        "Answer": 12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6/2",
+        "Answer": 3.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6+3",
+        "Answer": 9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6-3",
+        "Answer": 3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6*3",
+        "Answer": 18,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6/3",
+        "Answer": 2.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6+4",
+        "Answer": 10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6-4",
+        "Answer": 2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6*4",
+        "Answer": 24,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6+5",
+        "Answer": 11,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6-5",
+        "Answer": 1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6*5",
+        "Answer": 30,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6+6",
+        "Answer": 12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6-6",
+        "Answer": 0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6*6",
+        "Answer": 36,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6/6",
+        "Answer": 1.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6+7",
+        "Answer": 13,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6-7",
+        "Answer": -1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6*7",
+        "Answer": 42,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6+8",
+        "Answer": 14,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6-8",
+        "Answer": -2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6*8",
+        "Answer": 48,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6+9",
+        "Answer": 15,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6-9",
+        "Answer": -3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6*9",
+        "Answer": 54,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6+10",
+        "Answer": 16,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6-10",
+        "Answer": -4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6*10",
+        "Answer": 60,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6+11",
+        "Answer": 17,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6-11",
+        "Answer": -5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6*11",
+        "Answer": 66,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6+12",
+        "Answer": 18,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6-12",
+        "Answer": -6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6*12",
+        "Answer": 72,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6+13",
+        "Answer": 19,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6-13",
+        "Answer": -7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6*13",
+        "Answer": 78,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6+14",
+        "Answer": 20,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6-14",
+        "Answer": -8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6*14",
+        "Answer": 84,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6+15",
+        "Answer": 21,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6-15",
+        "Answer": -9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6*15",
+        "Answer": 90,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6+16",
+        "Answer": 22,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6-16",
+        "Answer": -10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6*16",
+        "Answer": 96,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6+17",
+        "Answer": 23,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6-17",
+        "Answer": -11,
+        "Difficulty": 1
+    },
+    {
+        "Text": "6*17",
+        "Answer": 102,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7+1",
+        "Answer": 8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7-1",
+        "Answer": 6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7*1",
+        "Answer": 7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7/1",
+        "Answer": 7.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7+2",
+        "Answer": 9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7-2",
+        "Answer": 5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7*2",
+        "Answer": 14,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7+3",
+        "Answer": 10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7-3",
+        "Answer": 4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7*3",
+        "Answer": 21,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7+4",
+        "Answer": 11,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7-4",
+        "Answer": 3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7*4",
+        "Answer": 28,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7+5",
+        "Answer": 12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7-5",
+        "Answer": 2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7*5",
+        "Answer": 35,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7+6",
+        "Answer": 13,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7-6",
+        "Answer": 1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7*6",
+        "Answer": 42,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7+7",
+        "Answer": 14,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7-7",
+        "Answer": 0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7*7",
+        "Answer": 49,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7/7",
+        "Answer": 1.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7+8",
+        "Answer": 15,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7-8",
+        "Answer": -1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7*8",
+        "Answer": 56,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7+9",
+        "Answer": 16,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7-9",
+        "Answer": -2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7*9",
+        "Answer": 63,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7+10",
+        "Answer": 17,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7-10",
+        "Answer": -3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7*10",
+        "Answer": 70,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7+11",
+        "Answer": 18,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7-11",
+        "Answer": -4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7*11",
+        "Answer": 77,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7+12",
+        "Answer": 19,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7-12",
+        "Answer": -5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7*12",
+        "Answer": 84,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7+13",
+        "Answer": 20,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7-13",
+        "Answer": -6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7*13",
+        "Answer": 91,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7+14",
+        "Answer": 21,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7-14",
+        "Answer": -7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7*14",
+        "Answer": 98,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7+15",
+        "Answer": 22,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7-15",
+        "Answer": -8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7*15",
+        "Answer": 105,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7+16",
+        "Answer": 23,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7-16",
+        "Answer": -9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7*16",
+        "Answer": 112,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7+17",
+        "Answer": 24,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7-17",
+        "Answer": -10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "7*17",
+        "Answer": 119,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8+1",
+        "Answer": 9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8-1",
+        "Answer": 7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8*1",
+        "Answer": 8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8/1",
+        "Answer": 8.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8+2",
+        "Answer": 10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8-2",
+        "Answer": 6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8*2",
+        "Answer": 16,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8/2",
+        "Answer": 4.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8+3",
+        "Answer": 11,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8-3",
+        "Answer": 5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8*3",
+        "Answer": 24,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8+4",
+        "Answer": 12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8-4",
+        "Answer": 4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8*4",
+        "Answer": 32,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8/4",
+        "Answer": 2.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8+5",
+        "Answer": 13,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8-5",
+        "Answer": 3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8*5",
+        "Answer": 40,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8+6",
+        "Answer": 14,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8-6",
+        "Answer": 2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8*6",
+        "Answer": 48,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8+7",
+        "Answer": 15,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8-7",
+        "Answer": 1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8*7",
+        "Answer": 56,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8+8",
+        "Answer": 16,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8-8",
+        "Answer": 0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8*8",
+        "Answer": 64,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8/8",
+        "Answer": 1.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8+9",
+        "Answer": 17,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8-9",
+        "Answer": -1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8*9",
+        "Answer": 72,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8+10",
+        "Answer": 18,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8-10",
+        "Answer": -2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8*10",
+        "Answer": 80,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8+11",
+        "Answer": 19,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8-11",
+        "Answer": -3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8*11",
+        "Answer": 88,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8+12",
+        "Answer": 20,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8-12",
+        "Answer": -4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8*12",
+        "Answer": 96,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8+13",
+        "Answer": 21,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8-13",
+        "Answer": -5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8*13",
+        "Answer": 104,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8+14",
+        "Answer": 22,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8-14",
+        "Answer": -6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8*14",
+        "Answer": 112,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8+15",
+        "Answer": 23,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8-15",
+        "Answer": -7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8*15",
+        "Answer": 120,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8+16",
+        "Answer": 24,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8-16",
+        "Answer": -8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8*16",
+        "Answer": 128,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8+17",
+        "Answer": 25,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8-17",
+        "Answer": -9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "8*17",
+        "Answer": 136,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9+1",
+        "Answer": 10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9-1",
+        "Answer": 8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9*1",
+        "Answer": 9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9/1",
+        "Answer": 9.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9+2",
+        "Answer": 11,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9-2",
+        "Answer": 7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9*2",
+        "Answer": 18,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9+3",
+        "Answer": 12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9-3",
+        "Answer": 6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9*3",
+        "Answer": 27,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9/3",
+        "Answer": 3.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9+4",
+        "Answer": 13,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9-4",
+        "Answer": 5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9*4",
+        "Answer": 36,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9+5",
+        "Answer": 14,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9-5",
+        "Answer": 4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9*5",
+        "Answer": 45,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9+6",
+        "Answer": 15,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9-6",
+        "Answer": 3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9*6",
+        "Answer": 54,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9+7",
+        "Answer": 16,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9-7",
+        "Answer": 2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9*7",
+        "Answer": 63,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9+8",
+        "Answer": 17,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9-8",
+        "Answer": 1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9*8",
+        "Answer": 72,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9+9",
+        "Answer": 18,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9-9",
+        "Answer": 0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9*9",
+        "Answer": 81,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9/9",
+        "Answer": 1.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9+10",
+        "Answer": 19,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9-10",
+        "Answer": -1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9*10",
+        "Answer": 90,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9+11",
+        "Answer": 20,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9-11",
+        "Answer": -2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9*11",
+        "Answer": 99,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9+12",
+        "Answer": 21,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9-12",
+        "Answer": -3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9*12",
+        "Answer": 108,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9+13",
+        "Answer": 22,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9-13",
+        "Answer": -4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9*13",
+        "Answer": 117,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9+14",
+        "Answer": 23,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9-14",
+        "Answer": -5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9*14",
+        "Answer": 126,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9+15",
+        "Answer": 24,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9-15",
+        "Answer": -6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9*15",
+        "Answer": 135,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9+16",
+        "Answer": 25,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9-16",
+        "Answer": -7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9*16",
+        "Answer": 144,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9+17",
+        "Answer": 26,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9-17",
+        "Answer": -8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "9*17",
+        "Answer": 153,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10+1",
+        "Answer": 11,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10-1",
+        "Answer": 9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10*1",
+        "Answer": 10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10/1",
+        "Answer": 10.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10+2",
+        "Answer": 12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10-2",
+        "Answer": 8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10*2",
+        "Answer": 20,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10/2",
+        "Answer": 5.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10+3",
+        "Answer": 13,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10-3",
+        "Answer": 7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10*3",
+        "Answer": 30,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10+4",
+        "Answer": 14,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10-4",
+        "Answer": 6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10*4",
+        "Answer": 40,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10+5",
+        "Answer": 15,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10-5",
+        "Answer": 5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10*5",
+        "Answer": 50,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10/5",
+        "Answer": 2.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10+6",
+        "Answer": 16,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10-6",
+        "Answer": 4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10*6",
+        "Answer": 60,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10+7",
+        "Answer": 17,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10-7",
+        "Answer": 3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10*7",
+        "Answer": 70,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10+8",
+        "Answer": 18,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10-8",
+        "Answer": 2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10*8",
+        "Answer": 80,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10+9",
+        "Answer": 19,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10-9",
+        "Answer": 1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10*9",
+        "Answer": 90,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10+10",
+        "Answer": 20,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10-10",
+        "Answer": 0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10*10",
+        "Answer": 100,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10/10",
+        "Answer": 1.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10+11",
+        "Answer": 21,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10-11",
+        "Answer": -1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10*11",
+        "Answer": 110,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10+12",
+        "Answer": 22,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10-12",
+        "Answer": -2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10*12",
+        "Answer": 120,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10+13",
+        "Answer": 23,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10-13",
+        "Answer": -3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10*13",
+        "Answer": 130,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10+14",
+        "Answer": 24,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10-14",
+        "Answer": -4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10*14",
+        "Answer": 140,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10+15",
+        "Answer": 25,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10-15",
+        "Answer": -5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10*15",
+        "Answer": 150,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10+16",
+        "Answer": 26,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10-16",
+        "Answer": -6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10*16",
+        "Answer": 160,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10+17",
+        "Answer": 27,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10-17",
+        "Answer": -7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "10*17",
+        "Answer": 170,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11+1",
+        "Answer": 12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11-1",
+        "Answer": 10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11*1",
+        "Answer": 11,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11/1",
+        "Answer": 11.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11+2",
+        "Answer": 13,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11-2",
+        "Answer": 9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11*2",
+        "Answer": 22,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11+3",
+        "Answer": 14,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11-3",
+        "Answer": 8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11*3",
+        "Answer": 33,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11+4",
+        "Answer": 15,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11-4",
+        "Answer": 7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11*4",
+        "Answer": 44,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11+5",
+        "Answer": 16,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11-5",
+        "Answer": 6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11*5",
+        "Answer": 55,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11+6",
+        "Answer": 17,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11-6",
+        "Answer": 5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11*6",
+        "Answer": 66,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11+7",
+        "Answer": 18,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11-7",
+        "Answer": 4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11*7",
+        "Answer": 77,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11+8",
+        "Answer": 19,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11-8",
+        "Answer": 3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11*8",
+        "Answer": 88,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11+9",
+        "Answer": 20,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11-9",
+        "Answer": 2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11*9",
+        "Answer": 99,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11+10",
+        "Answer": 21,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11-10",
+        "Answer": 1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11*10",
+        "Answer": 110,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11+11",
+        "Answer": 22,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11-11",
+        "Answer": 0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11*11",
+        "Answer": 121,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11/11",
+        "Answer": 1.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11+12",
+        "Answer": 23,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11-12",
+        "Answer": -1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11*12",
+        "Answer": 132,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11+13",
+        "Answer": 24,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11-13",
+        "Answer": -2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11*13",
+        "Answer": 143,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11+14",
+        "Answer": 25,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11-14",
+        "Answer": -3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11*14",
+        "Answer": 154,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11+15",
+        "Answer": 26,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11-15",
+        "Answer": -4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11*15",
+        "Answer": 165,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11+16",
+        "Answer": 27,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11-16",
+        "Answer": -5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11*16",
+        "Answer": 176,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11+17",
+        "Answer": 28,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11-17",
+        "Answer": -6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "11*17",
+        "Answer": 187,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12+1",
+        "Answer": 13,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12-1",
+        "Answer": 11,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12*1",
+        "Answer": 12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12/1",
+        "Answer": 12.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12+2",
+        "Answer": 14,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12-2",
+        "Answer": 10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12*2",
+        "Answer": 24,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12/2",
+        "Answer": 6.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12+3",
+        "Answer": 15,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12-3",
+        "Answer": 9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12*3",
+        "Answer": 36,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12/3",
+        "Answer": 4.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12+4",
+        "Answer": 16,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12-4",
+        "Answer": 8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12*4",
+        "Answer": 48,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12/4",
+        "Answer": 3.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12+5",
+        "Answer": 17,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12-5",
+        "Answer": 7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12*5",
+        "Answer": 60,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12+6",
+        "Answer": 18,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12-6",
+        "Answer": 6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12*6",
+        "Answer": 72,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12/6",
+        "Answer": 2.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12+7",
+        "Answer": 19,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12-7",
+        "Answer": 5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12*7",
+        "Answer": 84,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12+8",
+        "Answer": 20,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12-8",
+        "Answer": 4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12*8",
+        "Answer": 96,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12+9",
+        "Answer": 21,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12-9",
+        "Answer": 3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12*9",
+        "Answer": 108,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12+10",
+        "Answer": 22,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12-10",
+        "Answer": 2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12*10",
+        "Answer": 120,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12+11",
+        "Answer": 23,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12-11",
+        "Answer": 1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12*11",
+        "Answer": 132,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12+12",
+        "Answer": 24,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12-12",
+        "Answer": 0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12*12",
+        "Answer": 144,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12/12",
+        "Answer": 1.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12+13",
+        "Answer": 25,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12-13",
+        "Answer": -1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12*13",
+        "Answer": 156,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12+14",
+        "Answer": 26,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12-14",
+        "Answer": -2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12*14",
+        "Answer": 168,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12+15",
+        "Answer": 27,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12-15",
+        "Answer": -3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12*15",
+        "Answer": 180,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12+16",
+        "Answer": 28,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12-16",
+        "Answer": -4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12*16",
+        "Answer": 192,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12+17",
+        "Answer": 29,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12-17",
+        "Answer": -5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "12*17",
+        "Answer": 204,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13+1",
+        "Answer": 14,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13-1",
+        "Answer": 12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13*1",
+        "Answer": 13,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13/1",
+        "Answer": 13.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13+2",
+        "Answer": 15,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13-2",
+        "Answer": 11,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13*2",
+        "Answer": 26,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13+3",
+        "Answer": 16,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13-3",
+        "Answer": 10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13*3",
+        "Answer": 39,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13+4",
+        "Answer": 17,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13-4",
+        "Answer": 9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13*4",
+        "Answer": 52,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13+5",
+        "Answer": 18,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13-5",
+        "Answer": 8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13*5",
+        "Answer": 65,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13+6",
+        "Answer": 19,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13-6",
+        "Answer": 7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13*6",
+        "Answer": 78,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13+7",
+        "Answer": 20,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13-7",
+        "Answer": 6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13*7",
+        "Answer": 91,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13+8",
+        "Answer": 21,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13-8",
+        "Answer": 5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13*8",
+        "Answer": 104,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13+9",
+        "Answer": 22,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13-9",
+        "Answer": 4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13*9",
+        "Answer": 117,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13+10",
+        "Answer": 23,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13-10",
+        "Answer": 3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13*10",
+        "Answer": 130,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13+11",
+        "Answer": 24,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13-11",
+        "Answer": 2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13*11",
+        "Answer": 143,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13+12",
+        "Answer": 25,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13-12",
+        "Answer": 1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13*12",
+        "Answer": 156,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13+13",
+        "Answer": 26,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13-13",
+        "Answer": 0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13*13",
+        "Answer": 169,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13/13",
+        "Answer": 1.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13+14",
+        "Answer": 27,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13-14",
+        "Answer": -1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13*14",
+        "Answer": 182,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13+15",
+        "Answer": 28,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13-15",
+        "Answer": -2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13*15",
+        "Answer": 195,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13+16",
+        "Answer": 29,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13-16",
+        "Answer": -3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13*16",
+        "Answer": 208,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13+17",
+        "Answer": 30,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13-17",
+        "Answer": -4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "13*17",
+        "Answer": 221,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14+1",
+        "Answer": 15,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14-1",
+        "Answer": 13,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14*1",
+        "Answer": 14,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14/1",
+        "Answer": 14.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14+2",
+        "Answer": 16,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14-2",
+        "Answer": 12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14*2",
+        "Answer": 28,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14/2",
+        "Answer": 7.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14+3",
+        "Answer": 17,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14-3",
+        "Answer": 11,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14*3",
+        "Answer": 42,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14+4",
+        "Answer": 18,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14-4",
+        "Answer": 10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14*4",
+        "Answer": 56,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14+5",
+        "Answer": 19,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14-5",
+        "Answer": 9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14*5",
+        "Answer": 70,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14+6",
+        "Answer": 20,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14-6",
+        "Answer": 8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14*6",
+        "Answer": 84,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14+7",
+        "Answer": 21,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14-7",
+        "Answer": 7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14*7",
+        "Answer": 98,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14/7",
+        "Answer": 2.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14+8",
+        "Answer": 22,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14-8",
+        "Answer": 6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14*8",
+        "Answer": 112,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14+9",
+        "Answer": 23,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14-9",
+        "Answer": 5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14*9",
+        "Answer": 126,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14+10",
+        "Answer": 24,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14-10",
+        "Answer": 4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14*10",
+        "Answer": 140,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14+11",
+        "Answer": 25,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14-11",
+        "Answer": 3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14*11",
+        "Answer": 154,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14+12",
+        "Answer": 26,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14-12",
+        "Answer": 2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14*12",
+        "Answer": 168,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14+13",
+        "Answer": 27,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14-13",
+        "Answer": 1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14*13",
+        "Answer": 182,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14+14",
+        "Answer": 28,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14-14",
+        "Answer": 0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14*14",
+        "Answer": 196,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14/14",
+        "Answer": 1.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14+15",
+        "Answer": 29,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14-15",
+        "Answer": -1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14*15",
+        "Answer": 210,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14+16",
+        "Answer": 30,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14-16",
+        "Answer": -2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14*16",
+        "Answer": 224,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14+17",
+        "Answer": 31,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14-17",
+        "Answer": -3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "14*17",
+        "Answer": 238,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15+1",
+        "Answer": 16,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15-1",
+        "Answer": 14,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15*1",
+        "Answer": 15,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15/1",
+        "Answer": 15.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15+2",
+        "Answer": 17,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15-2",
+        "Answer": 13,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15*2",
+        "Answer": 30,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15+3",
+        "Answer": 18,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15-3",
+        "Answer": 12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15*3",
+        "Answer": 45,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15/3",
+        "Answer": 5.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15+4",
+        "Answer": 19,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15-4",
+        "Answer": 11,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15*4",
+        "Answer": 60,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15+5",
+        "Answer": 20,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15-5",
+        "Answer": 10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15*5",
+        "Answer": 75,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15/5",
+        "Answer": 3.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15+6",
+        "Answer": 21,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15-6",
+        "Answer": 9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15*6",
+        "Answer": 90,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15+7",
+        "Answer": 22,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15-7",
+        "Answer": 8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15*7",
+        "Answer": 105,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15+8",
+        "Answer": 23,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15-8",
+        "Answer": 7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15*8",
+        "Answer": 120,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15+9",
+        "Answer": 24,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15-9",
+        "Answer": 6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15*9",
+        "Answer": 135,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15+10",
+        "Answer": 25,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15-10",
+        "Answer": 5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15*10",
+        "Answer": 150,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15+11",
+        "Answer": 26,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15-11",
+        "Answer": 4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15*11",
+        "Answer": 165,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15+12",
+        "Answer": 27,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15-12",
+        "Answer": 3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15*12",
+        "Answer": 180,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15+13",
+        "Answer": 28,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15-13",
+        "Answer": 2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15*13",
+        "Answer": 195,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15+14",
+        "Answer": 29,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15-14",
+        "Answer": 1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15*14",
+        "Answer": 210,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15+15",
+        "Answer": 30,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15-15",
+        "Answer": 0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15*15",
+        "Answer": 225,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15/15",
+        "Answer": 1.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15+16",
+        "Answer": 31,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15-16",
+        "Answer": -1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15*16",
+        "Answer": 240,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15+17",
+        "Answer": 32,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15-17",
+        "Answer": -2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "15*17",
+        "Answer": 255,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16+1",
+        "Answer": 17,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16-1",
+        "Answer": 15,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16*1",
+        "Answer": 16,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16/1",
+        "Answer": 16.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16+2",
+        "Answer": 18,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16-2",
+        "Answer": 14,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16*2",
+        "Answer": 32,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16/2",
+        "Answer": 8.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16+3",
+        "Answer": 19,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16-3",
+        "Answer": 13,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16*3",
+        "Answer": 48,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16+4",
+        "Answer": 20,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16-4",
+        "Answer": 12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16*4",
+        "Answer": 64,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16/4",
+        "Answer": 4.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16+5",
+        "Answer": 21,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16-5",
+        "Answer": 11,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16*5",
+        "Answer": 80,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16+6",
+        "Answer": 22,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16-6",
+        "Answer": 10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16*6",
+        "Answer": 96,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16+7",
+        "Answer": 23,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16-7",
+        "Answer": 9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16*7",
+        "Answer": 112,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16+8",
+        "Answer": 24,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16-8",
+        "Answer": 8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16*8",
+        "Answer": 128,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16/8",
+        "Answer": 2.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16+9",
+        "Answer": 25,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16-9",
+        "Answer": 7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16*9",
+        "Answer": 144,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16+10",
+        "Answer": 26,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16-10",
+        "Answer": 6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16*10",
+        "Answer": 160,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16+11",
+        "Answer": 27,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16-11",
+        "Answer": 5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16*11",
+        "Answer": 176,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16+12",
+        "Answer": 28,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16-12",
+        "Answer": 4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16*12",
+        "Answer": 192,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16+13",
+        "Answer": 29,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16-13",
+        "Answer": 3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16*13",
+        "Answer": 208,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16+14",
+        "Answer": 30,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16-14",
+        "Answer": 2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16*14",
+        "Answer": 224,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16+15",
+        "Answer": 31,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16-15",
+        "Answer": 1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16*15",
+        "Answer": 240,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16+16",
+        "Answer": 32,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16-16",
+        "Answer": 0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16*16",
+        "Answer": 256,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16/16",
+        "Answer": 1.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16+17",
+        "Answer": 33,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16-17",
+        "Answer": -1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "16*17",
+        "Answer": 272,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17+1",
+        "Answer": 18,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17-1",
+        "Answer": 16,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17*1",
+        "Answer": 17,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17/1",
+        "Answer": 17.0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17+2",
+        "Answer": 19,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17-2",
+        "Answer": 15,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17*2",
+        "Answer": 34,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17+3",
+        "Answer": 20,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17-3",
+        "Answer": 14,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17*3",
+        "Answer": 51,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17+4",
+        "Answer": 21,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17-4",
+        "Answer": 13,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17*4",
+        "Answer": 68,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17+5",
+        "Answer": 22,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17-5",
+        "Answer": 12,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17*5",
+        "Answer": 85,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17+6",
+        "Answer": 23,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17-6",
+        "Answer": 11,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17*6",
+        "Answer": 102,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17+7",
+        "Answer": 24,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17-7",
+        "Answer": 10,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17*7",
+        "Answer": 119,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17+8",
+        "Answer": 25,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17-8",
+        "Answer": 9,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17*8",
+        "Answer": 136,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17+9",
+        "Answer": 26,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17-9",
+        "Answer": 8,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17*9",
+        "Answer": 153,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17+10",
+        "Answer": 27,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17-10",
+        "Answer": 7,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17*10",
+        "Answer": 170,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17+11",
+        "Answer": 28,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17-11",
+        "Answer": 6,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17*11",
+        "Answer": 187,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17+12",
+        "Answer": 29,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17-12",
+        "Answer": 5,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17*12",
+        "Answer": 204,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17+13",
+        "Answer": 30,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17-13",
+        "Answer": 4,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17*13",
+        "Answer": 221,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17+14",
+        "Answer": 31,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17-14",
+        "Answer": 3,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17*14",
+        "Answer": 238,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17+15",
+        "Answer": 32,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17-15",
+        "Answer": 2,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17*15",
+        "Answer": 255,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17+16",
+        "Answer": 33,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17-16",
+        "Answer": 1,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17*16",
+        "Answer": 272,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17+17",
+        "Answer": 34,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17-17",
+        "Answer": 0,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17*17",
+        "Answer": 289,
+        "Difficulty": 1
+    },
+    {
+        "Text": "17/17",
+        "Answer": 1.0,
+        "Difficulty": 1
+    }
 ]
