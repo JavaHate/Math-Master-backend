@@ -140,4 +140,5 @@ coverage/
 *.sln.docstates
 
 Migrations/
+TestResults/
 logs.txt
