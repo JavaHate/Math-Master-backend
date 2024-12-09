@@ -37,7 +37,7 @@ namespace JavaHateBE.Repository
         }
 
         public async Task<List<Game>> GetAllGames() {
-            return await _context.Games.ToListAsync();
+           return await _context.Games.ToListAsync();
         }
 
         public async Task<List<Game>> GetGamesByUser(Guid userId) {
